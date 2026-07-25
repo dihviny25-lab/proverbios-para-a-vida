@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desafio da Semana - Lição 1: O Temor do Senhor</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family:'Inter',sans-serif; color:#111; background:#fff; font-size:9.4pt; line-height:1.3; }
+@page { size: A4; margin: 0.65cm 1.1cm; }
+
+.sheet { width:100%; }
+
+.dw-header { text-align:center; margin-bottom:5px; position:relative; }
+.dw-icons-row { display:flex; justify-content:space-between; align-items:flex-end; padding:0 4px; }
+.dw-icons-row svg { height:34px; width:auto; }
+.dw-title { font-family:'Baloo 2',sans-serif; font-size:24pt; font-weight:800; letter-spacing:1px; margin:2px 0 2px; }
+.dw-subtitle { font-family:'Baloo 2',sans-serif; font-size:13pt; font-weight:600; }
+.dw-rule { border:none; border-top:2.5px solid #111; margin:4px 0 7px; }
+
+.dw-verse-box { border:2.5px solid #111; border-radius:12px; padding:7px 16px; text-align:center; margin-bottom:6px; }
+.dw-verse-label { font-family:'Baloo 2',sans-serif; font-weight:700; font-size:9.5pt; text-transform:uppercase; letter-spacing:1px; margin-bottom:3px; }
+.dw-verse-text { font-style:italic; font-size:10.3pt; line-height:1.4; }
+.dw-verse-ref { font-weight:700; font-size:9.8pt; margin-top:3px; }
+
+.dw-section { margin-bottom:6px; }
+.dw-section-title { font-family:'Baloo 2',sans-serif; font-weight:700; font-size:11.5pt; border-bottom:1.8px solid #111; padding-bottom:2px; margin-bottom:5px; }
+
+table.dw-reading { width:100%; border-collapse:collapse; }
+table.dw-reading th { font-size:8.3pt; text-transform:uppercase; letter-spacing:0.5px; text-align:left; border-bottom:1.5px solid #111; padding:2px 4px; }
+table.dw-reading td { font-size:9.3pt; padding:2.5px 4px; border-bottom:0.75px solid #999; }
+table.dw-reading td.chk { text-align:center; width:24px; }
+.box { display:inline-block; width:11px; height:11px; border:1.5px solid #111; border-radius:2px; }
+
+.dw-challenge-text { font-size:9.3pt; margin-bottom:5px; }
+.dw-day-lines div { display:flex; align-items:center; gap:6px; margin-bottom:4px; }
+.dw-day-lines .lbl { font-size:8.8pt; font-weight:600; width:64px; flex:0 0 auto; }
+.dw-day-lines .ln { flex:1; border-bottom:0.9px solid #111; height:1px; }
+
+.dw-prayer-box { border:1.5px dashed #111; border-radius:10px; padding:7px 12px; }
+.dw-prayer-box p.starter { font-style:italic; font-size:9.6pt; margin-bottom:4px; }
+.dw-prayer-lines div { border-bottom:0.9px solid #999; height:1px; margin-bottom:9px; }
+
+.dw-family-box { border:2px solid #111; border-radius:12px; padding:6px 14px; }
+.dw-family-box .dw-section-title { border-bottom:none; margin-bottom:4px; }
+.dw-family-list { list-style:none; }
+.dw-family-list li { font-size:9.1pt; margin-bottom:2.5px; padding-left:18px; position:relative; }
+.dw-family-list li::before { content:''; position:absolute; left:0; top:1.5px; width:11px; height:11px; border:1.5px solid #111; border-radius:2px; }
+.dw-family-list li.ask { font-style:italic; }
+.dw-family-footer { font-size:8.8pt; margin-top:5px; padding-top:5px; border-top:0.75px dashed #999; }
+
+.dw-two-col { display:flex; gap:14px; }
+.dw-two-col > div { flex:1; }
+
+.dw-creative-box { border:1.5px solid #111; border-radius:10px; padding:6px 14px; display:flex; align-items:center; gap:10px; }
+.dw-creative-box svg { height:36px; width:auto; flex:0 0 auto; }
+.dw-creative-box p { font-size:8.8pt; }
+.dw-creative-box strong { font-family:'Baloo 2',sans-serif; font-size:9.6pt; }
+
+.dw-footer { border-top:2px solid #111; padding-top:4px; margin-top:4px; text-align:center; }
+.dw-footer-title { font-family:'Baloo 2',sans-serif; font-weight:700; font-size:10.3pt; margin-bottom:3px; }
+.dw-footer ul { list-style:none; display:inline-block; text-align:left; }
+.dw-footer li { font-size:8.8pt; margin-bottom:2px; padding-left:16px; position:relative; }
+.dw-footer li::before { content:'\2713'; position:absolute; left:0; font-weight:700; }
+.dw-footer-verse { font-weight:700; font-size:9pt; margin-top:4px; }
+
+
+#pv-a11y-bar { position:fixed; top:14px; right:14px; z-index:9999; display:flex; align-items:center; gap:2px; background:#1B3A2D; border-radius:999px; padding:5px 6px; box-shadow:0 4px 16px rgba(0,0,0,0.28); font-family:'Inter',sans-serif; }
+#pv-a11y-bar a.pv-link { all:unset; cursor:pointer; color:#fff; font-size:12px; font-weight:600; padding:6px 10px; border-radius:999px; white-space:nowrap; }
+#pv-a11y-bar a.pv-link:hover { background:rgba(255,255,255,0.16); color:#F5EDCF; }
+#pv-a11y-bar .pv-sep { width:1px; height:18px; background:rgba(255,255,255,0.25); margin:0 3px; }
+#pv-a11y-bar button.pv-fbtn { all:unset; cursor:pointer; color:#fff; font-weight:700; font-size:12.5px; width:28px; height:28px; display:flex; align-items:center; justify-content:center; border-radius:50%; }
+#pv-a11y-bar button.pv-fbtn:hover { background:rgba(255,255,255,0.18); }
+#pv-a11y-bar .pv-lbl { color:#C4941A; font-size:9.5px; font-weight:700; letter-spacing:1px; padding:0 3px; text-transform:uppercase; }
+@media print { #pv-a11y-bar { display:none !important; } }
+@media (max-width:560px) { #pv-a11y-bar .pv-lbl { display:none; } #pv-a11y-bar a.pv-link { padding:6px 8px; font-size:11.5px; } #pv-a11y-bar { top:8px; right:8px; } }
+
+#pv-scale-wrap { transition: zoom .08s; }
+body { padding-top:56px; }
+</style>
+</head>
+<body>
+<div id="pv-a11y-bar"><a class="pv-link" href="../../licoes/licao-01.html">&larr; Voltar à lição</a><a class="pv-link" href="../pdfs/Desafio_Semana_Licao_01_O_Temor_do_Senhor.pdf">Baixar PDF</a><div class="pv-sep"></div><span class="pv-lbl">Fonte</span><button class="pv-fbtn" id="pv-a11y-minus" title="Diminuir fonte">A-</button><button class="pv-fbtn" id="pv-a11y-reset" title="Tamanho padrão">A</button><button class="pv-fbtn" id="pv-a11y-plus" title="Aumentar fonte">A+</button></div>
+<div id="pv-scale-wrap">
+
+<div class="sheet">
+  <div class="dw-header">
+    <div class="dw-icons-row">
+      <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg">
+    <path d="M100 40 L100 160 Q60 150 30 165 L30 55 Q60 40 100 40 Z" stroke="#1C1A17" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M100 40 L100 160 Q140 150 170 165 L170 55 Q140 40 100 40 Z" stroke="#1C1A17" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    <line x1="55" y1="75" x2="85" y2="70" stroke="#1C1A17" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" />
+    <line x1="55" y1="95" x2="85" y2="90" stroke="#1C1A17" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" />
+    <line x1="115" y1="70" x2="145" y2="75" stroke="#1C1A17" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" />
+    <line x1="115" y1="90" x2="145" y2="95" stroke="#1C1A17" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" />
+    </svg><svg viewBox="0 0 120 145" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="60" cy="34" r="22" stroke="#1C1A17" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" />
+    <path d="M30 130 Q30 75 60 75 Q90 75 90 130" stroke="#1C1A17" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" />
+    <path d="M35 108 L60 118 L85 108 L85 128 L60 138 L35 128 Z" stroke="#1C1A17" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" />
+    <line x1="60" y1="118" x2="60" y2="138" stroke="#1C1A17" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" />
+    </svg><svg viewBox="0 0 120 110" xmlns="http://www.w3.org/2000/svg">
+    <path d="M60 10 L72 42 L106 44 L79 65 L89 98 L60 79 L31 98 L41 65 L14 44 L48 42 Z" stroke="#1C1A17" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" />
+    </svg><svg viewBox="0 0 120 110" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 100 Q60 60 110 20" stroke="#1C1A17" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" />
+    <path d="M40 88 Q50 65 75 60 Q65 82 40 88 Z" stroke="#1C1A17" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" />
+    <path d="M65 62 Q75 40 100 35 Q90 57 65 62 Z" stroke="#1C1A17" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" />
+    <path d="M20 92 Q30 78 48 76 Q40 92 20 92 Z" stroke="#1C1A17" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" />
+    </svg>
+    </div>
+    <div class="dw-title">DESAFIO DA SEMANA</div>
+    <div class="dw-subtitle">Lição 1 — O Temor do Senhor</div>
+    <hr class="dw-rule">
+  </div>
+
+  <div class="dw-verse-box">
+    <div class="dw-verse-label">Versículo para Memorizar</div>
+    <div class="dw-verse-text">&ldquo;O temor do Senhor é o princípio da sabedoria; os loucos desprezam a sabedoria e a instrução.&rdquo;</div>
+    <div class="dw-verse-ref">Pv 1:7</div>
+  </div>
+
+  <div class="dw-section">
+    <div class="dw-section-title">Leitura Bíblica da Semana</div>
+    <table class="dw-reading">
+<tr><th>Dia</th><th>Leitura</th><th class="chk">✔</th></tr>
+<tr><td>Segunda</td><td>1 Reis 3:9-12</td><td class="chk"><span class="box"></span></td></tr><tr><td>Terça</td><td>Pv 10:27</td><td class="chk"><span class="box"></span></td></tr><tr><td>Quarta</td><td>1 Coríntios 1:24</td><td class="chk"><span class="box"></span></td></tr><tr><td>Quinta</td><td>1 Coríntios 1:30</td><td class="chk"><span class="box"></span></td></tr><tr><td>Sexta</td><td>Colossenses 2:3</td><td class="chk"><span class="box"></span></td></tr><tr><td>Sábado</td><td>Lucas 2:46-47</td><td class="chk"><span class="box"></span></td></tr><tr><td>Domingo</td><td>Releia Provérbios 1</td><td class="chk"><span class="box"></span></td></tr>
+</table>
+  </div>
+
+  <div class="dw-two-col">
+    <div class="dw-section">
+      <div class="dw-section-title">Meu Desafio: Vivendo a Palavra</div>
+      <p class="dw-challenge-text">Durante esta semana, escolha uma situação por dia em que você vai conscientemente lembrar do versículo antes de tomar uma decisão, mesmo pequena.</p>
+      <div class="dw-day-lines"><div><span class="lbl">Segunda</span><span class="ln"></span></div><div><span class="lbl">Terça</span><span class="ln"></span></div><div><span class="lbl">Quarta</span><span class="ln"></span></div><div><span class="lbl">Quinta</span><span class="ln"></span></div><div><span class="lbl">Sexta</span><span class="ln"></span></div></div>
+    </div>
+    <div class="dw-section">
+      <div class="dw-section-title">Minha Oração</div>
+      <div class="dw-prayer-box">
+        <p class="starter">&ldquo;Jesus, ajuda-me a viver com sabedoria e a temer o Senhor.&rdquo;</p>
+        <div class="dw-prayer-lines"><div></div><div></div><div></div><div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dw-section dw-family-box">
+    <div class="dw-section-title">Tarefas em Família</div>
+    <p style="font-size:8.8pt; margin-bottom:4px;">Esta semana, façam estas atividades juntos:</p>
+    <ul class="dw-family-list">
+      <li>Leiam juntos Pv 1:7.</li>
+      <li>Cada pessoa da família conte uma situação em que viveu (ou poderia viver) o tema desta semana: O Temor do Senhor.</li>
+      <li>Memorizem juntos o versículo da semana.</li>
+      <li>Façam uma oração juntos, pedindo a Deus ajuda para viver o que aprenderam.</li>
+      <li class="ask">Pergunte aos seus pais: &ldquo;Pai/Mãe, você se lembra de um momento em que tomou uma decisão sem levar Deus em conta? O que aconteceu e o que aprendeu?&rdquo;</li>
+    </ul>
+    <div class="dw-family-footer">No próximo domingo, conte ao professor qual foi a atividade que sua família mais gostou.</div>
+  </div>
+
+  <div class="dw-section dw-creative-box">
+    <svg viewBox="0 0 120 135" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 100 L75 45 L95 65 L40 120 Z" stroke="#1C1A17" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" />
+    <path d="M20 100 L15 120 L35 115 Z" stroke="#1C1A17" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" />
+    <line x1="66" y1="54" x2="86" y2="74" stroke="#1C1A17" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" />
+    </svg>
+    <p><strong>Desafio Criativo:</strong> no verso desta folha, faça um desenho mostrando uma situação em que você viveu o tema desta semana: O Temor do Senhor.</p>
+  </div>
+
+  <div class="dw-footer">
+    <div class="dw-footer-title">Lembre-se</div>
+    <ul><li>O temor do Senhor é reconhecer que Deus é grande, santo e justo, e que eu sou pequeno e pecador — e ainda assim correr para Ele, porque em Cristo sou amado e perdoado.</li><li>O temor do Senhor é o princípio da sabedoria. (Pv 1:7)</li><li>Jesus cumpriu isso por nós, e nos dá forças para vivê-lo.</li></ul>
+    <div class="dw-footer-verse">Pv 1:7</div>
+  </div>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var KEY='pv_fontscale', min=0.8, max=1.8, step=0.1;
+  var wrap = document.getElementById('pv-scale-wrap');
+  var saved = parseFloat(localStorage.getItem(KEY)) || 1;
+  function apply(v){ if(wrap){ wrap.style.zoom = v; } try{ localStorage.setItem(KEY, v); }catch(e){} }
+  apply(saved);
+  var mEl = document.getElementById('pv-a11y-minus'), pEl = document.getElementById('pv-a11y-plus'), rEl = document.getElementById('pv-a11y-reset');
+  if(mEl) mEl.onclick = function(){ saved = Math.max(min, +(saved-step).toFixed(2)); apply(saved); };
+  if(pEl) pEl.onclick = function(){ saved = Math.min(max, +(saved+step).toFixed(2)); apply(saved); };
+  if(rEl) rEl.onclick = function(){ saved = 1; apply(saved); };
+})();
+</script>
+
+</body>
+</html>
