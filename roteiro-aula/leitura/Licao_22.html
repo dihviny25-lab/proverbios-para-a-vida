@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roteiro de Aula - Lição 22: Honrando Pais e Autoridades</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+:root {
+  --bg: #EFEBE0;
+  --surface: #FAFAF7;
+  --primary: #1B3A2D;
+  --primary-light: #2D5C45;
+  --accent: #C4941A;
+  --accent-light: #F5EDCF;
+  --text: #1C1A17;
+  --text-muted: #6B6557;
+  --border: #DDD8CC;
+  --radius: 10px;
+}
+* { box-sizing: border-box; margin:0; padding:0; }
+html { -webkit-text-size-adjust: 100%; }
+body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.65; font-size:10.6pt; }
+
+.roteiro-header { background:var(--primary); color:#fff; padding:44px 32px 34px; text-align:center; position:relative; overflow:hidden; }
+.roteiro-header::before { content: attr(data-num); position:absolute; font-family:'Playfair Display',serif; font-weight:700; font-size:150px; top:50%; left:50%; transform:translate(-50%,-50%); opacity:0.06; line-height:1; }
+.roteiro-eyebrow { font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+.roteiro-title { font-family:'Playfair Display',serif; font-size:24pt; font-weight:700; line-height:1.2; margin-bottom:8px; }
+.roteiro-subtitle { font-size:11.5pt; opacity:0.78; max-width:520px; margin:0 auto; }
+
+.roteiro-content { max-width:100%; padding:26px 32px 44px; }
+
+.meta-grid { display:flex; flex-wrap:wrap; gap:12px; margin-bottom:26px; }
+.meta-card { flex:1 1 220px; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:14px 16px; border-top:3px solid var(--accent); }
+.meta-label { font-size:8.5px; font-weight:700; letter-spacing:1.8px; text-transform:uppercase; color:var(--accent); margin-bottom:6px; }
+.meta-card p { font-size:9.8pt; line-height:1.5; }
+.meta-card.verse p { font-family:'Playfair Display',serif; font-style:italic; color:var(--primary); font-size:10.5pt; }
+.usage-note { background:var(--accent-light); border:1px dashed var(--accent); border-radius:var(--radius); padding:10px 16px; margin-bottom:18px; }
+.usage-note p { font-size:9.3pt; font-style:italic; color:var(--text); }
+.usage-note p::before { content:'✦  '; font-style:normal; color:var(--accent); }
+
+.outline-box { background:var(--primary); color:#fff; border-radius:var(--radius); padding:16px 20px; margin-bottom:30px; }
+.outline-title { font-family:'Playfair Display',serif; font-size:11.5pt; font-weight:700; color:var(--accent); margin-bottom:10px; }
+.outline-list { list-style:none; display:flex; flex-wrap:wrap; gap:6px 18px; }
+.outline-list li { font-size:9.3pt; opacity:0.92; padding-left:20px; position:relative; }
+.outline-list li::before { content: counter(item); counter-increment:item; position:absolute; left:0; top:0; width:15px; height:15px; background:var(--accent); color:var(--primary); border-radius:50%; font-size:8px; font-weight:700; display:flex; align-items:center; justify-content:center; }
+.outline-list { counter-reset:item; }
+
+.roteiro-section { margin-bottom:32px; }
+.roteiro-section-head { display:flex; align-items:center; gap:12px; margin-bottom:14px; padding-bottom:8px; border-bottom:1px solid var(--border); }
+.roteiro-num { flex:0 0 auto; width:30px; height:30px; border-radius:50%; background:var(--primary); color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-weight:700; font-size:12.5pt; }
+.roteiro-section-title { font-family:'Playfair Display',serif; font-size:15.5pt; font-weight:700; color:var(--primary); }
+
+.script-box { background:var(--primary); color:#fff; border-radius:var(--radius); padding:16px 20px; margin:10px 0; page-break-inside: avoid; position:relative; }
+.script-label { font-size:8.5px; font-weight:700; letter-spacing:1.8px; text-transform:uppercase; color:var(--accent); margin-bottom:8px; }
+.script-box p { font-family:'Playfair Display',serif; font-style:italic; font-size:11pt; line-height:1.55; }
+
+.engage-box { background:var(--accent-light); border-left:4px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:12px 16px; margin:10px 0; page-break-inside: avoid; }
+.engage-label { font-size:8.5px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--text-muted); margin-bottom:4px; }
+.engage-box p { font-size:10pt; color:var(--text); }
+
+.illustration-box { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:14px 18px; margin:12px 0; page-break-inside: avoid; }
+.illustration-label { font-size:8.5px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--accent); margin-bottom:6px; }
+.illustration-label::before { content:'✦  '; }
+.illustration-title { font-family:'Playfair Display',serif; font-weight:700; font-size:11pt; color:var(--primary); margin-bottom:6px; }
+.illustration-box p { font-size:9.8pt; margin-bottom:6px; }
+.illustration-box .reflect { font-style:italic; color:var(--primary-light); font-size:9.5pt; }
+
+.tip-box { background:#FFF8F4; border-left:4px solid #E85D04; border-radius:0 var(--radius) var(--radius) 0; padding:12px 16px; margin:12px 0; page-break-inside: avoid; }
+.tip-label { font-size:8.5px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:#E85D04; margin-bottom:6px; }
+.tip-label::before { content:'→  '; }
+.tip-box p { font-size:9.8pt; margin-bottom:4px; }
+
+.bible-text { background:var(--surface); border-left:3px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:14px 18px; margin:12px 0; page-break-inside: avoid; }
+.bible-ref { font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--accent); margin-bottom:7px; }
+.bible-quote { font-family:'Playfair Display',serif; font-style:italic; font-size:11.5pt; line-height:1.5; color:var(--primary); }
+
+.explain-list { list-style:none; margin:10px 0; }
+.explain-list li { padding:8px 0 8px 18px; position:relative; font-size:10pt; border-bottom:1px solid var(--border); line-height:1.5; }
+.explain-list li:last-child { border-bottom:none; }
+.explain-list li::before { content:'—'; position:absolute; left:0; color:var(--accent); font-weight:700; }
+.explain-list li strong { color:var(--primary); }
+
+.dynamic-box { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:16px 20px; margin:10px 0; }
+.dynamic-block-label { font-size:8.5px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--accent); margin:12px 0 6px; }
+.dynamic-block-label:first-child { margin-top:0; }
+.dynamic-box p { font-size:9.8pt; margin-bottom:5px; }
+.steps-list { counter-reset:step; list-style:none; margin:6px 0; }
+.steps-list li { counter-increment:step; padding:6px 0 6px 30px; position:relative; font-size:9.8pt; }
+.steps-list li::before { content:counter(step); position:absolute; left:0; top:6px; width:20px; height:20px; background:var(--primary); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:9px; font-weight:700; }
+
+.aplicacao-list { counter-reset:apl; list-style:none; margin:8px 0; }
+.aplicacao-list li { counter-increment:apl; padding:8px 0 8px 32px; position:relative; font-size:10pt; border-bottom:1px solid var(--border); line-height:1.5; }
+.aplicacao-list li:last-child { border-bottom:none; }
+.aplicacao-list li::before { content:counter(apl); position:absolute; left:0; top:8px; width:21px; height:21px; background:var(--accent); color:var(--primary); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:9.5pt; font-weight:700; }
+
+.memorize-box { background:var(--accent-light); border-radius:var(--radius); padding:12px 16px; margin-top:10px; }
+.memorize-box p { font-size:9.6pt; margin-bottom:4px; }
+
+.prayer-final { background:var(--primary); color:#fff; border-radius:var(--radius); padding:20px 22px; margin:10px 0; page-break-inside: avoid; }
+.prayer-final .script-label { color:var(--accent); }
+.prayer-final p { font-family:'Playfair Display',serif; font-style:italic; font-size:10.6pt; line-height:1.6; opacity:0.95; }
+.verse-extra { margin-top:14px; padding-top:14px; border-top:1px solid rgba(255,255,255,0.15); }
+.verse-extra p { font-family:'Inter',sans-serif; font-style:normal; font-size:9.3pt; opacity:0.8; }
+
+.notes-page { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:20px 24px; min-height:320px; }
+.notes-page .notes-title { font-family:'Playfair Display',serif; font-weight:700; font-size:13pt; color:var(--primary); margin-bottom:6px; }
+.notes-page .notes-hint { font-size:9.5pt; color:var(--text-muted); margin-bottom:18px; }
+.notes-lines { display:flex; flex-direction:column; gap:22px; }
+.notes-lines div { border-bottom:1px solid var(--border); height:1px; }
+
+@page { size: A4; margin: 0 0 1.6cm 0; }
+.print-cover { page-break-after: always; background:var(--primary); color:#fff; width:21cm; height:29.7cm; position:relative; }
+.print-cover .bar { background:var(--accent); height:12px; width:100%; position:absolute; left:0; }
+.print-cover .bar.top { top:0; } .print-cover .bar.bottom { bottom:0; }
+.print-cover .content { position:absolute; top:42%; left:0; right:0; text-align:center; padding:0 2.4cm; }
+.print-cover .kicker { color:var(--accent); letter-spacing:2.5px; font-size:11pt; text-transform:uppercase; margin-bottom:16px; font-weight:600; }
+.print-cover h1 { font-family:'Playfair Display',serif; font-size:28pt; margin-bottom:22px; font-weight:700; line-height:1.25; }
+.print-cover .base { color:#dcd0b0; font-style:italic; font-size:12.5pt; margin-bottom:8px; }
+.print-cover .tag { color:var(--accent); font-size:11pt; letter-spacing:1.5px; }
+.print-cover .foot { position:absolute; bottom:60px; left:0; right:0; text-align:center; color:#c9bd9a; font-size:9.5pt; }
+.lesson-page { page-break-after: always; }
+
+@media screen and (max-width: 680px) {
+  .roteiro-header { padding:32px 18px 26px; }
+  .roteiro-title { font-size:19pt; }
+  .roteiro-content { padding:18px 16px 36px; }
+  .meta-grid { flex-direction:column; }
+  .outline-list { flex-direction:column; gap:8px; }
+  .roteiro-section-title { font-size:13.5pt; }
+  body { font-size:11.5px; }
+  .script-box p, .bible-quote { font-size:11pt; }
+}
+
+body { background: #fff; }
+
+
+#pv-a11y-bar { position:fixed; top:14px; right:14px; z-index:9999; display:flex; align-items:center; gap:2px; background:#1B3A2D; border-radius:999px; padding:5px 6px; box-shadow:0 4px 16px rgba(0,0,0,0.28); font-family:'Inter',sans-serif; }
+#pv-a11y-bar a.pv-link { all:unset; cursor:pointer; color:#fff; font-size:12px; font-weight:600; padding:6px 10px; border-radius:999px; white-space:nowrap; }
+#pv-a11y-bar a.pv-link:hover { background:rgba(255,255,255,0.16); color:#F5EDCF; }
+#pv-a11y-bar .pv-sep { width:1px; height:18px; background:rgba(255,255,255,0.25); margin:0 3px; }
+#pv-a11y-bar button.pv-fbtn { all:unset; cursor:pointer; color:#fff; font-weight:700; font-size:12.5px; width:28px; height:28px; display:flex; align-items:center; justify-content:center; border-radius:50%; }
+#pv-a11y-bar button.pv-fbtn:hover { background:rgba(255,255,255,0.18); }
+#pv-a11y-bar .pv-lbl { color:#C4941A; font-size:9.5px; font-weight:700; letter-spacing:1px; padding:0 3px; text-transform:uppercase; }
+@media print { #pv-a11y-bar { display:none !important; } }
+@media (max-width:560px) { #pv-a11y-bar .pv-lbl { display:none; } #pv-a11y-bar a.pv-link { padding:6px 8px; font-size:11.5px; } #pv-a11y-bar { top:8px; right:8px; } }
+
+#pv-scale-wrap { transition: zoom .08s; }
+body { padding-top:56px; }
+</style>
+</head>
+<body>
+<div id="pv-a11y-bar"><a class="pv-link" href="../../licoes/licao-22.html">&larr; Voltar à lição</a><a class="pv-link" href="../pdfs/Roteiro_Licao_22_Honrando_Pais_e_Autoridades.pdf">Baixar PDF</a><div class="pv-sep"></div><span class="pv-lbl">Fonte</span><button class="pv-fbtn" id="pv-a11y-minus" title="Diminuir fonte">A-</button><button class="pv-fbtn" id="pv-a11y-reset" title="Tamanho padrão">A</button><button class="pv-fbtn" id="pv-a11y-plus" title="Aumentar fonte">A+</button></div>
+<div id="pv-scale-wrap">
+
+<div class="print-cover">
+  <div class="bar top"></div>
+  <div class="content">
+    <div class="kicker">Provérbios para a Vida &middot; Roteiro de Aula</div>
+    <h1>Lição 22: Honrando Pais e Autoridades</h1>
+    <div class="base">Texto Base: Provérbios 22</div>
+    <div class="tag">GUIA DO PROFESSOR &mdash; ROTEIRO</div>
+  </div>
+  <div class="foot">Material de Apoio para Ministração Infantil</div>
+  <div class="bar bottom"></div>
+</div>
+<div class="lesson-page">
+<div class="roteiro-header" data-num="22">
+  <div class="roteiro-eyebrow">Lição 22 de 31 &middot; Roteiro de Aula</div>
+  <h1 class="roteiro-title">Honrando Pais e Autoridades</h1>
+  <p class="roteiro-subtitle">Provérbios 22</p>
+</div>
+<div class="roteiro-content">
+<div class="usage-note"><p>Este guia é um ponto de partida, não um roteiro para decorar. Use as sugestões de fala, ilustração e oração como inspiração — ensine com suas próprias palavras. As crianças percebem quando a professora fala de coração.</p></div>
+<div class="meta-grid">
+<div class="meta-card"><div class="meta-label">Objetivo da Lição</div><p>Compreender o valor da instrução dos pais e das autoridades que Deus coloca em nossa vida, e ver que honrar essas autoridades reflete nossa confiança em Deus, que estabeleceu essa ordem por amor.</p></div>
+<div class="meta-card"><div class="meta-label">Verdade Central</div><p>Porque Deus estabeleceu essas autoridades para nos instruir e proteger, e honrá-las é uma forma de confiar e obedecer ao próprio Deus, que as colocou ali por amor.</p></div>
+<div class="meta-card verse"><div class="meta-label">Versículo para Decorar</div><p>&ldquo;Ensina a criança no caminho em que deve andar, e ainda quando for velho não se desviará dele.&rdquo; (Pv 22:6)</p></div>
+</div>
+<div class="outline-box"><div class="outline-title">Roteiro da Aula</div><ul class="outline-list"><li>Abertura</li><li>Contexto e Fundamento Bíblico</li><li>Dinâmica: Mundo x Deus</li><li>Legado: Cristo na Lição</li><li>Aplicação e Versículo</li><li>Oração Final</li><li>Notas Pessoais do Professor</li></ul></div>
+<div class="roteiro-section">
+<div class="roteiro-section-head"><div class="roteiro-num">1</div><div class="roteiro-section-title">Abertura</div></div>
+<div class="script-box"><div class="script-label">Sugestão de Abertura (fale com suas palavras)</div><p>&ldquo;Hoje vamos falar sobre honrar nossos pais — e vou contar um segredo: até Jesus fez isso.&rdquo;</p></div>
+<div class="engage-box"><div class="engage-label">Pergunta para Engajar</div><p>Quem aqui já discordou de uma regra dos pais, mas obedeceu mesmo assim?</p></div>
+<div class="illustration-box"><div class="illustration-label">Ilustração de Abertura</div><div class="illustration-title">Na Escola</div><p>Vitor acha uma regra do professor sem sentido e decide simplesmente ignorá-la, achando que sabe melhor o que é certo.</p><p class="reflect">Reflita: Como honrar a autoridade do professor, mesmo discordando de uma regra, reflete confiança em Deus? Existe uma forma respeitosa de expressar discordância?</p></div>
+</div>
+<div class="roteiro-section">
+<div class="roteiro-section-head"><div class="roteiro-num">2</div><div class="roteiro-section-title">Contexto e Fundamento Bíblico</div></div>
+<div class="bible-text"><div class="bible-ref">Leia ou conte &mdash; Pv 22:6</div><div class="bible-quote">&ldquo;Ensina a criança no caminho em que deve andar, e ainda quando for velho não se desviará dele.&rdquo;</div></div>
+
+<div class="illustration-box"><div class="illustration-label">Ilustração</div><div class="illustration-title">Com os Amigos</div><p>Um grupo de amigos de Ana zomba dela por "sempre obedecer" aos pais e seguir as regras de casa.</p><p class="reflect">Reflita: Como Ana pode responder a essa zombaria com convicção, sem se envergonhar de honrar seus pais? O que Provérbios 22:1 ensina sobre o valor do bom nome?</p></div>
+<div class="tip-box"><div class="tip-label">Dica para o Professor</div><p>Evite dizer algo como “Você não precisa se submeter a ninguém; questione e ignore toda autoridade que não concorda com você."”. Em vez disso, ensine: Porque Deus estabeleceu essas autoridades para nos instruir e proteger, e honrá-las é uma forma de confiar e obedecer ao próprio Deus, que as colocou ali por amor.</p></div>
+</div>
+<div class="roteiro-section">
+<div class="roteiro-section-head"><div class="roteiro-num">3</div><div class="roteiro-section-title">Dinâmica: Mundo x Deus</div></div>
+<div class="dynamic-box">
+<div class="dynamic-block-label">Objetivo</div>
+<p>Treinar as crianças a reconhecer, na prática, a diferença entre o que o mundo diz sobre este tema e o que Deus realmente diz.</p>
+<div class="dynamic-block-label">Materiais</div>
+<p>Nenhum material obrigatório. Se quiser, prepare dois cartazes: um escrito "MUNDO" e outro "DEUS", um de cada lado da sala.</p>
+<div class="dynamic-block-label">Como Fazer</div>
+<ol class="steps-list">
+<li>Divida a turma em dois grupos: "Grupo Mundo" e "Grupo Deus".</li>
+<li>Leia em voz alta, uma de cada vez, as frases abaixo. O grupo correspondente responde em coro, com entusiasmo.</li>
+<li>Depois de todas as rodadas, troque os grupos de papel e repita mais rápido, como uma competição amigável.</li>
+</ol>
+<div class="dynamic-block-label">Frases do Jogo</div>
+<ul class="explain-list"><li><strong>Grupo Mundo diz:</strong> &ldquo;Você não precisa se submeter a ninguém; questione e ignore toda autoridade que não concorda com você."&rdquo;<br><strong>Grupo Deus diz:</strong> &ldquo;Ensina a criança no caminho em que deve andar. (Pv 22:6)&rdquo;</li><li><strong>Grupo Mundo diz:</strong> &ldquo;Seus pais são de uma geração antiga; eles não entendem sua realidade, então não vale a pena ouvi-los."&rdquo;<br><strong>Grupo Deus diz:</strong> &ldquo;Guarda, filho meu, o mandamento de teu pai, e não abandones a instrução de tua mãe. (Pv 6:20)&rdquo;</li><li><strong>Grupo Mundo diz:</strong> &ldquo;O que importa é ter dinheiro e sucesso, não importa como conseguiu."&rdquo;<br><strong>Grupo Deus diz:</strong> &ldquo;Mais quer se deve escolher o bom nome do que muitas riquezas. (Pv 22:1)&rdquo;</li><li><strong>Grupo Mundo diz:</strong> &ldquo;Submeter-se a alguém é sinal de fraqueza ou falta de personalidade."&rdquo;<br><strong>Grupo Deus diz:</strong> &ldquo;Jesus era-lhes sujeito" (a Maria e José). (Lc 2:51)&rdquo;</li></ul>
+</div>
+<div class="illustration-box"><div class="illustration-label">Para Aprofundar a Reflexão</div><div class="illustration-title">Nos Jogos e Redes</div><p>Os pais de Bianca estabeleceram limites de tempo e conteúdo online, e ela tenta encontrar formas de burlar essas regras às escondidas.</p><p class="reflect">Reflita: Como isso se relaciona com honrar (ou desonrar) a autoridade dos pais? O que Bianca poderia fazer se realmente discordar dos limites estabelecidos?</p></div>
+</div>
+<div class="roteiro-section">
+<div class="roteiro-section-head"><div class="roteiro-num">4</div><div class="roteiro-section-title">Legado: Cristo na Lição</div></div>
+
+<div class="illustration-box"><div class="illustration-label">Ilustração</div><div class="illustration-title">Em Família</div><p>Lucas sente que uma regra dos pais é injusta e desatualizada, e resiste em segui-la mesmo depois de ser repreendido.</p><p class="reflect">Reflita: Como Lucas pode expressar sua opinião com respeito, mesmo discordando? O que o exemplo de Jesus, sujeito a Maria e José, nos ensina sobre isso?</p></div>
+<p class="reading-line">Leitura complementar: Filipenses 2:8.</p>
+<div class="tip-box"><div class="tip-label">Dica para o Professor</div><p>Se a turma estiver dispersa, volte ao versículo-chave e peça para todos repetirem juntos antes de continuar.</p></div>
+</div>
+<div class="roteiro-section">
+<div class="roteiro-section-head"><div class="roteiro-num">5</div><div class="roteiro-section-title">Aplicação e Versículo</div></div>
+<p style="margin-bottom:10px;">A instrução recebida na infância molda profundamente o adulto que a criança vai se tornar — por isso honrar pais e autoridades (mesmo discordando às vezes) faz parte do plano bom de Deus, não é regra arbitrária. Jesus, sendo o próprio Filho de Deus, se sujeitou a Maria e José; se Ele honrou, isso nos dá um exemplo poderoso.</p>
+<ol class="aplicacao-list"><li>Porque Deus estabeleceu essas autoridades para nos instruir e proteger, e honrá-las é uma forma de confiar e obedecer ao próprio Deus, que as colocou ali por amor.</li><li>Sobre autoridade: "Ensina a criança no caminho em que deve andar." (Pv 22:6)</li><li>Sobre obedecer aos pais: "Guarda, filho meu, o mandamento de teu pai, e não abandones a instrução de tua mãe." (Pv 6:20)</li><li>Sobre reputação e caráter: "Mais quer se deve escolher o bom nome do que muitas riquezas." (Pv 22:1)</li></ol>
+<div class="bible-text"><div class="bible-ref">Versículo para Decorar</div><div class="bible-quote">&ldquo;Ensina a criança no caminho em que deve andar, e ainda quando for velho não se desviará dele.&rdquo; (Pv 22:6)</div></div>
+<div class="memorize-box"><div class="meta-label">Como Ajudar as Crianças a Decorar</div><p>Desenhe um caminho com pegadas pequenas (criança) se tornando pegadas grandes (adulto), todas na mesma direção. Escreva o versículo abaixo e repita-o, agradecendo por alguém que te instrui.</p></div>
+<div class="engage-box"><div class="engage-label">Desafio da Semana</div><p>Esta semana, escolha honrar seus pais (ou outra autoridade, como um professor) de forma intencional, mesmo em uma situação em que você não concorda totalmente com uma regra ou decisão. Anote como foi essa experiência.</p></div>
+</div>
+<div class="roteiro-section">
+<div class="roteiro-section-head"><div class="roteiro-num">6</div><div class="roteiro-section-title">Oração Final</div></div>
+<div class="prayer-final"><div class="script-label">Sugestão de Oração (ore com suas palavras)</div><p>Senhor, obrigado por estabeleceres pais e autoridades em nossa vida para nos instruir, guiar e proteger. Perdoa-nos pelas vezes em que desonramos essas autoridades, questionando sem respeito ou desobedecendo por acharmos que sabemos melhor. Obrigado porque Jesus, mesmo sendo Teu Filho, se sujeitou perfeitamente às autoridades terrenas e, acima de tudo, a Ti. Ajuda pais e filhos, nesta família, a honrarem uns aos outros com amor, humildade e respeito, confiando que Tu estabeleceste essa ordem para o nosso bem. Em nome de Jesus. Amém.</p><div class="verse-extra"><p><strong>Para o professor meditar esta semana:</strong> considere ler também Pv 13:1; Pv 6:20; Êxodo 20:12.</p></div></div>
+</div>
+<div class="roteiro-section">
+<div class="roteiro-section-head"><div class="roteiro-num">7</div><div class="roteiro-section-title">Notas Pessoais do Professor</div></div>
+<div class="notes-page"><div class="notes-title">Notas Pessoais do Professor</div><div class="notes-hint">Espaço para anotações durante a preparação ou ministração desta lição.</div><div class="notes-lines"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var KEY='pv_fontscale', min=0.8, max=1.8, step=0.1;
+  var wrap = document.getElementById('pv-scale-wrap');
+  var saved = parseFloat(localStorage.getItem(KEY)) || 1;
+  function apply(v){ if(wrap){ wrap.style.zoom = v; } try{ localStorage.setItem(KEY, v); }catch(e){} }
+  apply(saved);
+  var mEl = document.getElementById('pv-a11y-minus'), pEl = document.getElementById('pv-a11y-plus'), rEl = document.getElementById('pv-a11y-reset');
+  if(mEl) mEl.onclick = function(){ saved = Math.max(min, +(saved-step).toFixed(2)); apply(saved); };
+  if(pEl) pEl.onclick = function(){ saved = Math.min(max, +(saved+step).toFixed(2)); apply(saved); };
+  if(rEl) rEl.onclick = function(){ saved = 1; apply(saved); };
+})();
+</script>
+
+</body>
+</html>

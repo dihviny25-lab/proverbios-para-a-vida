@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roteiro de Aula - Lição 1: O Temor do Senhor</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+:root {
+  --bg: #EFEBE0;
+  --surface: #FAFAF7;
+  --primary: #1B3A2D;
+  --primary-light: #2D5C45;
+  --accent: #C4941A;
+  --accent-light: #F5EDCF;
+  --text: #1C1A17;
+  --text-muted: #6B6557;
+  --border: #DDD8CC;
+  --radius: 10px;
+}
+* { box-sizing: border-box; margin:0; padding:0; }
+html { -webkit-text-size-adjust: 100%; }
+body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.65; font-size:10.6pt; }
+
+.roteiro-header { background:var(--primary); color:#fff; padding:44px 32px 34px; text-align:center; position:relative; overflow:hidden; }
+.roteiro-header::before { content: attr(data-num); position:absolute; font-family:'Playfair Display',serif; font-weight:700; font-size:150px; top:50%; left:50%; transform:translate(-50%,-50%); opacity:0.06; line-height:1; }
+.roteiro-eyebrow { font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+.roteiro-title { font-family:'Playfair Display',serif; font-size:24pt; font-weight:700; line-height:1.2; margin-bottom:8px; }
+.roteiro-subtitle { font-size:11.5pt; opacity:0.78; max-width:520px; margin:0 auto; }
+
+.roteiro-content { max-width:100%; padding:26px 32px 44px; }
+
+.meta-grid { display:flex; flex-wrap:wrap; gap:12px; margin-bottom:26px; }
+.meta-card { flex:1 1 220px; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:14px 16px; border-top:3px solid var(--accent); }
+.meta-label { font-size:8.5px; font-weight:700; letter-spacing:1.8px; text-transform:uppercase; color:var(--accent); margin-bottom:6px; }
+.meta-card p { font-size:9.8pt; line-height:1.5; }
+.meta-card.verse p { font-family:'Playfair Display',serif; font-style:italic; color:var(--primary); font-size:10.5pt; }
+.usage-note { background:var(--accent-light); border:1px dashed var(--accent); border-radius:var(--radius); padding:10px 16px; margin-bottom:18px; }
+.usage-note p { font-size:9.3pt; font-style:italic; color:var(--text); }
+.usage-note p::before { content:'✦  '; font-style:normal; color:var(--accent); }
+
+.outline-box { background:var(--primary); color:#fff; border-radius:var(--radius); padding:16px 20px; margin-bottom:30px; }
+.outline-title { font-family:'Playfair Display',serif; font-size:11.5pt; font-weight:700; color:var(--accent); margin-bottom:10px; }
+.outline-list { list-style:none; display:flex; flex-wrap:wrap; gap:6px 18px; }
+.outline-list li { font-size:9.3pt; opacity:0.92; padding-left:20px; position:relative; }
+.outline-list li::before { content: counter(item); counter-increment:item; position:absolute; left:0; top:0; width:15px; height:15px; background:var(--accent); color:var(--primary); border-radius:50%; font-size:8px; font-weight:700; display:flex; align-items:center; justify-content:center; }
+.outline-list { counter-reset:item; }
+
+.roteiro-section { margin-bottom:32px; }
+.roteiro-section-head { display:flex; align-items:center; gap:12px; margin-bottom:14px; padding-bottom:8px; border-bottom:1px solid var(--border); }
+.roteiro-num { flex:0 0 auto; width:30px; height:30px; border-radius:50%; background:var(--primary); color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-weight:700; font-size:12.5pt; }
+.roteiro-section-title { font-family:'Playfair Display',serif; font-size:15.5pt; font-weight:700; color:var(--primary); }
+
+.script-box { background:var(--primary); color:#fff; border-radius:var(--radius); padding:16px 20px; margin:10px 0; page-break-inside: avoid; position:relative; }
+.script-label { font-size:8.5px; font-weight:700; letter-spacing:1.8px; text-transform:uppercase; color:var(--accent); margin-bottom:8px; }
+.script-box p { font-family:'Playfair Display',serif; font-style:italic; font-size:11pt; line-height:1.55; }
+
+.engage-box { background:var(--accent-light); border-left:4px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:12px 16px; margin:10px 0; page-break-inside: avoid; }
+.engage-label { font-size:8.5px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--text-muted); margin-bottom:4px; }
+.engage-box p { font-size:10pt; color:var(--text); }
+
+.illustration-box { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:14px 18px; margin:12px 0; page-break-inside: avoid; }
+.illustration-label { font-size:8.5px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--accent); margin-bottom:6px; }
+.illustration-label::before { content:'✦  '; }
+.illustration-title { font-family:'Playfair Display',serif; font-weight:700; font-size:11pt; color:var(--primary); margin-bottom:6px; }
+.illustration-box p { font-size:9.8pt; margin-bottom:6px; }
+.illustration-box .reflect { font-style:italic; color:var(--primary-light); font-size:9.5pt; }
+
+.tip-box { background:#FFF8F4; border-left:4px solid #E85D04; border-radius:0 var(--radius) var(--radius) 0; padding:12px 16px; margin:12px 0; page-break-inside: avoid; }
+.tip-label { font-size:8.5px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:#E85D04; margin-bottom:6px; }
+.tip-label::before { content:'→  '; }
+.tip-box p { font-size:9.8pt; margin-bottom:4px; }
+
+.bible-text { background:var(--surface); border-left:3px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:14px 18px; margin:12px 0; page-break-inside: avoid; }
+.bible-ref { font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--accent); margin-bottom:7px; }
+.bible-quote { font-family:'Playfair Display',serif; font-style:italic; font-size:11.5pt; line-height:1.5; color:var(--primary); }
+
+.explain-list { list-style:none; margin:10px 0; }
+.explain-list li { padding:8px 0 8px 18px; position:relative; font-size:10pt; border-bottom:1px solid var(--border); line-height:1.5; }
+.explain-list li:last-child { border-bottom:none; }
+.explain-list li::before { content:'—'; position:absolute; left:0; color:var(--accent); font-weight:700; }
+.explain-list li strong { color:var(--primary); }
+
+.dynamic-box { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:16px 20px; margin:10px 0; }
+.dynamic-block-label { font-size:8.5px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--accent); margin:12px 0 6px; }
+.dynamic-block-label:first-child { margin-top:0; }
+.dynamic-box p { font-size:9.8pt; margin-bottom:5px; }
+.steps-list { counter-reset:step; list-style:none; margin:6px 0; }
+.steps-list li { counter-increment:step; padding:6px 0 6px 30px; position:relative; font-size:9.8pt; }
+.steps-list li::before { content:counter(step); position:absolute; left:0; top:6px; width:20px; height:20px; background:var(--primary); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:9px; font-weight:700; }
+
+.aplicacao-list { counter-reset:apl; list-style:none; margin:8px 0; }
+.aplicacao-list li { counter-increment:apl; padding:8px 0 8px 32px; position:relative; font-size:10pt; border-bottom:1px solid var(--border); line-height:1.5; }
+.aplicacao-list li:last-child { border-bottom:none; }
+.aplicacao-list li::before { content:counter(apl); position:absolute; left:0; top:8px; width:21px; height:21px; background:var(--accent); color:var(--primary); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:9.5pt; font-weight:700; }
+
+.memorize-box { background:var(--accent-light); border-radius:var(--radius); padding:12px 16px; margin-top:10px; }
+.memorize-box p { font-size:9.6pt; margin-bottom:4px; }
+
+.prayer-final { background:var(--primary); color:#fff; border-radius:var(--radius); padding:20px 22px; margin:10px 0; page-break-inside: avoid; }
+.prayer-final .script-label { color:var(--accent); }
+.prayer-final p { font-family:'Playfair Display',serif; font-style:italic; font-size:10.6pt; line-height:1.6; opacity:0.95; }
+.verse-extra { margin-top:14px; padding-top:14px; border-top:1px solid rgba(255,255,255,0.15); }
+.verse-extra p { font-family:'Inter',sans-serif; font-style:normal; font-size:9.3pt; opacity:0.8; }
+
+.notes-page { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:20px 24px; min-height:320px; }
+.notes-page .notes-title { font-family:'Playfair Display',serif; font-weight:700; font-size:13pt; color:var(--primary); margin-bottom:6px; }
+.notes-page .notes-hint { font-size:9.5pt; color:var(--text-muted); margin-bottom:18px; }
+.notes-lines { display:flex; flex-direction:column; gap:22px; }
+.notes-lines div { border-bottom:1px solid var(--border); height:1px; }
+
+@page { size: A4; margin: 0 0 1.6cm 0; }
+.print-cover { page-break-after: always; background:var(--primary); color:#fff; width:21cm; height:29.7cm; position:relative; }
+.print-cover .bar { background:var(--accent); height:12px; width:100%; position:absolute; left:0; }
+.print-cover .bar.top { top:0; } .print-cover .bar.bottom { bottom:0; }
+.print-cover .content { position:absolute; top:42%; left:0; right:0; text-align:center; padding:0 2.4cm; }
+.print-cover .kicker { color:var(--accent); letter-spacing:2.5px; font-size:11pt; text-transform:uppercase; margin-bottom:16px; font-weight:600; }
+.print-cover h1 { font-family:'Playfair Display',serif; font-size:28pt; margin-bottom:22px; font-weight:700; line-height:1.25; }
+.print-cover .base { color:#dcd0b0; font-style:italic; font-size:12.5pt; margin-bottom:8px; }
+.print-cover .tag { color:var(--accent); font-size:11pt; letter-spacing:1.5px; }
+.print-cover .foot { position:absolute; bottom:60px; left:0; right:0; text-align:center; color:#c9bd9a; font-size:9.5pt; }
+.lesson-page { page-break-after: always; }
+
+@media screen and (max-width: 680px) {
+  .roteiro-header { padding:32px 18px 26px; }
+  .roteiro-title { font-size:19pt; }
+  .roteiro-content { padding:18px 16px 36px; }
+  .meta-grid { flex-direction:column; }
+  .outline-list { flex-direction:column; gap:8px; }
+  .roteiro-section-title { font-size:13.5pt; }
+  body { font-size:11.5px; }
+  .script-box p, .bible-quote { font-size:11pt; }
+}
+
+body { background: #fff; }
+
+
+#pv-a11y-bar { position:fixed; top:14px; right:14px; z-index:9999; display:flex; align-items:center; gap:2px; background:#1B3A2D; border-radius:999px; padding:5px 6px; box-shadow:0 4px 16px rgba(0,0,0,0.28); font-family:'Inter',sans-serif; }
+#pv-a11y-bar a.pv-link { all:unset; cursor:pointer; color:#fff; font-size:12px; font-weight:600; padding:6px 10px; border-radius:999px; white-space:nowrap; }
+#pv-a11y-bar a.pv-link:hover { background:rgba(255,255,255,0.16); color:#F5EDCF; }
+#pv-a11y-bar .pv-sep { width:1px; height:18px; background:rgba(255,255,255,0.25); margin:0 3px; }
+#pv-a11y-bar button.pv-fbtn { all:unset; cursor:pointer; color:#fff; font-weight:700; font-size:12.5px; width:28px; height:28px; display:flex; align-items:center; justify-content:center; border-radius:50%; }
+#pv-a11y-bar button.pv-fbtn:hover { background:rgba(255,255,255,0.18); }
+#pv-a11y-bar .pv-lbl { color:#C4941A; font-size:9.5px; font-weight:700; letter-spacing:1px; padding:0 3px; text-transform:uppercase; }
+@media print { #pv-a11y-bar { display:none !important; } }
+@media (max-width:560px) { #pv-a11y-bar .pv-lbl { display:none; } #pv-a11y-bar a.pv-link { padding:6px 8px; font-size:11.5px; } #pv-a11y-bar { top:8px; right:8px; } }
+
+#pv-scale-wrap { transition: zoom .08s; }
+body { padding-top:56px; }
+</style>
+</head>
+<body>
+<div id="pv-a11y-bar"><a class="pv-link" href="../../licoes/licao-01.html">&larr; Voltar à lição</a><a class="pv-link" href="../pdfs/Roteiro_Licao_01_O_Temor_do_Senhor.pdf">Baixar PDF</a><div class="pv-sep"></div><span class="pv-lbl">Fonte</span><button class="pv-fbtn" id="pv-a11y-minus" title="Diminuir fonte">A-</button><button class="pv-fbtn" id="pv-a11y-reset" title="Tamanho padrão">A</button><button class="pv-fbtn" id="pv-a11y-plus" title="Aumentar fonte">A+</button></div>
+<div id="pv-scale-wrap">
+
+<div class="print-cover">
+  <div class="bar top"></div>
+  <div class="content">
+    <div class="kicker">Provérbios para a Vida &middot; Roteiro de Aula</div>
+    <h1>Lição 1: O Temor do Senhor</h1>
+    <div class="base">Texto Base: Provérbios 1</div>
+    <div class="tag">GUIA DO PROFESSOR &mdash; ROTEIRO</div>
+  </div>
+  <div class="foot">Material de Apoio para Ministração Infantil</div>
+  <div class="bar bottom"></div>
+</div>
+<div class="lesson-page">
+<div class="roteiro-header" data-num="1">
+  <div class="roteiro-eyebrow">Lição 1 de 31 &middot; Roteiro de Aula</div>
+  <h1 class="roteiro-title">O Temor do Senhor</h1>
+  <p class="roteiro-subtitle">Provérbios 1</p>
+</div>
+<div class="roteiro-content">
+<div class="usage-note"><p>Este guia é um ponto de partida, não um roteiro para decorar. Use as sugestões de fala, ilustração e oração como inspiração — ensine com suas próprias palavras. As crianças percebem quando a professora fala de coração.</p></div>
+<div class="meta-grid">
+<div class="meta-card"><div class="meta-label">Objetivo da Lição</div><p>Compreender que o temor do Senhor — reverência, respeito e amor confiante — é o alicerce de toda sabedoria, e que essa sabedoria se cumpre perfeitamente em Cristo.</p></div>
+<div class="meta-card"><div class="meta-label">Verdade Central</div><p>O temor do Senhor é reconhecer que Deus é grande, santo e justo, e que eu sou pequeno e pecador — e ainda assim correr para Ele, porque em Cristo sou amado e perdoado.</p></div>
+<div class="meta-card verse"><div class="meta-label">Versículo para Decorar</div><p>&ldquo;O temor do Senhor é o princípio da sabedoria; os loucos desprezam a sabedoria e a instrução.&rdquo; (Pv 1:7)</p></div>
+</div>
+<div class="outline-box"><div class="outline-title">Roteiro da Aula</div><ul class="outline-list"><li>Abertura</li><li>Contexto e Fundamento Bíblico</li><li>Dinâmica: Mundo x Deus</li><li>Legado: Cristo na Lição</li><li>Aplicação e Versículo</li><li>Oração Final</li><li>Notas Pessoais do Professor</li></ul></div>
+<div class="roteiro-section">
+<div class="roteiro-section-head"><div class="roteiro-num">1</div><div class="roteiro-section-title">Abertura</div></div>
+<div class="script-box"><div class="script-label">Sugestão de Abertura (fale com suas palavras)</div><p>&ldquo;Queridas crianças, hoje vamos falar sobre um tipo de respeito muito especial: o temor do Senhor. Não é medo de monstro — é levar a Deus a sério, e vamos descobrir juntos como isso muda tudo.&rdquo;</p></div>
+<div class="engage-box"><div class="engage-label">Pergunta para Engajar</div><p>Quem aqui já teve que decidir entre fazer o que é fácil e fazer o que é certo? O que vocês escolheram?</p></div>
+<div class="illustration-box"><div class="illustration-label">Ilustração de Abertura</div><div class="illustration-title">Na Escola</div><p>Mateus tem 10 anos e é o melhor aluno da turma. Um dia, o professor passou uma atividade difícil para fazer em casa sem ajuda. Mateus ficou travado numa questão e sabia que poderia copiar a resposta da internet sem que ninguém percebesse.</p><p class="reflect">Reflita: O que significa temer ao Senhor numa situação como essa, e como isso é diferente de apenas "ter medo de ser pego"? Se Mateus copiar, ele estará agindo com sabedoria ou loucura segundo Provérbios? O que você faria no lugar dele?</p></div>
+</div>
+<div class="roteiro-section">
+<div class="roteiro-section-head"><div class="roteiro-num">2</div><div class="roteiro-section-title">Contexto e Fundamento Bíblico</div></div>
+<div class="bible-text"><div class="bible-ref">Leia ou conte &mdash; Pv 1:7</div><div class="bible-quote">&ldquo;O temor do Senhor é o princípio da sabedoria; os loucos desprezam a sabedoria e a instrução.&rdquo;</div></div>
+<ul class="explain-list"><li><strong>O Livro de Provérbios: Uma Escola de Sabedoria</strong> &mdash; Imagine que você começa o ano letivo numa escola completamente diferente de todas as outras. O prédio não tem carteiras nem lousas. O professor principal não é um ser humano. E a primeira coisa que você aprende não é matemática, português ou ciências — é como enxergar o mundo do jeito certo.</li><li><strong>O Que É um Provérbio?</strong> &mdash; Um provérbio é uma frase curta, mas cheia de verdade. É como uma lanterna pequena que ilumina um corredor escuro: não é grande, mas mostra exatamente para onde você precisa ir. Você provavelmente já ouviu provérbios populares como "água mole em pedra dura tanto bate até que fura" ou "quem não tem cão caça com gato".</li><li><strong>Provérbios Não São Promessas Absolutas</strong> &mdash; Antes de continuar, há algo muito importante que você precisa entender sobre como ler este livro. Um provérbio não é uma promessa garantida por Deus, como se dissesse "faça X e Y sempre vai acontecer, sem exceção".</li><li><strong>O Versículo Mais Importante do Livro</strong> &mdash; Provérbios 1:7 funciona como a porta de entrada para todo o livro.</li><li><strong>Mas o Que Significa "Temer" a Deus?</strong> &mdash; Muitas crianças, ao ouvir essa palavra, pensam: "Tenho que ter medo de Deus? Como de um monstro?" Não é isso. O temor do Senhor não é o mesmo que ter medo de um cachorro raivoso ou de um trovão forte. Esse tipo de medo faz você correr para longe.</li><li><strong>O Oposto: Os Loucos que Desprezam a Sabedoria</strong> &mdash; O versículo também fala dos "loucos" que desprezam a sabedoria e a instrução. Na Bíblia, "louco" não é uma palavra sobre inteligência — é uma palavra sobre o coração.</li></ul>
+<div class="illustration-box"><div class="illustration-label">Ilustração</div><div class="illustration-title">Com os Amigos</div><p>Sofia tem 9 anos. Um dia, seu grupo de amigas começou a falar mal de uma colega ausente, e todas riram. Sofia sabia que era errado, mas temia ser excluída se dissesse algo.</p><p class="reflect">Reflita: Temer ao Senhor significa se preocupar mais com o que as amigas pensam ou com o que Deus pensa? Como o temor do Senhor poderia dar a Sofia coragem para agir diferente? Você já viveu algo parecido?</p></div>
+<div class="tip-box"><div class="tip-label">Dica para o Professor</div><p>Evite dizer algo como “Sabedoria é ter muita informação, tirar boas notas, ser esperto e saber resolver todos os problemas sozinho."”. Em vez disso, ensine: O temor do Senhor é reconhecer que Deus é grande, santo e justo, e que eu sou pequeno e pecador — e ainda assim correr para Ele, porque em Cristo sou amado e perdoado.</p></div>
+</div>
+<div class="roteiro-section">
+<div class="roteiro-section-head"><div class="roteiro-num">3</div><div class="roteiro-section-title">Dinâmica: Mundo x Deus</div></div>
+<div class="dynamic-box">
+<div class="dynamic-block-label">Objetivo</div>
+<p>Treinar as crianças a reconhecer, na prática, a diferença entre o que o mundo diz sobre este tema e o que Deus realmente diz.</p>
+<div class="dynamic-block-label">Materiais</div>
+<p>Nenhum material obrigatório. Se quiser, prepare dois cartazes: um escrito "MUNDO" e outro "DEUS", um de cada lado da sala.</p>
+<div class="dynamic-block-label">Como Fazer</div>
+<ol class="steps-list">
+<li>Divida a turma em dois grupos: "Grupo Mundo" e "Grupo Deus".</li>
+<li>Leia em voz alta, uma de cada vez, as frases abaixo. O grupo correspondente responde em coro, com entusiasmo.</li>
+<li>Depois de todas as rodadas, troque os grupos de papel e repita mais rápido, como uma competição amigável.</li>
+</ol>
+<div class="dynamic-block-label">Frases do Jogo</div>
+<ul class="explain-list"><li><strong>Grupo Mundo diz:</strong> &ldquo;Sabedoria é ter muita informação, tirar boas notas, ser esperto e saber resolver todos os problemas sozinho."&rdquo;<br><strong>Grupo Deus diz:</strong> &ldquo;O temor do Senhor é o princípio da sabedoria. (Pv 1:7)&rdquo;</li><li><strong>Grupo Mundo diz:</strong> &ldquo;Siga o seu coração. Faça o que te faz feliz. Confie nos seus sentimentos."&rdquo;<br><strong>Grupo Deus diz:</strong> &ldquo;Confia no Senhor de todo o teu coração e não te estribes no teu próprio entendimento. (Pv 3:5)&rdquo;</li><li><strong>Grupo Mundo diz:</strong> &ldquo;Você não precisa obedecer a ninguém. Seja livre, faça as suas próprias regras."&rdquo;<br><strong>Grupo Deus diz:</strong> &ldquo;Filho meu, guarda os mandamentos de teu pai e não abandones a instrução de tua mãe. (Pv 6:20)&rdquo;</li><li><strong>Grupo Mundo diz:</strong> &ldquo;O que importa é ser famoso, ter muitos seguidores, ganhar muito dinheiro e ser admirado por todos."&rdquo;<br><strong>Grupo Deus diz:</strong> &ldquo;A humildade e o temor do Senhor trazem riquezas, honra e vida. (Pv 22:4)&rdquo;</li></ul>
+</div>
+<div class="illustration-box"><div class="illustration-label">Para Aprofundar a Reflexão</div><div class="illustration-title">Na Internet e nos Jogos</div><p>Lara tem 10 anos e joga online. Um colega de jogo que ela não conhecia pessoalmente disse ter um "segredo especial" para contar, mas pediu que ela não falasse com os pais.</p><p class="reflect">Reflita: O que o temor do Senhor tem a ver com como usamos a internet? Por que um adulto pedir segredo a uma criança é sempre um sinal de perigo? Como conversar com os pais sobre o que vemos online é uma forma de viver o temor do Senhor?</p></div>
+</div>
+<div class="roteiro-section">
+<div class="roteiro-section-head"><div class="roteiro-num">4</div><div class="roteiro-section-title">Legado: Cristo na Lição</div></div>
+<ul class="explain-list"><li><strong>Jesus: A Sabedoria de Deus em Pessoa</strong> &mdash; Aqui está algo que vai mudar a forma como você lê Provérbios para sempre: quando a Bíblia fala de "sabedoria", ela está apontando — mesmo que indiretamente — para Jesus Cristo.</li><li><strong>Como Jesus Cumpriu Perfeitamente o Temor do Senhor</strong> &mdash; Jesus viveu na terra como o único ser humano que temeu ao Senhor de forma absolutamente perfeita. Cada decisão que Ele tomou foi baseada na vontade do Pai. Cada palavra que Ele falou foi a palavra do Pai. Cada passo que Ele deu foi orientado pela sabedoria divina.</li><li><strong>Mas Então, o Que Isso Tem a Ver Comigo?</strong> &mdash; Você pode estar pensando: "Jesus foi perfeito, mas eu não sou. Como posso ter esse temor do Senhor?" Aqui entra a beleza do evangelho. Jesus não viveu essa vida perfeita apenas para ser um exemplo para você imitar com suas próprias forças. Ele viveu essa vida perfeita para oferecê-la a você como presente.</li></ul>
+<div class="illustration-box"><div class="illustration-label">Ilustração</div><div class="illustration-title">Em Família</div><p>Davi tem 11 anos. Sua mãe pediu que arrumasse o quarto antes de jogar videogame. Ele obedeceu de má vontade, só empurrando as coisas para debaixo da cama, e depois disse que tinha arrumado tudo.</p><p class="reflect">Reflita: Davi obedeceu de verdade ou só fingiu? Como o temor do Senhor transforma não apenas nossas ações, mas as razões por trás delas? O que Davi poderia pedir a Deus para que sua obediência viesse do coração?</p></div>
+<p class="reading-line">Leitura complementar: 1 Coríntios 1:24; 1 Coríntios 1:30; Colossenses 2:3.</p>
+<div class="tip-box"><div class="tip-label">Dica para o Professor</div><p>Não tenha pressa em avançar. É melhor as crianças entenderem bem uma ideia do que passar rápido por todas as seções.</p></div>
+</div>
+<div class="roteiro-section">
+<div class="roteiro-section-head"><div class="roteiro-num">5</div><div class="roteiro-section-title">Aplicação e Versículo</div></div>
+<p style="margin-bottom:10px;">O temor do Senhor não é medo de um monstro — é reverência, respeito e confiança em Deus, o alicerce de toda sabedoria. Uma criança inteligente que ignora Deus ainda age como "louca" segundo a Bíblia; o problema é o coração, não o QI. Jesus viveu esse temor perfeitamente e, pela fé nEle, recebemos essa mesma base como presente — não precisamos merecê-la.</p>
+<ol class="aplicacao-list"><li>O temor do Senhor é reconhecer que Deus é grande, santo e justo, e que eu sou pequeno e pecador — e ainda assim correr para Ele, porque em Cristo sou amado e perdoado.</li><li>Sobre o que é ser sábio: "O temor do Senhor é o princípio da sabedoria." (Pv 1:7)</li><li>Sobre tomar decisões: "Confia no Senhor de todo o teu coração e não te estribes no teu próprio entendimento." (Pv 3:5)</li><li>Sobre respeitar autoridade: "Filho meu, guarda os mandamentos de teu pai e não abandones a instrução de tua mãe." (Pv 6:20)</li></ol>
+<div class="bible-text"><div class="bible-ref">Versículo para Decorar</div><div class="bible-quote">&ldquo;O temor do Senhor é o princípio da sabedoria; os loucos desprezam a sabedoria e a instrução.&rdquo; (Pv 1:7)</div></div>
+<div class="memorize-box"><div class="meta-label">Como Ajudar as Crianças a Decorar</div><p>(1) Leia em voz alta três vezes, sem pressa. (2) Divida em partes e memorize uma de cada vez. (3) Use gestos para cada parte. (4) Escreva o versículo três vezes. (5) Repita para um familiar.</p></div>
+<div class="engage-box"><div class="engage-label">Desafio da Semana</div><p>Durante esta semana, escolha uma situação por dia em que você vai conscientemente lembrar do versículo antes de tomar uma decisão, mesmo pequena. Registre: Dia 1 a 5 — Situação / O que fiz lembrando do versículo. Ao final: O temor do Senhor foi mais fácil ou mais difícil de viver do que eu esperava? Por quê? O que aprendi sobre meu próprio coração essa semana? O que vou pedir a Deus em oração por causa disso?</p></div>
+</div>
+<div class="roteiro-section">
+<div class="roteiro-section-head"><div class="roteiro-num">6</div><div class="roteiro-section-title">Oração Final</div></div>
+<div class="prayer-final"><div class="script-label">Sugestão de Oração (ore com suas palavras)</div><p>Pai celestial, nós Te adoramos porque és grande, santo e perfeito em tudo o que fazes. Tu criaste o universo com uma só palavra, e cada estrela, cada árvore, cada batida do nosso coração existe porque Tu quiseste. Quem somos nós diante de Ti? E ainda assim, Tu nos conheces pelo nome — isso nos enche de assombro e gratidão.
+
+Senhor, ensinaste na Tua Palavra que o temor do Teu nome é o começo de toda sabedoria. Mas reconhecemos que nossos corações são facilmente enganados, que muitas vezes tomamos decisões como se Tu não existisses. Perdoa-nos por essa tolice. Nós não temos forças para Te temer do jeito certo por conta própria. Por isso, Te pedimos: age em nossos corações pelo Teu Espírito Santo. Dá-nos um coração que Te reconheça como o grande Rei que és — e que, ao mesmo tempo, saiba correr para Ti com confiança, porque em Cristo somos filhos amados e perdoados.
+
+Obrigado, Senhor Jesus, por teres vivido a vida perfeita que nós nunca poderíamos viver, por teres ido à cruz carregar o peso dos nossos pecados, e por Tua ressurreição, que nos dá esperança e vida nova. É só em Ti que encontramos a sabedoria verdadeira. Ensina-nos, dia após dia, a viver com os olhos voltados para Ti. Que o temor do Senhor seja o alicerce da nossa vida — não como um fardo pesado, mas como uma luz que ilumina cada passo do caminho.
+
+Em nome de Jesus Cristo, o único Salvador e a única Sabedoria verdadeira. Amém.
+
+<em>"O temor do Senhor é o princípio da sabedoria; os loucos desprezam a sabedoria e a instrução." (Provérbios 1:7)</em></p><div class="verse-extra"><p><strong>Para o professor meditar esta semana:</strong> considere ler também 1 Reis 3:9-12; Pv 10:27; 1 Coríntios 1:24.</p></div></div>
+</div>
+<div class="roteiro-section">
+<div class="roteiro-section-head"><div class="roteiro-num">7</div><div class="roteiro-section-title">Notas Pessoais do Professor</div></div>
+<div class="notes-page"><div class="notes-title">Notas Pessoais do Professor</div><div class="notes-hint">Espaço para anotações durante a preparação ou ministração desta lição.</div><div class="notes-lines"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var KEY='pv_fontscale', min=0.8, max=1.8, step=0.1;
+  var wrap = document.getElementById('pv-scale-wrap');
+  var saved = parseFloat(localStorage.getItem(KEY)) || 1;
+  function apply(v){ if(wrap){ wrap.style.zoom = v; } try{ localStorage.setItem(KEY, v); }catch(e){} }
+  apply(saved);
+  var mEl = document.getElementById('pv-a11y-minus'), pEl = document.getElementById('pv-a11y-plus'), rEl = document.getElementById('pv-a11y-reset');
+  if(mEl) mEl.onclick = function(){ saved = Math.max(min, +(saved-step).toFixed(2)); apply(saved); };
+  if(pEl) pEl.onclick = function(){ saved = Math.min(max, +(saved+step).toFixed(2)); apply(saved); };
+  if(rEl) rEl.onclick = function(){ saved = 1; apply(saved); };
+})();
+</script>
+
+</body>
+</html>
