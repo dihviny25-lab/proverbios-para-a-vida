@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resumo do Professor - Lição 2: O Valor da Sabedoria</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+:root {
+  --bg: #EFEBE0;
+  --surface: #FAFAF7;
+  --primary: #1B3A2D;
+  --primary-light: #2D5C45;
+  --accent: #C4941A;
+  --accent-light: #F5EDCF;
+  --text: #1C1A17;
+  --text-muted: #6B6557;
+  --border: #DDD8CC;
+  --radius: 10px;
+}
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.7; font-size:10.6pt; }
+.lesson-header { background:var(--primary); color:#fff; padding:52px 40px 40px; text-align:center; position:relative; overflow:hidden; }
+.lesson-header::before { content: attr(data-num); position:absolute; font-family:'Playfair Display',serif; font-weight:700; font-size:170px; top:50%; left:50%; transform:translate(-50%,-50%); opacity:0.06; line-height:1; }
+.lesson-eyebrow { font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--accent); margin-bottom:12px; }
+.lesson-title { font-family:'Playfair Display',serif; font-size:27pt; font-weight:700; line-height:1.2; margin-bottom:10px; }
+.lesson-subtitle { font-size:12.5pt; opacity:0.75; max-width:520px; margin:0 auto; }
+.lesson-content { max-width: 100%; padding: 30px 40px 50px; }
+.section { margin-bottom:30px; page-break-inside: avoid; }
+.section-label { font-size:9px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--accent); margin-bottom:5px; }
+.section-title { font-family:'Playfair Display',serif; font-size:16pt; font-weight:700; color:var(--primary); margin-bottom:14px; padding-bottom:9px; border-bottom:1px solid var(--border); }
+.section p { margin-bottom:9px; font-size:10.4pt; }
+h3.subsection { font-family:'Playfair Display',serif; font-size:12.5pt; color:var(--primary); margin:16px 0 8px; }
+.bible-text { background:var(--surface); border-left:3px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:14px 18px; margin:14px 0; page-break-inside: avoid; }
+.bible-ref { font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--accent); margin-bottom:7px; }
+.bible-quote { font-family:'Playfair Display',serif; font-style:italic; font-size:12pt; line-height:1.55; color:var(--primary); margin-bottom:10px; }
+.bible-explain p { font-size:10pt; margin-bottom:6px; }
+.callout { background:var(--surface); border-radius:var(--radius); padding:14px 18px; margin:12px 0; border:1px solid var(--border); page-break-inside: avoid; }
+.callout.warning { border-left:4px solid #E85D04; background:#FFF8F4; }
+.callout.tip { border-left:4px solid var(--primary-light); background:#F0F7F4; }
+.callout.gold { border-left:4px solid var(--accent); background:var(--accent-light); }
+.callout-title { font-weight:700; font-size:9.5pt; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:6px; color:var(--text-muted); }
+.callout p { font-size:10pt; margin-bottom:5px; }
+.styled-list { list-style:none; margin:10px 0; }
+.styled-list li { padding:6px 0 6px 18px; position:relative; font-size:10.2pt; border-bottom:1px solid var(--border); }
+.styled-list li:last-child { border-bottom:none; }
+.styled-list li::before { content:'—'; position:absolute; left:0; color:var(--accent); font-weight:700; }
+.questions-list { counter-reset:question; list-style:none; margin:8px 0; }
+.questions-list li { counter-increment:question; padding:8px 0 8px 34px; position:relative; font-size:10.2pt; border-bottom:1px solid var(--border); }
+.questions-list li:last-child { border-bottom:none; }
+.questions-list li::before { content:counter(question); position:absolute; left:0; width:22px; height:22px; background:var(--primary); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:9.5pt; font-weight:700; top:7px; }
+.example { background:var(--surface); border-radius:var(--radius); padding:14px 18px; margin:10px 0; border:1px solid var(--border); page-break-inside: avoid; }
+.example-title { font-weight:700; font-size:10pt; color:var(--primary); margin-bottom:8px; }
+.example-title::before { content:'→ '; color:var(--accent); }
+.example p { font-size:10pt; margin-bottom:5px; }
+.example .wrong { color:#C0392B; font-size:9.3pt; font-style:italic; }
+.example .right { color:#1B7A3E; font-size:9.3pt; font-style:italic; }
+.challenge-box { background:var(--primary); color:#fff; border-radius:var(--radius); padding:22px 24px; margin-top:20px; page-break-inside: avoid; }
+.challenge-title { font-family:'Playfair Display',serif; font-size:14.5pt; font-weight:700; margin-bottom:14px; color:var(--accent); }
+.challenge-box p { font-size: 10pt; opacity:0.9; margin-bottom: 8px;}
+.reading-plan { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:12px; }
+.reading-day { background:rgba(255,255,255,0.08); border-radius:8px; padding:8px 10px; font-size:9.3pt; }
+.reading-day strong { display:block; color:var(--accent); font-size:8.6pt; letter-spacing:0.8px; text-transform:uppercase; margin-bottom:3px; }
+.verse-inline { font-style:italic; color:var(--primary); font-family:'Playfair Display',serif; }
+.prayer-box { background:var(--accent-light); border-left:4px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:16px 20px; margin-top:10px; color:var(--text); }
+.prayer-box p { font-style:italic; font-size:10pt; color:var(--text); }
+.prayer-box .callout-title { color: var(--text-muted); }
+
+@page { size: A4; margin: 0 0 1.6cm 0; }
+@page cover { margin: 0; }
+.print-cover { page-break-after: always; background:var(--primary); color:#fff; width:21cm; height:29.7cm; position:relative; }
+.print-cover .bar { background:var(--accent); height:12px; width:100%; position:absolute; left:0; }
+.print-cover .bar.top { top:0; } .print-cover .bar.bottom { bottom:0; }
+.print-cover .content { position:absolute; top:42%; left:0; right:0; text-align:center; padding:0 2.4cm; }
+.print-cover .kicker { color:var(--accent); letter-spacing:2.5px; font-size:11pt; text-transform:uppercase; margin-bottom:16px; font-weight:600; }
+.print-cover h1 { font-family:'Playfair Display',serif; font-size:30pt; margin-bottom:22px; font-weight:700; line-height:1.25; }
+.print-cover .base { color:#dcd0b0; font-style:italic; font-size:12.5pt; margin-bottom:8px; }
+.print-cover .tag { color:var(--accent); font-size:11pt; letter-spacing:1.5px; }
+.print-cover .foot { position:absolute; bottom:60px; left:0; right:0; text-align:center; color:#c9bd9a; font-size:9.5pt; }
+.lesson-page { page-break-after: always; }
+
+
+.summary-page { padding: 30px 40px; }
+.summary-header { background:var(--primary); color:#fff; padding:26px 30px; border-radius:var(--radius); margin-bottom:20px; }
+.summary-header .eyebrow { font-size:9px; letter-spacing:2.5px; text-transform:uppercase; color:var(--accent); margin-bottom:8px; font-weight:700; }
+.summary-header h1 { font-family:'Playfair Display',serif; font-size:19pt; margin-bottom:4px; }
+.summary-header .cap { font-size:10pt; opacity:0.75; }
+.summary-grid { margin-bottom:16px; overflow:hidden; }
+.summary-block { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:12px 15px; float:left; width:47%; margin:0 3% 12px 0; box-sizing:border-box; page-break-inside:avoid; }
+.summary-block:nth-child(2n) { margin-right:0; }
+.summary-block h4 { font-family:'Playfair Display',serif; font-size:11pt; color:var(--primary); margin-bottom:6px; }
+.summary-block p, .summary-block li { font-size:9.5pt; }
+.summary-full { clear:both; width:100%; margin-right:0; }
+.mini-table { width:100%; border-collapse:collapse; font-size:9pt; margin-top:6px; }
+.mini-table td { padding:4px 6px; border-bottom:1px solid var(--border); }
+.mini-table td:first-child { font-weight:700; color:var(--primary); width:45%; }
+
+body { background:#fff; }
+@page { size: A4; margin: 1.2cm; }
+
+
+#pv-a11y-bar { position:fixed; top:14px; right:14px; z-index:9999; display:flex; align-items:center; gap:2px; background:#1B3A2D; border-radius:999px; padding:5px 6px; box-shadow:0 4px 16px rgba(0,0,0,0.28); font-family:'Inter',sans-serif; }
+#pv-a11y-bar a.pv-link { all:unset; cursor:pointer; color:#fff; font-size:12px; font-weight:600; padding:6px 10px; border-radius:999px; white-space:nowrap; }
+#pv-a11y-bar a.pv-link:hover { background:rgba(255,255,255,0.16); color:#F5EDCF; }
+#pv-a11y-bar .pv-sep { width:1px; height:18px; background:rgba(255,255,255,0.25); margin:0 3px; }
+#pv-a11y-bar button.pv-fbtn { all:unset; cursor:pointer; color:#fff; font-weight:700; font-size:12.5px; width:28px; height:28px; display:flex; align-items:center; justify-content:center; border-radius:50%; }
+#pv-a11y-bar button.pv-fbtn:hover { background:rgba(255,255,255,0.18); }
+#pv-a11y-bar .pv-lbl { color:#C4941A; font-size:9.5px; font-weight:700; letter-spacing:1px; padding:0 3px; text-transform:uppercase; }
+@media print { #pv-a11y-bar { display:none !important; } }
+@media (max-width:560px) { #pv-a11y-bar .pv-lbl { display:none; } #pv-a11y-bar a.pv-link { padding:6px 8px; font-size:11.5px; } #pv-a11y-bar { top:8px; right:8px; } }
+
+#pv-scale-wrap { transition: zoom .08s; }
+body { padding-top:56px; }
+</style>
+</head>
+<body>
+<div id="pv-a11y-bar"><a class="pv-link" href="../../licoes/licao-02.html">&larr; Voltar à lição</a><a class="pv-link" href="../pdfs/Resumo_Licao_02_O_Valor_da_Sabedoria.pdf">Baixar PDF</a><div class="pv-sep"></div><span class="pv-lbl">Fonte</span><button class="pv-fbtn" id="pv-a11y-minus" title="Diminuir fonte">A-</button><button class="pv-fbtn" id="pv-a11y-reset" title="Tamanho padrão">A</button><button class="pv-fbtn" id="pv-a11y-plus" title="Aumentar fonte">A+</button></div>
+<div id="pv-scale-wrap">
+
+
+<div class="summary-page">
+  <div class="summary-header">
+    <div class="eyebrow">Resumo do Professor &middot; Lição 2 de 31</div>
+    <h1>O Valor da Sabedoria</h1>
+    <div class="cap">Provérbios 2</div>
+  </div>
+
+  <div class="summary-grid">
+    <div class="summary-block">
+      <h4>Objetivo da Aula</h4>
+      <p>Compreender que a sabedoria não é conquistada pelo próprio esforço, mas é um dom que Deus dá a quem a busca como um tesouro — e que esse dom supremo é o próprio Cristo.</p>
+    </div>
+    <div class="summary-block">
+      <h4>Grande Ideia (Cristo na Lição)</h4>
+      <p>Jesus contou uma parábola muito parecida com a imagem de Provérbios 2: "O reino dos céus é semelhante a um tesouro escondido num campo, que um homem achou e escondeu; e, pelo gozo dele, vai, vende tudo quanto tem e compra aquele campo" (Mateus 13:44).</p>
+    </div>
+    <div class="summary-block">
+      <h4>Verdade Principal (Catecismo)</h4>
+      <p><strong>P:</strong> De onde vem a verdadeira sabedoria?<br><strong>R:</strong> Toda verdadeira sabedoria vem do Senhor; Ele a dá de graça a quem a busca como quem procura um tesouro escondido.</p>
+    </div>
+    <div class="summary-block">
+      <h4>Aplicação Principal</h4>
+      <p>Escolha uma "escavação" desta semana: um momento em que você vai buscar a Deus com afinco antes de decidir algo — orando, lendo a Bíblia ou pedindo conselho a um adulto de confiança.</p>
+    </div>
+    <div class="summary-block summary-full">
+      <h4>Frase para Memorizar</h4>
+      <p><em>&ldquo;Porque o Senhor dá a sabedoria; da sua boca vem o conhecimento e o entendimento.&rdquo;</em> (Pv 2:6)</p>
+    </div>
+    <div class="summary-block">
+      <h4>Palavra Difícil da Aula</h4>
+      <p><strong>Graça:</strong> um favor ou presente que não merecemos, mas que Deus concede mesmo assim, por amor.</p>
+    </div>
+    <div class="summary-block">
+      <h4>Tempo Estimado</h4>
+      <table class="mini-table">
+        <tr><td>Abertura</td><td>5 min</td></tr>
+        <tr><td>Entendendo a Palavra</td><td>15 min</td></tr>
+        <tr><td>Cristo e a Sabedoria</td><td>10 min</td></tr>
+        <tr><td>Dinâmica + Aplicação</td><td>18 min</td></tr>
+        <tr><td>Memorização + Encerramento</td><td>10 min</td></tr>
+      </table>
+    </div>
+    <div class="summary-block summary-full">
+      <h4>Erros a Evitar</h4>
+      <ul class="styled-list"><li><strong>Não diga:</strong> &ldquo;Se você tem uma dúvida, procure no Google ou pergunte para qualquer pessoa; toda opinião vale igual.&rdquo;</li><li><strong>Não diga:</strong> &ldquo;Você é capaz de tudo sozinho, basta acreditar em si mesmo.&rdquo;</li><li><strong>Diga:</strong> Toda verdadeira sabedoria vem do Senhor; Ele a dá de graça a quem a busca como quem procura um tesouro escondido.</li></ul>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+<script>
+(function(){
+  var KEY='pv_fontscale', min=0.8, max=1.8, step=0.1;
+  var wrap = document.getElementById('pv-scale-wrap');
+  var saved = parseFloat(localStorage.getItem(KEY)) || 1;
+  function apply(v){ if(wrap){ wrap.style.zoom = v; } try{ localStorage.setItem(KEY, v); }catch(e){} }
+  apply(saved);
+  var mEl = document.getElementById('pv-a11y-minus'), pEl = document.getElementById('pv-a11y-plus'), rEl = document.getElementById('pv-a11y-reset');
+  if(mEl) mEl.onclick = function(){ saved = Math.max(min, +(saved-step).toFixed(2)); apply(saved); };
+  if(pEl) pEl.onclick = function(){ saved = Math.min(max, +(saved+step).toFixed(2)); apply(saved); };
+  if(rEl) rEl.onclick = function(){ saved = 1; apply(saved); };
+})();
+</script>
+
+</body>
+</html>
