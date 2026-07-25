@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia do Professor - Lição 28: Diligência e Trabalho</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+:root {
+  --bg: #EFEBE0;
+  --surface: #FAFAF7;
+  --primary: #1B3A2D;
+  --primary-light: #2D5C45;
+  --accent: #C4941A;
+  --accent-light: #F5EDCF;
+  --text: #1C1A17;
+  --text-muted: #6B6557;
+  --border: #DDD8CC;
+  --radius: 10px;
+}
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.7; font-size:10.6pt; }
+.lesson-header { background:var(--primary); color:#fff; padding:52px 40px 40px; text-align:center; position:relative; overflow:hidden; }
+.lesson-header::before { content: attr(data-num); position:absolute; font-family:'Playfair Display',serif; font-weight:700; font-size:170px; top:50%; left:50%; transform:translate(-50%,-50%); opacity:0.06; line-height:1; }
+.lesson-eyebrow { font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--accent); margin-bottom:12px; }
+.lesson-title { font-family:'Playfair Display',serif; font-size:27pt; font-weight:700; line-height:1.2; margin-bottom:10px; }
+.lesson-subtitle { font-size:12.5pt; opacity:0.75; max-width:520px; margin:0 auto; }
+.lesson-content { max-width: 100%; padding: 30px 40px 50px; }
+.section { margin-bottom:30px; page-break-inside: avoid; }
+.section-label { font-size:9px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--accent); margin-bottom:5px; }
+.section-title { font-family:'Playfair Display',serif; font-size:16pt; font-weight:700; color:var(--primary); margin-bottom:14px; padding-bottom:9px; border-bottom:1px solid var(--border); }
+.section p { margin-bottom:9px; font-size:10.4pt; }
+h3.subsection { font-family:'Playfair Display',serif; font-size:12.5pt; color:var(--primary); margin:16px 0 8px; }
+.bible-text { background:var(--surface); border-left:3px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:14px 18px; margin:14px 0; page-break-inside: avoid; }
+.bible-ref { font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--accent); margin-bottom:7px; }
+.bible-quote { font-family:'Playfair Display',serif; font-style:italic; font-size:12pt; line-height:1.55; color:var(--primary); margin-bottom:10px; }
+.bible-explain p { font-size:10pt; margin-bottom:6px; }
+.callout { background:var(--surface); border-radius:var(--radius); padding:14px 18px; margin:12px 0; border:1px solid var(--border); page-break-inside: avoid; }
+.callout.warning { border-left:4px solid #E85D04; background:#FFF8F4; }
+.callout.tip { border-left:4px solid var(--primary-light); background:#F0F7F4; }
+.callout.gold { border-left:4px solid var(--accent); background:var(--accent-light); }
+.callout-title { font-weight:700; font-size:9.5pt; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:6px; color:var(--text-muted); }
+.callout p { font-size:10pt; margin-bottom:5px; }
+.styled-list { list-style:none; margin:10px 0; }
+.styled-list li { padding:6px 0 6px 18px; position:relative; font-size:10.2pt; border-bottom:1px solid var(--border); }
+.styled-list li:last-child { border-bottom:none; }
+.styled-list li::before { content:'—'; position:absolute; left:0; color:var(--accent); font-weight:700; }
+.questions-list { counter-reset:question; list-style:none; margin:8px 0; }
+.questions-list li { counter-increment:question; padding:8px 0 8px 34px; position:relative; font-size:10.2pt; border-bottom:1px solid var(--border); }
+.questions-list li:last-child { border-bottom:none; }
+.questions-list li::before { content:counter(question); position:absolute; left:0; width:22px; height:22px; background:var(--primary); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:9.5pt; font-weight:700; top:7px; }
+.example { background:var(--surface); border-radius:var(--radius); padding:14px 18px; margin:10px 0; border:1px solid var(--border); page-break-inside: avoid; }
+.example-title { font-weight:700; font-size:10pt; color:var(--primary); margin-bottom:8px; }
+.example-title::before { content:'→ '; color:var(--accent); }
+.example p { font-size:10pt; margin-bottom:5px; }
+.example .wrong { color:#C0392B; font-size:9.3pt; font-style:italic; }
+.example .right { color:#1B7A3E; font-size:9.3pt; font-style:italic; }
+.challenge-box { background:var(--primary); color:#fff; border-radius:var(--radius); padding:22px 24px; margin-top:20px; page-break-inside: avoid; }
+.challenge-title { font-family:'Playfair Display',serif; font-size:14.5pt; font-weight:700; margin-bottom:14px; color:var(--accent); }
+.challenge-box p { font-size: 10pt; opacity:0.9; margin-bottom: 8px;}
+.reading-plan { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:12px; }
+.reading-day { background:rgba(255,255,255,0.08); border-radius:8px; padding:8px 10px; font-size:9.3pt; }
+.reading-day strong { display:block; color:var(--accent); font-size:8.6pt; letter-spacing:0.8px; text-transform:uppercase; margin-bottom:3px; }
+.verse-inline { font-style:italic; color:var(--primary); font-family:'Playfair Display',serif; }
+.prayer-box { background:var(--accent-light); border-left:4px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:16px 20px; margin-top:10px; color:var(--text); }
+.prayer-box p { font-style:italic; font-size:10pt; color:var(--text); }
+.prayer-box .callout-title { color: var(--text-muted); }
+
+.essencial-box { background:var(--primary); color:#fff; border-radius:var(--radius); padding:18px 22px; margin:4px 0 24px; border-left:5px solid var(--accent); page-break-inside: avoid; }
+.essencial-title { font-family:'Playfair Display',serif; font-weight:700; font-size:12.5pt; color:var(--accent); margin-bottom:8px; }
+.essencial-box p { font-size:10.4pt; margin-bottom:6px; opacity:0.96; color:#fff; }
+.essencial-box ul.styled-list li { border-bottom-color: rgba(255,255,255,0.15); color:#fff; }
+.essencial-box ul.styled-list li::before { color: var(--accent); }
+details.aprofunde { margin: 10px 0 28px; border:1px solid var(--border); border-radius:var(--radius); background:#F4F2EA; }
+details.aprofunde summary.aprofunde-summary { cursor:pointer; padding:14px 20px; font-family:'Playfair Display',serif; font-weight:700; font-size:12pt; color:var(--text-muted); list-style:none; }
+details.aprofunde summary.aprofunde-summary::-webkit-details-marker { display:none; }
+details.aprofunde summary.aprofunde-summary::marker { content:''; }
+details.aprofunde summary.aprofunde-summary::before { content:'▸  '; color:var(--accent); }
+details.aprofunde[open] summary.aprofunde-summary::before { content:'▾  '; }
+details.aprofunde .aprofunde-note { font-weight:400; font-size:9pt; text-transform:none; letter-spacing:0; color:var(--text-muted); display:block; margin-top:3px; }
+details.aprofunde > .aprofunde-content { padding:2px 20px 18px; color: var(--text-muted); display:none; }
+details.aprofunde[open] > .aprofunde-content { display:block; }
+details.aprofunde .aprofunde-content .section-title { color: var(--text-muted); border-bottom-color: var(--border); }
+details.aprofunde .aprofunde-content .section-label { color: var(--text-muted); opacity:0.7; }
+details.aprofunde .aprofunde-content p { color: var(--text-muted); }
+details.aprofunde .aprofunde-content h3.subsection { color: var(--text-muted); }
+details.aprofunde .aprofunde-content .section { page-break-inside: auto; margin-bottom: 14px; }
+
+@page { size: A4; margin: 0 0 1.6cm 0; }
+@page cover { margin: 0; }
+.print-cover { page-break-after: always; background:var(--primary); color:#fff; width:21cm; height:29.7cm; position:relative; }
+.print-cover .bar { background:var(--accent); height:12px; width:100%; position:absolute; left:0; }
+.print-cover .bar.top { top:0; } .print-cover .bar.bottom { bottom:0; }
+.print-cover .content { position:absolute; top:42%; left:0; right:0; text-align:center; padding:0 2.4cm; }
+.print-cover .kicker { color:var(--accent); letter-spacing:2.5px; font-size:11pt; text-transform:uppercase; margin-bottom:16px; font-weight:600; }
+.print-cover h1 { font-family:'Playfair Display',serif; font-size:30pt; margin-bottom:22px; font-weight:700; line-height:1.25; }
+.print-cover .base { color:#dcd0b0; font-style:italic; font-size:12.5pt; margin-bottom:8px; }
+.print-cover .tag { color:var(--accent); font-size:11pt; letter-spacing:1.5px; }
+.print-cover .foot { position:absolute; bottom:60px; left:0; right:0; text-align:center; color:#c9bd9a; font-size:9.5pt; }
+.lesson-page { page-break-after: always; }
+
+body { background: #fff; }
+
+
+#pv-a11y-bar { position:fixed; top:14px; right:14px; z-index:9999; display:flex; align-items:center; gap:2px; background:#1B3A2D; border-radius:999px; padding:5px 6px; box-shadow:0 4px 16px rgba(0,0,0,0.28); font-family:'Inter',sans-serif; }
+#pv-a11y-bar a.pv-link { all:unset; cursor:pointer; color:#fff; font-size:12px; font-weight:600; padding:6px 10px; border-radius:999px; white-space:nowrap; }
+#pv-a11y-bar a.pv-link:hover { background:rgba(255,255,255,0.16); color:#F5EDCF; }
+#pv-a11y-bar .pv-sep { width:1px; height:18px; background:rgba(255,255,255,0.25); margin:0 3px; }
+#pv-a11y-bar button.pv-fbtn { all:unset; cursor:pointer; color:#fff; font-weight:700; font-size:12.5px; width:28px; height:28px; display:flex; align-items:center; justify-content:center; border-radius:50%; }
+#pv-a11y-bar button.pv-fbtn:hover { background:rgba(255,255,255,0.18); }
+#pv-a11y-bar .pv-lbl { color:#C4941A; font-size:9.5px; font-weight:700; letter-spacing:1px; padding:0 3px; text-transform:uppercase; }
+@media print { #pv-a11y-bar { display:none !important; } }
+@media (max-width:560px) { #pv-a11y-bar .pv-lbl { display:none; } #pv-a11y-bar a.pv-link { padding:6px 8px; font-size:11.5px; } #pv-a11y-bar { top:8px; right:8px; } }
+
+#pv-scale-wrap { transition: zoom .08s; }
+body { padding-top:56px; }
+</style>
+</head>
+<body>
+<div id="pv-a11y-bar"><a class="pv-link" href="../../licoes/licao-28.html">&larr; Voltar à lição</a><a class="pv-link" href="../pdfs/Guia_Professor_Licao_28_Diligência_e_Trabalho.pdf">Baixar PDF</a><div class="pv-sep"></div><span class="pv-lbl">Fonte</span><button class="pv-fbtn" id="pv-a11y-minus" title="Diminuir fonte">A-</button><button class="pv-fbtn" id="pv-a11y-reset" title="Tamanho padrão">A</button><button class="pv-fbtn" id="pv-a11y-plus" title="Aumentar fonte">A+</button></div>
+<div id="pv-scale-wrap">
+
+<div class="print-cover">
+  <div class="bar top"></div>
+  <div class="content">
+    <div class="kicker">Provérbios para a Vida &middot; Ministério Infantil</div>
+    <h1>Lição 28: Diligência e Trabalho</h1>
+    <div class="base">Texto Base: Provérbios 28</div>
+    <div class="tag">GUIA DO PROFESSOR</div>
+  </div>
+  <div class="foot">Material de Apoio para Ministração Infantil</div>
+  <div class="bar bottom"></div>
+</div>
+<div class="lesson-page">
+<div class="lesson-header" data-num="28">
+  <div class="lesson-eyebrow">Lição 28 de 31</div>
+  <h1 class="lesson-title">Diligência e Trabalho</h1>
+  <p class="lesson-subtitle">Provérbios 28</p>
+</div>
+<div class="lesson-content">
+<div class="section">
+<div class="section-label">Introdução Pastoral</div>
+<div class="section-title">Diligência e Trabalho</div>
+<p>Provérbios 28:19 apresenta um contraste simples e prático: "o que lavra a sua terra se fartará de pão, mas o que segue os ociosos se fartará de pobreza." Assim como vimos na lição sobre a formiga (Provérbios 6), este capítulo reforça que trabalho diligente e constante produz frutos reais, enquanto a busca por atalhos fáceis — seguir "os ociosos" ou "vaidades" (como diz outra tradução) — leva à pobreza, tanto material quanto de caráter.
+
+O capítulo também contrasta caminhos de honestidade e desonestidade em relação à riqueza: "o que apressadamente busca enriquecer não será inocente" (v.</p>
+<p><strong>Provérbios 28</strong> — Aprender que o trabalho diligente e honesto é abençoado por Deus, enquanto atalhos e ociosidade trazem pobreza, e que trabalhamos com propósito por já sermos aceitos em Cristo.</p>
+<div class="callout gold"><div class="callout-title">Catecismo da Sabedoria</div><p><strong>Pergunta:</strong> O que Deus promete a quem trabalha com diligência e honestidade?</p><p><strong>Resposta:</strong> Quem trabalha a própria terra com diligência se fartará de pão, mas quem segue a ociosidade e busca atalhos se fartará de pobreza; Deus abençoa o trabalho honesto.</p></div>
+</div>
+<div class="section essencial-section">
+<div class="essencial-box">
+<div class="essencial-title">&#9733; O que você precisa saber para ensinar isso hoje</div>
+<p>Não existem atalhos verdadeiros para uma vida boa — trabalho diligente e honesto é o que Deus abençoa; buscar riqueza ou resultado rápido por meios desonestos nunca traz segurança real. Jesus recusou todo atalho fácil que o diabo Lhe ofereceu e escolheu o caminho difícil da cruz; trabalhamos com alegria porque já fomos aceitos por Ele, não para conquistar aprovação.</p>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Fundamento Bíblico</div>
+<div class="section-title">O que a Bíblia diz</div>
+<div class="bible-text">
+<div class="bible-ref">Pv 28:19</div>
+<div class="bible-quote">&ldquo;O que lavra a sua terra se fartará de pão, mas o que segue os ociosos se fartará de pobreza.&rdquo;</div>
+<div class="bible-explain"><p><em>Este é o versículo-âncora da lição. Leia em voz alta com as crianças antes de prosseguir — a explicação completa vem na próxima seção.</em></p></div>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Para o Professor</div>
+<div class="section-title">Erros que o Professor Deve Evitar</div>
+<div class="callout warning"><div class="callout-title">Resumo rápido antes de ensinar</div><ul class="styled-list"><li><strong>Não diga:</strong> algo como &ldquo;Encontre o caminho mais rápido e fácil para conseguir o que você quer, mesmo que precise cortar caminho.&rdquo;</li><li><strong>Não diga:</strong> algo como &ldquo;Esconder seus erros é a melhor forma de proteger sua reputação e seu sucesso.&rdquo;</li><li><strong>Não diga:</strong> algo como &ldquo;Trabalhe duro para provar seu valor e merecer reconhecimento.&rdquo;</li><li><strong>Diga:</strong> Quem trabalha a própria terra com diligência se fartará de pão, mas quem segue a ociosidade e busca atalhos se fartará de pobreza; Deus abençoa o trabalho honesto.</li></ul></div>
+</div>
+<details class="aprofunde" open>
+<summary class="aprofunde-summary">Aprofunde-se: Fundamentação Teológica Completa<span class="aprofunde-note">Leitura opcional, para o professor que quiser estudar o tema com mais profundidade. O essencial para dar a aula já está no resumo acima.</span></summary>
+<div class="aprofunde-content">
+<div class="section">
+<div class="section-label">Entendendo a Doutrina</div>
+<div class="section-title">Entendendo a Palavra</div>
+<p>Provérbios 28:19 apresenta um contraste simples e prático: "o que lavra a sua terra se fartará de pão, mas o que segue os ociosos se fartará de pobreza." Assim como vimos na lição sobre a formiga (Provérbios 6), este capítulo reforça que trabalho diligente e constante produz frutos reais, enquanto a busca por atalhos fáceis — seguir "os ociosos" ou "vaidades" (como diz outra tradução) — leva à pobreza, tanto material quanto de caráter.</p>
+<p>O capítulo também contrasta caminhos de honestidade e desonestidade em relação à riqueza: "o que apressadamente busca enriquecer não será inocente" (v. 20), e "o que multiplica a sua fazenda por meio de usura e de interesse, para o que se compadece do pobre a ajunta" (v. 8) — mostrando que riquezas obtidas de forma injusta ou apressada, sem consideração pelo próximo, não trazem a verdadeira bênção de Deus.</p>
+<p>Este capítulo também introduz um tema importante: "o que anda em integridade será salvo, mas o perverso em seus caminhos cairá logo" (v. 18), reforçando novamente o valor de viver com honestidade, mesmo quando isso significa um caminho mais lento e trabalhoso do que atalhos desonestos. E há um versículo sobre confissão e arrependimento que se conecta com o tema mais amplo do capítulo: "o que encobre as suas transgressões nunca prosperará, mas o que as confessa e deixa alcançará misericórdia" (v. 13) — mostrando que, mesmo em relação ao trabalho e à prosperidade, honestidade (inclusive sobre os próprios erros) é o caminho que Deus abençoa.</p>
+<p>Para uma criança, este capítulo ensina que não existem atalhos verdadeiros para uma vida boa — os deveres da escola, as responsabilidades de casa, o desenvolvimento de habilidades, tudo isso requer trabalho diligente e paciente. Buscar "atalhos" desonestos ou depender de sorte, em vez de esforço genuíno, é um caminho que Provérbios chama de insensato.</p>
+</div>
+<div class="section">
+<div class="section-label">O Evangelho na Lição</div>
+<div class="section-title">Cristo e a Sabedoria</div>
+<p>Jesus trabalhou intensamente durante Seu ministério terreno — ensinando multidões, caminhando longas distâncias, curando os doentes, orando durante a noite inteira. Ele nunca buscou atalhos fáceis para cumprir Sua missão, mesmo quando o diabo Lhe ofereceu exatamente isso no deserto: todos os reinos do mundo, sem precisar da cruz (Mateus 4:8-10). Jesus recusou o atalho e escolheu o caminho longo, trabalhoso e doloroso da obediência ao Pai, porque sabia que esse era o único caminho verdadeiro para nossa salvação.</p>
+<p>Aqui está a diferença crucial entre a diligência bíblica e o "trabalho" que o mundo às vezes exige: nós não trabalhamos para conquistar o amor ou a aprovação de Deus. Essa aprovação já foi conquistada por Jesus, através de Seu próprio trabalho perfeito e completo na cruz — "está consumado" (João 19:30). Quando confiamos nEle, recebemos gratuitamente a "recompensa" que Jesus mereceu por Seu trabalho perfeito, sem termos feito por merecê-la.</p>
+<p>Isso transforma completamente nossa motivação para o trabalho e a diligência. Não trabalhamos com ansiedade, tentando provar nosso valor ou conquistar a aprovação de Deus através do esforço. Trabalhamos com alegria e propósito, como resposta agradecida à graça que já recebemos. Colossenses 3:23-24 diz: "tudo o que fizerdes, fazei-o de todo o coração, como ao Senhor, e não aos homens... porque a Cristo, o Senhor, servis." O Espírito Santo nos capacita a trabalhar com diligência genuína — nos deveres da escola, nas tarefas de casa, em qualquer responsabilidade —, não por medo ou ansiedade, mas por amor e gratidão a Deus, que já nos aceitou plenamente em Cristo.</p>
+</div>
+</div>
+</details>
+<div class="section">
+<div class="section-label">Dinâmica</div>
+<div class="section-title">Pensando Biblicamente: Mundo x Deus</div>
+<p>Leia cada frase do "mundo" e pergunte às crianças se concordam. Depois revele o que Deus realmente diz.</p>
+<div class="example"><div class="example-title">Sobre atalhos para o sucesso</div><p class="wrong">Mundo diz: "Encontre o caminho mais rápido e fácil para conseguir o que você quer, mesmo que precise cortar caminho."</p><p class="right">Deus diz: "O que lavra a sua terra se fartará de pão, mas o que segue os ociosos se fartará de pobreza." (Pv 28:19)</p></div>
+<div class="example"><div class="example-title">Sobre esconder erros</div><p class="wrong">Mundo diz: "Esconder seus erros é a melhor forma de proteger sua reputação e seu sucesso."</p><p class="right">Deus diz: "O que encobre as suas transgressões nunca prosperará, mas o que as confessa e deixa alcançará misericórdia." (Pv 28:13)</p></div>
+<div class="example"><div class="example-title">Sobre a motivação para o trabalho</div><p class="wrong">Mundo diz: "Trabalhe duro para provar seu valor e merecer reconhecimento."</p><p class="right">Deus diz: "Tudo o que fizerdes, fazei-o de todo o coração, como ao Senhor." (Cl 3:23)</p></div>
+<div class="example"><div class="example-title">Sobre riqueza rápida</div><p class="wrong">Mundo diz: "Ficar rico rapidamente, por qualquer meio, é um sinal de sucesso."</p><p class="right">Deus diz: "O que apressadamente busca enriquecer não será inocente." (Pv 28:20)</p></div>
+</div>
+<div class="section">
+<div class="section-label">Aplicação Prática</div>
+<div class="section-title">Desafios da Vida Real</div>
+<div class="example"><div class="example-title">Situação 1 — Na Escola</div><p>Renato encontra um "atalho" para terminar um projeto rapidamente, copiando partes de outro trabalho sem citar a fonte.</p><p class="right">Reflita: Como isso se relaciona com "seguir os ociosos" em vez de trabalhar com diligência genuína (Pv 28:19)? Que consequências esse atalho pode trazer?</p></div>
+<div class="example"><div class="example-title">Situação 2 — Com os Amigos</div><p>Um grupo de amigos de Débora está sempre buscando formas rápidas e fáceis de ganhar dinheiro ou recompensas sem muito esforço.</p><p class="right">Reflita: O que Provérbios 28:20 alerta sobre a busca apressada por riqueza? Como Débora pode incentivar diligência genuína entre os amigos?</p></div>
+<div class="example"><div class="example-title">Situação 3 — Em Família</div><p>Depois de esconder um erro por semanas, Otávio finalmente decide contar a verdade aos pais, com medo da reação deles.</p><p class="right">Reflita: O que Provérbios 28:13 promete a quem confessa seus erros, em vez de escondê-los? Como isso se conecta com a graça que já temos em Cristo?</p></div>
+<div class="example"><div class="example-title">Situação 4 — Nos Jogos e Redes</div><p>Camila descobre um programa que promete "dinheiro fácil" através de tarefas online suspeitas.</p><p class="right">Reflita: Por que promessas de "dinheiro fácil e rápido" muitas vezes escondem armadilhas? O que a sabedoria de Provérbios 28 ensina sobre isso?</p></div>
+</div>
+<div class="section">
+<div class="section-label">Perguntas para Discussão</div>
+<div class="section-title">Conversa em Família</div>
+<ol class="questions-list"><li>Em que áreas nossa família busca "atalhos" em vez de diligência genuína?</li><li>Como podemos incentivar uns aos outros a trabalhar "de todo o coração, como ao Senhor" em nossas responsabilidades diárias?</li><li>Existe algum erro que alguém está escondendo e que precisaria ser confessado para encontrar misericórdia?</li><li>Como o exemplo de Jesus, recusando o atalho do diabo no deserto, nos inspira a evitar caminhos fáceis, mas errados?</li><li>Que hábito de diligência podemos cultivar juntos esta semana?</li></ol>
+</div>
+<div class="challenge-box">
+<div class="challenge-title">&#10022; Desafio da Semana</div>
+<p><strong>Versículo para memorizar:</strong> &ldquo;O que lavra a sua terra se fartará de pão, mas o que segue os ociosos se fartará de pobreza.&rdquo; (Pv 28:19)</p>
+<p>Escolha uma tarefa ou responsabilidade que você tem evitado ou feito com "atalhos" e, esta semana, dedique-se a fazê-la com diligência completa, como se estivesse trabalhando para o Senhor. Anote como foi essa experiência.</p>
+<div class="reading-plan">
+<div class="reading-day"><strong>Dia 1</strong>Mateus 4:8-10</div>
+<div class="reading-day"><strong>Dia 2</strong>João 19:30</div>
+<div class="reading-day"><strong>Dia 3</strong>Releia Provérbios 28</div>
+</div>
+<div class="prayer-box"><div class="callout-title">Oração Final (leia em voz alta com as crianças)</div><p>Senhor, perdoa-nos pelas vezes em que buscamos atalhos fáceis em vez de trabalhar com diligência e honestidade, e pelas vezes em que escondemos nossos erros em vez de confessá-los. Obrigado porque Jesus recusou todo atalho que o diabo Lhe ofereceu, escolhendo o caminho difícil da cruz para nos salvar, e porque Seu trabalho perfeito já nos garante a aprovação que nunca poderíamos conquistar sozinhos. Ensina-nos a trabalhar com alegria e propósito, como para Ti, e não apenas para os homens, sabendo que já somos amados e aceitos em Cristo. Em nome de Jesus. Amém.</p></div>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var KEY='pv_fontscale', min=0.8, max=1.8, step=0.1;
+  var wrap = document.getElementById('pv-scale-wrap');
+  var saved = parseFloat(localStorage.getItem(KEY)) || 1;
+  function apply(v){ if(wrap){ wrap.style.zoom = v; } try{ localStorage.setItem(KEY, v); }catch(e){} }
+  apply(saved);
+  var mEl = document.getElementById('pv-a11y-minus'), pEl = document.getElementById('pv-a11y-plus'), rEl = document.getElementById('pv-a11y-reset');
+  if(mEl) mEl.onclick = function(){ saved = Math.max(min, +(saved-step).toFixed(2)); apply(saved); };
+  if(pEl) pEl.onclick = function(){ saved = Math.min(max, +(saved+step).toFixed(2)); apply(saved); };
+  if(rEl) rEl.onclick = function(){ saved = 1; apply(saved); };
+})();
+</script>
+
+</body>
+</html>

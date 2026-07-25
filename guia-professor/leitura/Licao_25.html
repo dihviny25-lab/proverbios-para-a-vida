@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia do Professor - Lição 25: Integridade Oculta</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+:root {
+  --bg: #EFEBE0;
+  --surface: #FAFAF7;
+  --primary: #1B3A2D;
+  --primary-light: #2D5C45;
+  --accent: #C4941A;
+  --accent-light: #F5EDCF;
+  --text: #1C1A17;
+  --text-muted: #6B6557;
+  --border: #DDD8CC;
+  --radius: 10px;
+}
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.7; font-size:10.6pt; }
+.lesson-header { background:var(--primary); color:#fff; padding:52px 40px 40px; text-align:center; position:relative; overflow:hidden; }
+.lesson-header::before { content: attr(data-num); position:absolute; font-family:'Playfair Display',serif; font-weight:700; font-size:170px; top:50%; left:50%; transform:translate(-50%,-50%); opacity:0.06; line-height:1; }
+.lesson-eyebrow { font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--accent); margin-bottom:12px; }
+.lesson-title { font-family:'Playfair Display',serif; font-size:27pt; font-weight:700; line-height:1.2; margin-bottom:10px; }
+.lesson-subtitle { font-size:12.5pt; opacity:0.75; max-width:520px; margin:0 auto; }
+.lesson-content { max-width: 100%; padding: 30px 40px 50px; }
+.section { margin-bottom:30px; page-break-inside: avoid; }
+.section-label { font-size:9px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--accent); margin-bottom:5px; }
+.section-title { font-family:'Playfair Display',serif; font-size:16pt; font-weight:700; color:var(--primary); margin-bottom:14px; padding-bottom:9px; border-bottom:1px solid var(--border); }
+.section p { margin-bottom:9px; font-size:10.4pt; }
+h3.subsection { font-family:'Playfair Display',serif; font-size:12.5pt; color:var(--primary); margin:16px 0 8px; }
+.bible-text { background:var(--surface); border-left:3px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:14px 18px; margin:14px 0; page-break-inside: avoid; }
+.bible-ref { font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--accent); margin-bottom:7px; }
+.bible-quote { font-family:'Playfair Display',serif; font-style:italic; font-size:12pt; line-height:1.55; color:var(--primary); margin-bottom:10px; }
+.bible-explain p { font-size:10pt; margin-bottom:6px; }
+.callout { background:var(--surface); border-radius:var(--radius); padding:14px 18px; margin:12px 0; border:1px solid var(--border); page-break-inside: avoid; }
+.callout.warning { border-left:4px solid #E85D04; background:#FFF8F4; }
+.callout.tip { border-left:4px solid var(--primary-light); background:#F0F7F4; }
+.callout.gold { border-left:4px solid var(--accent); background:var(--accent-light); }
+.callout-title { font-weight:700; font-size:9.5pt; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:6px; color:var(--text-muted); }
+.callout p { font-size:10pt; margin-bottom:5px; }
+.styled-list { list-style:none; margin:10px 0; }
+.styled-list li { padding:6px 0 6px 18px; position:relative; font-size:10.2pt; border-bottom:1px solid var(--border); }
+.styled-list li:last-child { border-bottom:none; }
+.styled-list li::before { content:'—'; position:absolute; left:0; color:var(--accent); font-weight:700; }
+.questions-list { counter-reset:question; list-style:none; margin:8px 0; }
+.questions-list li { counter-increment:question; padding:8px 0 8px 34px; position:relative; font-size:10.2pt; border-bottom:1px solid var(--border); }
+.questions-list li:last-child { border-bottom:none; }
+.questions-list li::before { content:counter(question); position:absolute; left:0; width:22px; height:22px; background:var(--primary); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:9.5pt; font-weight:700; top:7px; }
+.example { background:var(--surface); border-radius:var(--radius); padding:14px 18px; margin:10px 0; border:1px solid var(--border); page-break-inside: avoid; }
+.example-title { font-weight:700; font-size:10pt; color:var(--primary); margin-bottom:8px; }
+.example-title::before { content:'→ '; color:var(--accent); }
+.example p { font-size:10pt; margin-bottom:5px; }
+.example .wrong { color:#C0392B; font-size:9.3pt; font-style:italic; }
+.example .right { color:#1B7A3E; font-size:9.3pt; font-style:italic; }
+.challenge-box { background:var(--primary); color:#fff; border-radius:var(--radius); padding:22px 24px; margin-top:20px; page-break-inside: avoid; }
+.challenge-title { font-family:'Playfair Display',serif; font-size:14.5pt; font-weight:700; margin-bottom:14px; color:var(--accent); }
+.challenge-box p { font-size: 10pt; opacity:0.9; margin-bottom: 8px;}
+.reading-plan { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:12px; }
+.reading-day { background:rgba(255,255,255,0.08); border-radius:8px; padding:8px 10px; font-size:9.3pt; }
+.reading-day strong { display:block; color:var(--accent); font-size:8.6pt; letter-spacing:0.8px; text-transform:uppercase; margin-bottom:3px; }
+.verse-inline { font-style:italic; color:var(--primary); font-family:'Playfair Display',serif; }
+.prayer-box { background:var(--accent-light); border-left:4px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:16px 20px; margin-top:10px; color:var(--text); }
+.prayer-box p { font-style:italic; font-size:10pt; color:var(--text); }
+.prayer-box .callout-title { color: var(--text-muted); }
+
+.essencial-box { background:var(--primary); color:#fff; border-radius:var(--radius); padding:18px 22px; margin:4px 0 24px; border-left:5px solid var(--accent); page-break-inside: avoid; }
+.essencial-title { font-family:'Playfair Display',serif; font-weight:700; font-size:12.5pt; color:var(--accent); margin-bottom:8px; }
+.essencial-box p { font-size:10.4pt; margin-bottom:6px; opacity:0.96; color:#fff; }
+.essencial-box ul.styled-list li { border-bottom-color: rgba(255,255,255,0.15); color:#fff; }
+.essencial-box ul.styled-list li::before { color: var(--accent); }
+details.aprofunde { margin: 10px 0 28px; border:1px solid var(--border); border-radius:var(--radius); background:#F4F2EA; }
+details.aprofunde summary.aprofunde-summary { cursor:pointer; padding:14px 20px; font-family:'Playfair Display',serif; font-weight:700; font-size:12pt; color:var(--text-muted); list-style:none; }
+details.aprofunde summary.aprofunde-summary::-webkit-details-marker { display:none; }
+details.aprofunde summary.aprofunde-summary::marker { content:''; }
+details.aprofunde summary.aprofunde-summary::before { content:'▸  '; color:var(--accent); }
+details.aprofunde[open] summary.aprofunde-summary::before { content:'▾  '; }
+details.aprofunde .aprofunde-note { font-weight:400; font-size:9pt; text-transform:none; letter-spacing:0; color:var(--text-muted); display:block; margin-top:3px; }
+details.aprofunde > .aprofunde-content { padding:2px 20px 18px; color: var(--text-muted); display:none; }
+details.aprofunde[open] > .aprofunde-content { display:block; }
+details.aprofunde .aprofunde-content .section-title { color: var(--text-muted); border-bottom-color: var(--border); }
+details.aprofunde .aprofunde-content .section-label { color: var(--text-muted); opacity:0.7; }
+details.aprofunde .aprofunde-content p { color: var(--text-muted); }
+details.aprofunde .aprofunde-content h3.subsection { color: var(--text-muted); }
+details.aprofunde .aprofunde-content .section { page-break-inside: auto; margin-bottom: 14px; }
+
+@page { size: A4; margin: 0 0 1.6cm 0; }
+@page cover { margin: 0; }
+.print-cover { page-break-after: always; background:var(--primary); color:#fff; width:21cm; height:29.7cm; position:relative; }
+.print-cover .bar { background:var(--accent); height:12px; width:100%; position:absolute; left:0; }
+.print-cover .bar.top { top:0; } .print-cover .bar.bottom { bottom:0; }
+.print-cover .content { position:absolute; top:42%; left:0; right:0; text-align:center; padding:0 2.4cm; }
+.print-cover .kicker { color:var(--accent); letter-spacing:2.5px; font-size:11pt; text-transform:uppercase; margin-bottom:16px; font-weight:600; }
+.print-cover h1 { font-family:'Playfair Display',serif; font-size:30pt; margin-bottom:22px; font-weight:700; line-height:1.25; }
+.print-cover .base { color:#dcd0b0; font-style:italic; font-size:12.5pt; margin-bottom:8px; }
+.print-cover .tag { color:var(--accent); font-size:11pt; letter-spacing:1.5px; }
+.print-cover .foot { position:absolute; bottom:60px; left:0; right:0; text-align:center; color:#c9bd9a; font-size:9.5pt; }
+.lesson-page { page-break-after: always; }
+
+body { background: #fff; }
+
+
+#pv-a11y-bar { position:fixed; top:14px; right:14px; z-index:9999; display:flex; align-items:center; gap:2px; background:#1B3A2D; border-radius:999px; padding:5px 6px; box-shadow:0 4px 16px rgba(0,0,0,0.28); font-family:'Inter',sans-serif; }
+#pv-a11y-bar a.pv-link { all:unset; cursor:pointer; color:#fff; font-size:12px; font-weight:600; padding:6px 10px; border-radius:999px; white-space:nowrap; }
+#pv-a11y-bar a.pv-link:hover { background:rgba(255,255,255,0.16); color:#F5EDCF; }
+#pv-a11y-bar .pv-sep { width:1px; height:18px; background:rgba(255,255,255,0.25); margin:0 3px; }
+#pv-a11y-bar button.pv-fbtn { all:unset; cursor:pointer; color:#fff; font-weight:700; font-size:12.5px; width:28px; height:28px; display:flex; align-items:center; justify-content:center; border-radius:50%; }
+#pv-a11y-bar button.pv-fbtn:hover { background:rgba(255,255,255,0.18); }
+#pv-a11y-bar .pv-lbl { color:#C4941A; font-size:9.5px; font-weight:700; letter-spacing:1px; padding:0 3px; text-transform:uppercase; }
+@media print { #pv-a11y-bar { display:none !important; } }
+@media (max-width:560px) { #pv-a11y-bar .pv-lbl { display:none; } #pv-a11y-bar a.pv-link { padding:6px 8px; font-size:11.5px; } #pv-a11y-bar { top:8px; right:8px; } }
+
+#pv-scale-wrap { transition: zoom .08s; }
+body { padding-top:56px; }
+</style>
+</head>
+<body>
+<div id="pv-a11y-bar"><a class="pv-link" href="../../licoes/licao-25.html">&larr; Voltar à lição</a><a class="pv-link" href="../pdfs/Guia_Professor_Licao_25_Integridade_Oculta.pdf">Baixar PDF</a><div class="pv-sep"></div><span class="pv-lbl">Fonte</span><button class="pv-fbtn" id="pv-a11y-minus" title="Diminuir fonte">A-</button><button class="pv-fbtn" id="pv-a11y-reset" title="Tamanho padrão">A</button><button class="pv-fbtn" id="pv-a11y-plus" title="Aumentar fonte">A+</button></div>
+<div id="pv-scale-wrap">
+
+<div class="print-cover">
+  <div class="bar top"></div>
+  <div class="content">
+    <div class="kicker">Provérbios para a Vida &middot; Ministério Infantil</div>
+    <h1>Lição 25: Integridade Oculta</h1>
+    <div class="base">Texto Base: Provérbios 25</div>
+    <div class="tag">GUIA DO PROFESSOR</div>
+  </div>
+  <div class="foot">Material de Apoio para Ministração Infantil</div>
+  <div class="bar bottom"></div>
+</div>
+<div class="lesson-page">
+<div class="lesson-header" data-num="25">
+  <div class="lesson-eyebrow">Lição 25 de 31</div>
+  <h1 class="lesson-title">Integridade Oculta</h1>
+  <p class="lesson-subtitle">Provérbios 25</p>
+</div>
+<div class="lesson-content">
+<div class="section">
+<div class="section-label">Introdução Pastoral</div>
+<div class="section-title">Integridade Oculta</div>
+<p>Provérbios 25:4 usa a imagem da metalurgia para ensinar sobre integridade: "tira da prata a escória, e sairá vaso para o fundidor." No processo de refinar prata, o metal precioso é aquecido a temperaturas altíssimas, e as impurezas (a "escória") sobem à superfície, sendo removidas até restar apenas prata pura, pronta para ser moldada em algo útil e valioso.</p>
+<p><strong>Provérbios 25</strong> — Entender que a verdadeira integridade se revela também no que fazemos quando ninguém está observando, e que Cristo nos purifica como prata refinada pelo fogo.</p>
+<div class="callout gold"><div class="callout-title">Catecismo da Sabedoria</div><p><strong>Pergunta:</strong> Como Deus purifica o nosso caráter?</p><p><strong>Resposta:</strong> Assim como a prata é purificada quando a escória é retirada no fogo, Deus purifica nosso caráter através das provações, retirando o que não Lhe agrada e moldando um coração íntegro.</p></div>
+</div>
+<div class="section essencial-section">
+<div class="essencial-box">
+<div class="essencial-title">&#9733; O que você precisa saber para ensinar isso hoje</div>
+<p>Assim como a prata é purificada no fogo, Deus usa dificuldades e correções para refinar nosso caráter — remover o que não Lhe agrada. A verdadeira integridade aparece tanto em público quanto em segredo. Jesus, que já era perfeitamente puro, passou pelo fogo do julgamento de Deus em nosso lugar, para que fôssemos declarados puros pela fé.</p>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Fundamento Bíblico</div>
+<div class="section-title">O que a Bíblia diz</div>
+<div class="bible-text">
+<div class="bible-ref">Pv 25:4</div>
+<div class="bible-quote">&ldquo;Tira da prata a escória, e sairá vaso para o fundidor.&rdquo;</div>
+<div class="bible-explain"><p><em>Este é o versículo-âncora da lição. Leia em voz alta com as crianças antes de prosseguir — a explicação completa vem na próxima seção.</em></p></div>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Para o Professor</div>
+<div class="section-title">Erros que o Professor Deve Evitar</div>
+<div class="callout warning"><div class="callout-title">Resumo rápido antes de ensinar</div><ul class="styled-list"><li><strong>Não diga:</strong> algo como &ldquo;Se algo é difícil ou doloroso, é sinal de que algo está errado e deve ser evitado a todo custo.&rdquo;</li><li><strong>Não diga:</strong> algo como &ldquo;Promova-se, mostre suas conquistas, garanta que todos vejam o seu valor.&rdquo;</li><li><strong>Não diga:</strong> algo como &ldquo;O que importa é a imagem que você mostra publicamente.&rdquo;</li><li><strong>Diga:</strong> Assim como a prata é purificada quando a escória é retirada no fogo, Deus purifica nosso caráter através das provações, retirando o que não Lhe agrada e moldando um coração íntegro.</li></ul></div>
+</div>
+<details class="aprofunde" open>
+<summary class="aprofunde-summary">Aprofunde-se: Fundamentação Teológica Completa<span class="aprofunde-note">Leitura opcional, para o professor que quiser estudar o tema com mais profundidade. O essencial para dar a aula já está no resumo acima.</span></summary>
+<div class="aprofunde-content">
+<div class="section">
+<div class="section-label">Entendendo a Doutrina</div>
+<div class="section-title">Entendendo a Palavra</div>
+<p>Provérbios 25:4 usa a imagem da metalurgia para ensinar sobre integridade: "tira da prata a escória, e sairá vaso para o fundidor." No processo de refinar prata, o metal precioso é aquecido a temperaturas altíssimas, e as impurezas (a "escória") sobem à superfície, sendo removidas até restar apenas prata pura, pronta para ser moldada em algo útil e valioso. O versículo seguinte aplica essa mesma ideia à liderança: "tira da presença do rei o ímpio, e o seu trono se firmará na justiça" (v. 5) — mostrando que remover o que é impuro, seja em um metal ou em um caráter, é o que permite que algo (ou alguém) se torne verdadeiramente valioso e confiável.</p>
+<p>Esse capítulo também traz um ensino importante sobre humildade: "não te ponhas em lugares de honra na presença do rei" (v. 6), ensinando que é melhor deixar que outros reconheçam nosso valor do que promover a nós mesmos com orgulho. E o famoso versículo sobre autocontrole: "como a cidade derrubada, sem muro, assim é o homem que não pode conter o seu espírito" (v. 28) — comparando a falta de domínio próprio a uma cidade vulnerável, sem proteção, exposta a qualquer ataque.</p>
+<p>A ideia central de "integridade oculta" vem da compreensão de que o verdadeiro caráter de uma pessoa não é definido pelo que ela mostra em público, mas pelo que ela é quando ninguém está observando, e pelo processo — muitas vezes doloroso, como o fogo que refina a prata — que Deus usa para remover impurezas do coração. Provações, dificuldades e até correções podem parecer, no momento, desagradáveis, mas Provérbios ensina que elas têm o propósito de refinar o caráter, removendo o que não reflete a santidade de Deus.</p>
+</div>
+<div class="section">
+<div class="section-label">O Evangelho na Lição</div>
+<div class="section-title">Cristo e a Sabedoria</div>
+<p>A imagem da prata sendo refinada no fogo aparece em outras partes da Bíblia de forma ainda mais profunda. Malaquias 3:2-3 descreve o Senhor como "fogo de fundidor" e "sabão de lavandeiros", que "assentar-se-á, como fundidor e purificador de prata; e purificará os filhos de Levi". Deus Se compara a esse processo de refinamento, mostrando que Ele está ativamente trabalhando para purificar o caráter do Seu povo, removendo o que não Lhe agrada.</p>
+<p>Jesus é o único que passou por esse "fogo" de forma completa e perfeita, sem ter nenhuma "escória" a ser removida — Ele já era completamente puro. Mas, de forma surpreendente, Ele Se ofereceu para passar pelo fogo do julgamento de Deus em nosso lugar. Na cruz, Jesus suportou a ira que nossas impurezas mereciam, para que, através da fé nEle, pudéssemos ser declarados puros diante de Deus — não porque removemos toda a escória de nosso próprio caráter, mas porque Jesus tomou nosso lugar no fogo.</p>
+<p>E, ainda assim, Deus continua o processo de refinamento em nós ao longo da vida — não para nos punir, mas para nos moldar cada vez mais à imagem de Cristo. 1 Pedro 1:7 fala sobre "a prova da vossa fé (muito mais preciosa do que o ouro que perece, embora provado pelo fogo)". As dificuldades, as correções e até os momentos difíceis que enfrentamos não são sinais de que Deus nos abandonou, mas parte do processo amoroso de remover o que ainda não reflete Seu caráter em nós, produzindo, aos poucos, uma integridade cada vez mais genuína — visível não apenas quando somos observados, mas também nos momentos escondidos da vida.</p>
+</div>
+</div>
+</details>
+<div class="section">
+<div class="section-label">Dinâmica</div>
+<div class="section-title">Pensando Biblicamente: Mundo x Deus</div>
+<p>Leia cada frase do "mundo" e pergunte às crianças se concordam. Depois revele o que Deus realmente diz.</p>
+<div class="example"><div class="example-title">Sobre dificuldades e provações</div><p class="wrong">Mundo diz: "Se algo é difícil ou doloroso, é sinal de que algo está errado e deve ser evitado a todo custo."</p><p class="right">Deus diz: "Tira da prata a escória, e sairá vaso para o fundidor." (Pv 25:4)</p></div>
+<div class="example"><div class="example-title">Sobre autopromoção</div><p class="wrong">Mundo diz: "Promova-se, mostre suas conquistas, garanta que todos vejam o seu valor."</p><p class="right">Deus diz: "Não te ponhas em lugares de honra na presença do rei." (Pv 25:6)</p></div>
+<div class="example"><div class="example-title">Sobre caráter público vs. privado</div><p class="wrong">Mundo diz: "O que importa é a imagem que você mostra publicamente."</p><p class="right">Deus diz: "Como a cidade derrubada, sem muro, assim é o homem que não pode conter o seu espírito." (Pv 25:28)</p></div>
+<div class="example"><div class="example-title">Sobre pureza diante de Deus</div><p class="wrong">Mundo diz: "Você precisa se purificar sozinho antes de se aproximar de Deus."</p><p class="right">Deus diz: "Jesus... purificará os filhos" através de Seu próprio sacrifício. (Ml 3:3, aplicado a Cristo)</p></div>
+</div>
+<div class="section">
+<div class="section-label">Aplicação Prática</div>
+<div class="section-title">Desafios da Vida Real</div>
+<div class="example"><div class="example-title">Situação 1 — Na Escola</div><p>Felipe passa por uma temporada difícil, sendo mal compreendido por professores e colegas, e se pergunta por que Deus permite isso.</p><p class="right">Reflita: Como a imagem da prata sendo refinada no fogo pode ajudar Felipe a entender essa dificuldade de um jeito diferente? Isso significa que Deus não se importa com o sofrimento dele?</p></div>
+<div class="example"><div class="example-title">Situação 2 — Com os Amigos</div><p>Ana Luiza sempre quer ser a primeira a contar suas conquistas e conseguir elogios do grupo de amigas.</p><p class="right">Reflita: O que Provérbios 25:6 ensina sobre autopromoção? Como Ana Luiza pode aprender a ter mais humildade nesse aspecto?</p></div>
+<div class="example"><div class="example-title">Situação 3 — Em Família</div><p>Depois de ser repreendido, Davi sente que a correção dos pais é desnecessariamente dura, sem perceber que ela está ajudando a moldar seu caráter.</p><p class="right">Reflita: Como a imagem do refino da prata ajuda a entender o propósito da correção dos pais? O que Davi pode aprender sobre esses momentos difíceis?</p></div>
+<div class="example"><div class="example-title">Situação 4 — Nos Jogos e Redes</div><p>Larissa se comporta de um jeito exemplar online, mas em particular, quando ninguém está vendo, ela age de forma bem diferente.</p><p class="right">Reflita: O que isso revela sobre a diferença entre imagem pública e caráter real? Como o processo de purificação de Deus se aplica a essa área "oculta" da vida de Larissa?</p></div>
+</div>
+<div class="section">
+<div class="section-label">Perguntas para Discussão</div>
+<div class="section-title">Conversa em Família</div>
+<ol class="questions-list"><li>Que dificuldade recente em nossa família pode ser vista como parte do "refino" de Deus em nosso caráter?</li><li>Como podemos apoiar uns aos outros durante os momentos de "fogo" (dificuldades e correções)?</li><li>Já promovemos a nós mesmos em busca de reconhecimento, em vez de esperar com humildade?</li><li>Como saber que Jesus já passou pelo fogo do julgamento por nós nos dá paz durante nossas próprias provações?</li><li>Que área "oculta" da nossa vida (o que fazemos quando ninguém vê) precisamos entregar mais a Deus?</li></ol>
+</div>
+<div class="challenge-box">
+<div class="challenge-title">&#10022; Desafio da Semana</div>
+<p><strong>Versículo para memorizar:</strong> &ldquo;Tira da prata a escória, e sairá vaso para o fundidor.&rdquo; (Pv 25:4)</p>
+<p>Esta semana, ao enfrentar uma dificuldade ou correção, tente vê-la como parte do processo de Deus de refinar seu caráter, em vez de apenas algo negativo a ser evitado. Anote como essa mudança de perspectiva afetou sua reação.</p>
+<div class="prayer-box"><div class="callout-title">Oração Final (leia em voz alta com as crianças)</div><p>Senhor, Tu és como um fundidor que purifica a prata, removendo pacientemente o que não reflete Teu caráter em nós. Perdoa-nos pelas vezes em que resistimos ao processo de refino, reclamando das dificuldades em vez de confiar em Teu propósito bom. Obrigado porque Jesus passou pelo fogo do julgamento em nosso lugar, tornando-nos puros diante de Ti pela fé. Continua o Teu trabalho de refinamento em nós, mesmo quando dói, e nos ajuda a ter integridade genuína, visível tanto em público quanto em segredo. Em nome de Jesus. Amém.</p></div>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var KEY='pv_fontscale', min=0.8, max=1.8, step=0.1;
+  var wrap = document.getElementById('pv-scale-wrap');
+  var saved = parseFloat(localStorage.getItem(KEY)) || 1;
+  function apply(v){ if(wrap){ wrap.style.zoom = v; } try{ localStorage.setItem(KEY, v); }catch(e){} }
+  apply(saved);
+  var mEl = document.getElementById('pv-a11y-minus'), pEl = document.getElementById('pv-a11y-plus'), rEl = document.getElementById('pv-a11y-reset');
+  if(mEl) mEl.onclick = function(){ saved = Math.max(min, +(saved-step).toFixed(2)); apply(saved); };
+  if(pEl) pEl.onclick = function(){ saved = Math.min(max, +(saved+step).toFixed(2)); apply(saved); };
+  if(rEl) rEl.onclick = function(){ saved = 1; apply(saved); };
+})();
+</script>
+
+</body>
+</html>

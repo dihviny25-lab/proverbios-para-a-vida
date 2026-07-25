@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia do Professor - Lição 9: A Sabedoria Clama</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+:root {
+  --bg: #EFEBE0;
+  --surface: #FAFAF7;
+  --primary: #1B3A2D;
+  --primary-light: #2D5C45;
+  --accent: #C4941A;
+  --accent-light: #F5EDCF;
+  --text: #1C1A17;
+  --text-muted: #6B6557;
+  --border: #DDD8CC;
+  --radius: 10px;
+}
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.7; font-size:10.6pt; }
+.lesson-header { background:var(--primary); color:#fff; padding:52px 40px 40px; text-align:center; position:relative; overflow:hidden; }
+.lesson-header::before { content: attr(data-num); position:absolute; font-family:'Playfair Display',serif; font-weight:700; font-size:170px; top:50%; left:50%; transform:translate(-50%,-50%); opacity:0.06; line-height:1; }
+.lesson-eyebrow { font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--accent); margin-bottom:12px; }
+.lesson-title { font-family:'Playfair Display',serif; font-size:27pt; font-weight:700; line-height:1.2; margin-bottom:10px; }
+.lesson-subtitle { font-size:12.5pt; opacity:0.75; max-width:520px; margin:0 auto; }
+.lesson-content { max-width: 100%; padding: 30px 40px 50px; }
+.section { margin-bottom:30px; page-break-inside: avoid; }
+.section-label { font-size:9px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--accent); margin-bottom:5px; }
+.section-title { font-family:'Playfair Display',serif; font-size:16pt; font-weight:700; color:var(--primary); margin-bottom:14px; padding-bottom:9px; border-bottom:1px solid var(--border); }
+.section p { margin-bottom:9px; font-size:10.4pt; }
+h3.subsection { font-family:'Playfair Display',serif; font-size:12.5pt; color:var(--primary); margin:16px 0 8px; }
+.bible-text { background:var(--surface); border-left:3px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:14px 18px; margin:14px 0; page-break-inside: avoid; }
+.bible-ref { font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--accent); margin-bottom:7px; }
+.bible-quote { font-family:'Playfair Display',serif; font-style:italic; font-size:12pt; line-height:1.55; color:var(--primary); margin-bottom:10px; }
+.bible-explain p { font-size:10pt; margin-bottom:6px; }
+.callout { background:var(--surface); border-radius:var(--radius); padding:14px 18px; margin:12px 0; border:1px solid var(--border); page-break-inside: avoid; }
+.callout.warning { border-left:4px solid #E85D04; background:#FFF8F4; }
+.callout.tip { border-left:4px solid var(--primary-light); background:#F0F7F4; }
+.callout.gold { border-left:4px solid var(--accent); background:var(--accent-light); }
+.callout-title { font-weight:700; font-size:9.5pt; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:6px; color:var(--text-muted); }
+.callout p { font-size:10pt; margin-bottom:5px; }
+.styled-list { list-style:none; margin:10px 0; }
+.styled-list li { padding:6px 0 6px 18px; position:relative; font-size:10.2pt; border-bottom:1px solid var(--border); }
+.styled-list li:last-child { border-bottom:none; }
+.styled-list li::before { content:'—'; position:absolute; left:0; color:var(--accent); font-weight:700; }
+.questions-list { counter-reset:question; list-style:none; margin:8px 0; }
+.questions-list li { counter-increment:question; padding:8px 0 8px 34px; position:relative; font-size:10.2pt; border-bottom:1px solid var(--border); }
+.questions-list li:last-child { border-bottom:none; }
+.questions-list li::before { content:counter(question); position:absolute; left:0; width:22px; height:22px; background:var(--primary); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:9.5pt; font-weight:700; top:7px; }
+.example { background:var(--surface); border-radius:var(--radius); padding:14px 18px; margin:10px 0; border:1px solid var(--border); page-break-inside: avoid; }
+.example-title { font-weight:700; font-size:10pt; color:var(--primary); margin-bottom:8px; }
+.example-title::before { content:'→ '; color:var(--accent); }
+.example p { font-size:10pt; margin-bottom:5px; }
+.example .wrong { color:#C0392B; font-size:9.3pt; font-style:italic; }
+.example .right { color:#1B7A3E; font-size:9.3pt; font-style:italic; }
+.challenge-box { background:var(--primary); color:#fff; border-radius:var(--radius); padding:22px 24px; margin-top:20px; page-break-inside: avoid; }
+.challenge-title { font-family:'Playfair Display',serif; font-size:14.5pt; font-weight:700; margin-bottom:14px; color:var(--accent); }
+.challenge-box p { font-size: 10pt; opacity:0.9; margin-bottom: 8px;}
+.reading-plan { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:12px; }
+.reading-day { background:rgba(255,255,255,0.08); border-radius:8px; padding:8px 10px; font-size:9.3pt; }
+.reading-day strong { display:block; color:var(--accent); font-size:8.6pt; letter-spacing:0.8px; text-transform:uppercase; margin-bottom:3px; }
+.verse-inline { font-style:italic; color:var(--primary); font-family:'Playfair Display',serif; }
+.prayer-box { background:var(--accent-light); border-left:4px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:16px 20px; margin-top:10px; color:var(--text); }
+.prayer-box p { font-style:italic; font-size:10pt; color:var(--text); }
+.prayer-box .callout-title { color: var(--text-muted); }
+
+.essencial-box { background:var(--primary); color:#fff; border-radius:var(--radius); padding:18px 22px; margin:4px 0 24px; border-left:5px solid var(--accent); page-break-inside: avoid; }
+.essencial-title { font-family:'Playfair Display',serif; font-weight:700; font-size:12.5pt; color:var(--accent); margin-bottom:8px; }
+.essencial-box p { font-size:10.4pt; margin-bottom:6px; opacity:0.96; color:#fff; }
+.essencial-box ul.styled-list li { border-bottom-color: rgba(255,255,255,0.15); color:#fff; }
+.essencial-box ul.styled-list li::before { color: var(--accent); }
+details.aprofunde { margin: 10px 0 28px; border:1px solid var(--border); border-radius:var(--radius); background:#F4F2EA; }
+details.aprofunde summary.aprofunde-summary { cursor:pointer; padding:14px 20px; font-family:'Playfair Display',serif; font-weight:700; font-size:12pt; color:var(--text-muted); list-style:none; }
+details.aprofunde summary.aprofunde-summary::-webkit-details-marker { display:none; }
+details.aprofunde summary.aprofunde-summary::marker { content:''; }
+details.aprofunde summary.aprofunde-summary::before { content:'▸  '; color:var(--accent); }
+details.aprofunde[open] summary.aprofunde-summary::before { content:'▾  '; }
+details.aprofunde .aprofunde-note { font-weight:400; font-size:9pt; text-transform:none; letter-spacing:0; color:var(--text-muted); display:block; margin-top:3px; }
+details.aprofunde > .aprofunde-content { padding:2px 20px 18px; color: var(--text-muted); display:none; }
+details.aprofunde[open] > .aprofunde-content { display:block; }
+details.aprofunde .aprofunde-content .section-title { color: var(--text-muted); border-bottom-color: var(--border); }
+details.aprofunde .aprofunde-content .section-label { color: var(--text-muted); opacity:0.7; }
+details.aprofunde .aprofunde-content p { color: var(--text-muted); }
+details.aprofunde .aprofunde-content h3.subsection { color: var(--text-muted); }
+details.aprofunde .aprofunde-content .section { page-break-inside: auto; margin-bottom: 14px; }
+
+@page { size: A4; margin: 0 0 1.6cm 0; }
+@page cover { margin: 0; }
+.print-cover { page-break-after: always; background:var(--primary); color:#fff; width:21cm; height:29.7cm; position:relative; }
+.print-cover .bar { background:var(--accent); height:12px; width:100%; position:absolute; left:0; }
+.print-cover .bar.top { top:0; } .print-cover .bar.bottom { bottom:0; }
+.print-cover .content { position:absolute; top:42%; left:0; right:0; text-align:center; padding:0 2.4cm; }
+.print-cover .kicker { color:var(--accent); letter-spacing:2.5px; font-size:11pt; text-transform:uppercase; margin-bottom:16px; font-weight:600; }
+.print-cover h1 { font-family:'Playfair Display',serif; font-size:30pt; margin-bottom:22px; font-weight:700; line-height:1.25; }
+.print-cover .base { color:#dcd0b0; font-style:italic; font-size:12.5pt; margin-bottom:8px; }
+.print-cover .tag { color:var(--accent); font-size:11pt; letter-spacing:1.5px; }
+.print-cover .foot { position:absolute; bottom:60px; left:0; right:0; text-align:center; color:#c9bd9a; font-size:9.5pt; }
+.lesson-page { page-break-after: always; }
+
+body { background: #fff; }
+
+
+#pv-a11y-bar { position:fixed; top:14px; right:14px; z-index:9999; display:flex; align-items:center; gap:2px; background:#1B3A2D; border-radius:999px; padding:5px 6px; box-shadow:0 4px 16px rgba(0,0,0,0.28); font-family:'Inter',sans-serif; }
+#pv-a11y-bar a.pv-link { all:unset; cursor:pointer; color:#fff; font-size:12px; font-weight:600; padding:6px 10px; border-radius:999px; white-space:nowrap; }
+#pv-a11y-bar a.pv-link:hover { background:rgba(255,255,255,0.16); color:#F5EDCF; }
+#pv-a11y-bar .pv-sep { width:1px; height:18px; background:rgba(255,255,255,0.25); margin:0 3px; }
+#pv-a11y-bar button.pv-fbtn { all:unset; cursor:pointer; color:#fff; font-weight:700; font-size:12.5px; width:28px; height:28px; display:flex; align-items:center; justify-content:center; border-radius:50%; }
+#pv-a11y-bar button.pv-fbtn:hover { background:rgba(255,255,255,0.18); }
+#pv-a11y-bar .pv-lbl { color:#C4941A; font-size:9.5px; font-weight:700; letter-spacing:1px; padding:0 3px; text-transform:uppercase; }
+@media print { #pv-a11y-bar { display:none !important; } }
+@media (max-width:560px) { #pv-a11y-bar .pv-lbl { display:none; } #pv-a11y-bar a.pv-link { padding:6px 8px; font-size:11.5px; } #pv-a11y-bar { top:8px; right:8px; } }
+
+#pv-scale-wrap { transition: zoom .08s; }
+body { padding-top:56px; }
+</style>
+</head>
+<body>
+<div id="pv-a11y-bar"><a class="pv-link" href="../../licoes/licao-09.html">&larr; Voltar à lição</a><a class="pv-link" href="../pdfs/Guia_Professor_Licao_09_A_Sabedoria_Clama.pdf">Baixar PDF</a><div class="pv-sep"></div><span class="pv-lbl">Fonte</span><button class="pv-fbtn" id="pv-a11y-minus" title="Diminuir fonte">A-</button><button class="pv-fbtn" id="pv-a11y-reset" title="Tamanho padrão">A</button><button class="pv-fbtn" id="pv-a11y-plus" title="Aumentar fonte">A+</button></div>
+<div id="pv-scale-wrap">
+
+<div class="print-cover">
+  <div class="bar top"></div>
+  <div class="content">
+    <div class="kicker">Provérbios para a Vida &middot; Ministério Infantil</div>
+    <h1>Lição 9: A Sabedoria Clama</h1>
+    <div class="base">Texto Base: Provérbios 9</div>
+    <div class="tag">GUIA DO PROFESSOR</div>
+  </div>
+  <div class="foot">Material de Apoio para Ministração Infantil</div>
+  <div class="bar bottom"></div>
+</div>
+<div class="lesson-page">
+<div class="lesson-header" data-num="9">
+  <div class="lesson-eyebrow">Lição 9 de 31</div>
+  <h1 class="lesson-title">A Sabedoria Clama</h1>
+  <p class="lesson-subtitle">Provérbios 9</p>
+</div>
+<div class="lesson-content">
+<div class="section">
+<div class="section-label">Introdução Pastoral</div>
+<div class="section-title">A Sabedoria Clama</div>
+<p>Provérbios 9 conta a história de duas casas e dois convites.</p>
+<p><strong>Provérbios 9</strong> — Perceber o contraste entre a casa da Sabedoria e a casa da Insensatez, e entender que toda pessoa está sendo convidada, a cada dia, a escolher a mesa em que vai se sentar — e que só em Cristo temos forças para escolher bem.</p>
+<div class="callout gold"><div class="callout-title">Catecismo da Sabedoria</div><p><strong>Pergunta:</strong> Onde começa o verdadeiro conhecimento?</p><p><strong>Resposta:</strong> O verdadeiro conhecimento começa no temor do Senhor; conhecer a Deus, o Santo, é o que nos torna verdadeiramente prudentes.</p></div>
+</div>
+<div class="section essencial-section">
+<div class="essencial-box">
+<div class="essencial-title">&#9733; O que você precisa saber para ensinar isso hoje</div>
+<p>O capítulo apresenta duas mesas e dois convites: a Sabedoria, que preparou um banquete com cuidado, e a Insensatez, que grita um convite fácil mas esconde a morte. Toda criança (e adulto) recebe esses dois tipos de convite todos os dias. Jesus é o cumprimento do banquete da Sabedoria — Ele Se ofereceu como pão e vinho, o alimento que realmente sacia (Jo 6:35).</p>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Fundamento Bíblico</div>
+<div class="section-title">O que a Bíblia diz</div>
+<div class="bible-text">
+<div class="bible-ref">Pv 9:10</div>
+<div class="bible-quote">&ldquo;O temor do Senhor é o princípio da sabedoria, e o conhecimento do Santo, a prudência.&rdquo;</div>
+<div class="bible-explain"><p><em>Este é o versículo-âncora da lição. Leia em voz alta com as crianças antes de prosseguir — a explicação completa vem na próxima seção.</em></p></div>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Para o Professor</div>
+<div class="section-title">Erros que o Professor Deve Evitar</div>
+<div class="callout warning"><div class="callout-title">Resumo rápido antes de ensinar</div><ul class="styled-list"><li><strong>Não diga:</strong> algo como &ldquo;Ninguém tem o direito de me corrigir; eu decido o que é certo para mim.&rdquo;</li><li><strong>Não diga:</strong> algo como &ldquo;Se é proibido e parece gostoso, deve valer a pena experimentar.&rdquo;</li><li><strong>Não diga:</strong> algo como &ldquo;As melhores coisas da vida vêm fácil, sem esforço.&rdquo;</li><li><strong>Diga:</strong> O verdadeiro conhecimento começa no temor do Senhor; conhecer a Deus, o Santo, é o que nos torna verdadeiramente prudentes.</li></ul></div>
+</div>
+<details class="aprofunde" open>
+<summary class="aprofunde-summary">Aprofunde-se: Fundamentação Teológica Completa<span class="aprofunde-note">Leitura opcional, para o professor que quiser estudar o tema com mais profundidade. O essencial para dar a aula já está no resumo acima.</span></summary>
+<div class="aprofunde-content">
+<div class="section">
+<div class="section-label">Entendendo a Doutrina</div>
+<div class="section-title">Entendendo a Palavra</div>
+<p>Provérbios 9 conta a história de duas casas e dois convites. De um lado, a Sabedoria "edificou a sua casa, lavrou as suas sete colunas" (v. 1) e preparou um banquete completo — carne, vinho preparado, mesa posta. Ela envia suas servas para convidar: "Vinde, comei do meu pão, e bebei do vinho que tenho preparado" (v. 5). É um convite generoso, preparado com cuidado, que promete vida: "Deixai as parvoíces, e vivei; e andai pelo caminho do entendimento" (v. 6).</p>
+<p>Do outro lado do capítulo, aparece a "mulher louca" — a Insensatez personificada —, que também tem uma casa e também grita um convite, mas de um jeito completamente diferente: "é alvoroçadora; é insensata, e não sabe coisa nenhuma" (v. 13). Ela senta-se "à porta da sua casa" (v. 14), sem esforço, sem preparo, apenas gritando para quem passa: "Quem é simples, volte-se para aqui... As águas roubadas são doces, e o pão comido às ocultas é agradável" (v. 16-17). Seu convite parece atraente e fácil — mas o capítulo termina com um alerta sombrio: "ele não sabe que ali estão os mortos; que os seus convidados estão nas profundezas do inferno" (v. 18).</p>
+<p>O capítulo apresenta uma escolha real para cada leitor: duas casas, dois convites, dois caminhos. Um exige disposição para aprender, humildade para receber correção (v. 8-9 fala sobre como o sábio ama quem o repreende, enquanto o escarnecedor odeia), e leva à vida verdadeira. O outro parece fácil e prazeroso, mas esconde a morte.</p>
+<p>O ponto culminante do capítulo — e o versículo-chave desta lição — resume tudo: "O temor do Senhor é o princípio da sabedoria, e o conhecimento do Santo, a prudência" (v. 10). Escolher a mesa da Sabedoria começa exatamente onde começou a Lição 1: reconhecendo quem Deus é e vivendo em reverência a Ele. Cada dia, cada criança (e cada adulto) recebe convites das duas casas — e a pergunta é: qual mesa você vai escolher?</p>
+</div>
+<div class="section">
+<div class="section-label">O Evangelho na Lição</div>
+<div class="section-title">Cristo e a Sabedoria</div>
+<p>O banquete preparado pela Sabedoria em Provérbios 9 encontra um eco lindo nas palavras e ações de Jesus. Ele mesmo comparou o Reino de Deus a um grande banquete de bodas, ao qual muitos foram convidados (Mateus 22:1-14). E, na última ceia, Jesus tomou pão e vinho — os mesmos elementos do banquete da Sabedoria — e disse: "Isto é o meu corpo... isto é o meu sangue" (Mateus 26:26-28), oferecendo a Si mesmo como o alimento verdadeiro que dá vida eterna.</p>
+<p>Jesus disse ainda: "Eu sou o pão da vida; aquele que vem a mim não terá fome" (João 6:35). Ele é o cumprimento do convite da Sabedoria — o banquete definitivo, preparado com um custo imenso: a própria vida de Cristo entregue na cruz. Diferente do convite fácil e enganoso da Insensatez, que promete prazer imediato mas esconde a morte, o convite de Jesus pode até exigir sacrifício e renúncia no caminho, mas leva à vida eterna verdadeira.</p>
+<p>A parte mais bonita é que o convite de Jesus não é para os que já são sábios e merecedores. Ele mesmo disse: "não vim chamar justos, mas pecadores, ao arrependimento" (Lucas 5:32). Todos nós, em algum momento, já nos sentamos, ainda que por pouco tempo, à mesa da Insensatez — atraídos por prazeres que prometiam ser doces. Mas o evangelho nos diz que, mesmo assim, o convite de Cristo continua de pé: "Vinde a mim". Quando aceitamos esse convite pela fé, Deus não apenas nos alimenta — Ele nos transforma pelo Espírito Santo, dando-nos um apetite cada vez maior pela mesa da verdadeira Sabedoria e menos pelo convite sedutor e vazio do pecado.</p>
+</div>
+</div>
+</details>
+<div class="section">
+<div class="section-label">Dinâmica</div>
+<div class="section-title">Pensando Biblicamente: Mundo x Deus</div>
+<p>Leia cada frase do "mundo" e pergunte às crianças se concordam. Depois revele o que Deus realmente diz.</p>
+<div class="example"><div class="example-title">Sobre receber correção</div><p class="wrong">Mundo diz: "Ninguém tem o direito de me corrigir; eu decido o que é certo para mim."</p><p class="right">Deus diz: "Repreende o sábio, e amar-te-á." (Pv 9:8)</p></div>
+<div class="example"><div class="example-title">Sobre prazeres proibidos</div><p class="wrong">Mundo diz: "Se é proibido e parece gostoso, deve valer a pena experimentar."</p><p class="right">Deus diz: "As águas roubadas são doces... mas ele não sabe que ali estão os mortos." (Pv 9:17-18)</p></div>
+<div class="example"><div class="example-title">Sobre esforço e preparo</div><p class="wrong">Mundo diz: "As melhores coisas da vida vêm fácil, sem esforço."</p><p class="right">Deus diz: "A sabedoria edificou a sua casa, lavrou as suas sete colunas." (Pv 9:1)</p></div>
+<div class="example"><div class="example-title">Sobre o que alimenta a alma</div><p class="wrong">Mundo diz: "Prazeres momentâneos são suficientes para satisfazer o coração."</p><p class="right">Deus diz: "Eu sou o pão da vida; aquele que vem a mim não terá fome." (Jo 6:35)</p></div>
+</div>
+<div class="section">
+<div class="section-label">Aplicação Prática</div>
+<div class="section-title">Desafios da Vida Real</div>
+<div class="example"><div class="example-title">Situação 1 — Na Escola</div><p>Um professor corrige Thiago com firmeza sobre um erro, e ele sente vontade de reagir com raiva em vez de ouvir.</p><p class="right">Reflita: O que Provérbios 9:8 ensina sobre como o sábio recebe correção, comparado ao escarnecedor? Como Thiago pode responder de forma sábia a essa correção?</p></div>
+<div class="example"><div class="example-title">Situação 2 — Com os Amigos</div><p>Um grupo de amigos convida Camila para uma "brincadeira secreta" que ela sabe que os pais não aprovariam.</p><p class="right">Reflita: Como esse convite se parece com o da "mulher louca" em Provérbios 9? O que parece atraente à primeira vista, mas pode esconder consequências ruins?</p></div>
+<div class="example"><div class="example-title">Situação 3 — Em Família</div><p>Os pais de Otávio insistem em ter um tempo de leitura bíblica em família, mas ele acha isso chato comparado a outras atividades.</p><p class="right">Reflita: Como esse tempo pode ser comparado a "sentar-se à mesa da Sabedoria"? O que muda quando entendemos que esse convite é preparado com amor, e não é uma obrigação sem sentido?</p></div>
+<div class="example"><div class="example-title">Situação 4 — Nos Jogos e Redes</div><p>Um jogo online oferece recompensas "grátis e fáceis" que, na verdade, exigem informações pessoais ou levam a conteúdos impróprios.</p><p class="right">Reflita: Como isso reflete o convite da Insensatez, que parece fácil mas esconde perigo? O que discernir antes de aceitar convites "bons demais para ser verdade"?</p></div>
+</div>
+<div class="section">
+<div class="section-label">Perguntas para Discussão</div>
+<div class="section-title">Conversa em Família</div>
+<ol class="questions-list"><li>Como podemos reconhecer, no dia a dia, quando estamos sendo convidados para a mesa da Sabedoria ou da Insensatez?</li><li>Já recebemos correção de alguém e reagimos mal? O que Provérbios 9 nos ensina sobre isso?</li><li>O que a nossa família faz para "preparar a mesa" da Sabedoria em casa (tempos de oração, leitura bíblica, conversas)?</li><li>Como a ceia de Jesus (pão e vinho) se relaciona com o banquete de Provérbios 9?</li><li>Que "convite fácil demais" precisamos recusar esta semana como família?</li></ol>
+</div>
+<div class="challenge-box">
+<div class="challenge-title">&#10022; Desafio da Semana</div>
+<p><strong>Versículo para memorizar:</strong> &ldquo;O temor do Senhor é o princípio da sabedoria, e o conhecimento do Santo, a prudência.&rdquo; (Pv 9:10)</p>
+<p>Observe esta semana os "convites" que você recebe — de amigos, da internet, dos seus próprios pensamentos — e identifique se eles vêm da mesa da Sabedoria ou da Insensatez. Anote pelo menos três exemplos e a escolha que você fez em cada um.</p>
+<div class="reading-plan">
+<div class="reading-day"><strong>Dia 1</strong>Mateus 22:1-14</div>
+<div class="reading-day"><strong>Dia 2</strong>Mateus 26:26-28</div>
+<div class="reading-day"><strong>Dia 3</strong>João 6:35</div>
+<div class="reading-day"><strong>Dia 4</strong>Lucas 5:32</div>
+<div class="reading-day"><strong>Dia 5</strong>Releia Provérbios 9</div>
+</div>
+<div class="prayer-box"><div class="callout-title">Oração Final (leia em voz alta com as crianças)</div><p>Senhor, obrigado por nos convidares à Tua mesa, preparada com tanto amor e a um custo que nunca poderíamos pagar — a vida do Teu Filho. Perdoa-nos pelas vezes em que preferimos os convites fáceis e enganosos da insensatez, achando que eles trariam mais prazer. Dá-nos um coração humilde que ame a correção e busque o conhecimento do Santo. Que possamos, cada dia, escolher sentar à mesa da verdadeira Sabedoria, que é Cristo, o pão da vida. Em nome de Jesus. Amém.</p></div>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var KEY='pv_fontscale', min=0.8, max=1.8, step=0.1;
+  var wrap = document.getElementById('pv-scale-wrap');
+  var saved = parseFloat(localStorage.getItem(KEY)) || 1;
+  function apply(v){ if(wrap){ wrap.style.zoom = v; } try{ localStorage.setItem(KEY, v); }catch(e){} }
+  apply(saved);
+  var mEl = document.getElementById('pv-a11y-minus'), pEl = document.getElementById('pv-a11y-plus'), rEl = document.getElementById('pv-a11y-reset');
+  if(mEl) mEl.onclick = function(){ saved = Math.max(min, +(saved-step).toFixed(2)); apply(saved); };
+  if(pEl) pEl.onclick = function(){ saved = Math.min(max, +(saved+step).toFixed(2)); apply(saved); };
+  if(rEl) rEl.onclick = function(){ saved = 1; apply(saved); };
+})();
+</script>
+
+</body>
+</html>

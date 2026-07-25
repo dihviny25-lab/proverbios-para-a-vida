@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia do Professor - Lição 16: Deus Dirige os Passos</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+:root {
+  --bg: #EFEBE0;
+  --surface: #FAFAF7;
+  --primary: #1B3A2D;
+  --primary-light: #2D5C45;
+  --accent: #C4941A;
+  --accent-light: #F5EDCF;
+  --text: #1C1A17;
+  --text-muted: #6B6557;
+  --border: #DDD8CC;
+  --radius: 10px;
+}
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.7; font-size:10.6pt; }
+.lesson-header { background:var(--primary); color:#fff; padding:52px 40px 40px; text-align:center; position:relative; overflow:hidden; }
+.lesson-header::before { content: attr(data-num); position:absolute; font-family:'Playfair Display',serif; font-weight:700; font-size:170px; top:50%; left:50%; transform:translate(-50%,-50%); opacity:0.06; line-height:1; }
+.lesson-eyebrow { font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--accent); margin-bottom:12px; }
+.lesson-title { font-family:'Playfair Display',serif; font-size:27pt; font-weight:700; line-height:1.2; margin-bottom:10px; }
+.lesson-subtitle { font-size:12.5pt; opacity:0.75; max-width:520px; margin:0 auto; }
+.lesson-content { max-width: 100%; padding: 30px 40px 50px; }
+.section { margin-bottom:30px; page-break-inside: avoid; }
+.section-label { font-size:9px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--accent); margin-bottom:5px; }
+.section-title { font-family:'Playfair Display',serif; font-size:16pt; font-weight:700; color:var(--primary); margin-bottom:14px; padding-bottom:9px; border-bottom:1px solid var(--border); }
+.section p { margin-bottom:9px; font-size:10.4pt; }
+h3.subsection { font-family:'Playfair Display',serif; font-size:12.5pt; color:var(--primary); margin:16px 0 8px; }
+.bible-text { background:var(--surface); border-left:3px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:14px 18px; margin:14px 0; page-break-inside: avoid; }
+.bible-ref { font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--accent); margin-bottom:7px; }
+.bible-quote { font-family:'Playfair Display',serif; font-style:italic; font-size:12pt; line-height:1.55; color:var(--primary); margin-bottom:10px; }
+.bible-explain p { font-size:10pt; margin-bottom:6px; }
+.callout { background:var(--surface); border-radius:var(--radius); padding:14px 18px; margin:12px 0; border:1px solid var(--border); page-break-inside: avoid; }
+.callout.warning { border-left:4px solid #E85D04; background:#FFF8F4; }
+.callout.tip { border-left:4px solid var(--primary-light); background:#F0F7F4; }
+.callout.gold { border-left:4px solid var(--accent); background:var(--accent-light); }
+.callout-title { font-weight:700; font-size:9.5pt; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:6px; color:var(--text-muted); }
+.callout p { font-size:10pt; margin-bottom:5px; }
+.styled-list { list-style:none; margin:10px 0; }
+.styled-list li { padding:6px 0 6px 18px; position:relative; font-size:10.2pt; border-bottom:1px solid var(--border); }
+.styled-list li:last-child { border-bottom:none; }
+.styled-list li::before { content:'—'; position:absolute; left:0; color:var(--accent); font-weight:700; }
+.questions-list { counter-reset:question; list-style:none; margin:8px 0; }
+.questions-list li { counter-increment:question; padding:8px 0 8px 34px; position:relative; font-size:10.2pt; border-bottom:1px solid var(--border); }
+.questions-list li:last-child { border-bottom:none; }
+.questions-list li::before { content:counter(question); position:absolute; left:0; width:22px; height:22px; background:var(--primary); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:9.5pt; font-weight:700; top:7px; }
+.example { background:var(--surface); border-radius:var(--radius); padding:14px 18px; margin:10px 0; border:1px solid var(--border); page-break-inside: avoid; }
+.example-title { font-weight:700; font-size:10pt; color:var(--primary); margin-bottom:8px; }
+.example-title::before { content:'→ '; color:var(--accent); }
+.example p { font-size:10pt; margin-bottom:5px; }
+.example .wrong { color:#C0392B; font-size:9.3pt; font-style:italic; }
+.example .right { color:#1B7A3E; font-size:9.3pt; font-style:italic; }
+.challenge-box { background:var(--primary); color:#fff; border-radius:var(--radius); padding:22px 24px; margin-top:20px; page-break-inside: avoid; }
+.challenge-title { font-family:'Playfair Display',serif; font-size:14.5pt; font-weight:700; margin-bottom:14px; color:var(--accent); }
+.challenge-box p { font-size: 10pt; opacity:0.9; margin-bottom: 8px;}
+.reading-plan { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:12px; }
+.reading-day { background:rgba(255,255,255,0.08); border-radius:8px; padding:8px 10px; font-size:9.3pt; }
+.reading-day strong { display:block; color:var(--accent); font-size:8.6pt; letter-spacing:0.8px; text-transform:uppercase; margin-bottom:3px; }
+.verse-inline { font-style:italic; color:var(--primary); font-family:'Playfair Display',serif; }
+.prayer-box { background:var(--accent-light); border-left:4px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:16px 20px; margin-top:10px; color:var(--text); }
+.prayer-box p { font-style:italic; font-size:10pt; color:var(--text); }
+.prayer-box .callout-title { color: var(--text-muted); }
+
+.essencial-box { background:var(--primary); color:#fff; border-radius:var(--radius); padding:18px 22px; margin:4px 0 24px; border-left:5px solid var(--accent); page-break-inside: avoid; }
+.essencial-title { font-family:'Playfair Display',serif; font-weight:700; font-size:12.5pt; color:var(--accent); margin-bottom:8px; }
+.essencial-box p { font-size:10.4pt; margin-bottom:6px; opacity:0.96; color:#fff; }
+.essencial-box ul.styled-list li { border-bottom-color: rgba(255,255,255,0.15); color:#fff; }
+.essencial-box ul.styled-list li::before { color: var(--accent); }
+details.aprofunde { margin: 10px 0 28px; border:1px solid var(--border); border-radius:var(--radius); background:#F4F2EA; }
+details.aprofunde summary.aprofunde-summary { cursor:pointer; padding:14px 20px; font-family:'Playfair Display',serif; font-weight:700; font-size:12pt; color:var(--text-muted); list-style:none; }
+details.aprofunde summary.aprofunde-summary::-webkit-details-marker { display:none; }
+details.aprofunde summary.aprofunde-summary::marker { content:''; }
+details.aprofunde summary.aprofunde-summary::before { content:'▸  '; color:var(--accent); }
+details.aprofunde[open] summary.aprofunde-summary::before { content:'▾  '; }
+details.aprofunde .aprofunde-note { font-weight:400; font-size:9pt; text-transform:none; letter-spacing:0; color:var(--text-muted); display:block; margin-top:3px; }
+details.aprofunde > .aprofunde-content { padding:2px 20px 18px; color: var(--text-muted); display:none; }
+details.aprofunde[open] > .aprofunde-content { display:block; }
+details.aprofunde .aprofunde-content .section-title { color: var(--text-muted); border-bottom-color: var(--border); }
+details.aprofunde .aprofunde-content .section-label { color: var(--text-muted); opacity:0.7; }
+details.aprofunde .aprofunde-content p { color: var(--text-muted); }
+details.aprofunde .aprofunde-content h3.subsection { color: var(--text-muted); }
+details.aprofunde .aprofunde-content .section { page-break-inside: auto; margin-bottom: 14px; }
+
+@page { size: A4; margin: 0 0 1.6cm 0; }
+@page cover { margin: 0; }
+.print-cover { page-break-after: always; background:var(--primary); color:#fff; width:21cm; height:29.7cm; position:relative; }
+.print-cover .bar { background:var(--accent); height:12px; width:100%; position:absolute; left:0; }
+.print-cover .bar.top { top:0; } .print-cover .bar.bottom { bottom:0; }
+.print-cover .content { position:absolute; top:42%; left:0; right:0; text-align:center; padding:0 2.4cm; }
+.print-cover .kicker { color:var(--accent); letter-spacing:2.5px; font-size:11pt; text-transform:uppercase; margin-bottom:16px; font-weight:600; }
+.print-cover h1 { font-family:'Playfair Display',serif; font-size:30pt; margin-bottom:22px; font-weight:700; line-height:1.25; }
+.print-cover .base { color:#dcd0b0; font-style:italic; font-size:12.5pt; margin-bottom:8px; }
+.print-cover .tag { color:var(--accent); font-size:11pt; letter-spacing:1.5px; }
+.print-cover .foot { position:absolute; bottom:60px; left:0; right:0; text-align:center; color:#c9bd9a; font-size:9.5pt; }
+.lesson-page { page-break-after: always; }
+
+body { background: #fff; }
+
+
+#pv-a11y-bar { position:fixed; top:14px; right:14px; z-index:9999; display:flex; align-items:center; gap:2px; background:#1B3A2D; border-radius:999px; padding:5px 6px; box-shadow:0 4px 16px rgba(0,0,0,0.28); font-family:'Inter',sans-serif; }
+#pv-a11y-bar a.pv-link { all:unset; cursor:pointer; color:#fff; font-size:12px; font-weight:600; padding:6px 10px; border-radius:999px; white-space:nowrap; }
+#pv-a11y-bar a.pv-link:hover { background:rgba(255,255,255,0.16); color:#F5EDCF; }
+#pv-a11y-bar .pv-sep { width:1px; height:18px; background:rgba(255,255,255,0.25); margin:0 3px; }
+#pv-a11y-bar button.pv-fbtn { all:unset; cursor:pointer; color:#fff; font-weight:700; font-size:12.5px; width:28px; height:28px; display:flex; align-items:center; justify-content:center; border-radius:50%; }
+#pv-a11y-bar button.pv-fbtn:hover { background:rgba(255,255,255,0.18); }
+#pv-a11y-bar .pv-lbl { color:#C4941A; font-size:9.5px; font-weight:700; letter-spacing:1px; padding:0 3px; text-transform:uppercase; }
+@media print { #pv-a11y-bar { display:none !important; } }
+@media (max-width:560px) { #pv-a11y-bar .pv-lbl { display:none; } #pv-a11y-bar a.pv-link { padding:6px 8px; font-size:11.5px; } #pv-a11y-bar { top:8px; right:8px; } }
+
+#pv-scale-wrap { transition: zoom .08s; }
+body { padding-top:56px; }
+</style>
+</head>
+<body>
+<div id="pv-a11y-bar"><a class="pv-link" href="../../licoes/licao-16.html">&larr; Voltar à lição</a><a class="pv-link" href="../pdfs/Guia_Professor_Licao_16_Deus_Dirige_os_Passos.pdf">Baixar PDF</a><div class="pv-sep"></div><span class="pv-lbl">Fonte</span><button class="pv-fbtn" id="pv-a11y-minus" title="Diminuir fonte">A-</button><button class="pv-fbtn" id="pv-a11y-reset" title="Tamanho padrão">A</button><button class="pv-fbtn" id="pv-a11y-plus" title="Aumentar fonte">A+</button></div>
+<div id="pv-scale-wrap">
+
+<div class="print-cover">
+  <div class="bar top"></div>
+  <div class="content">
+    <div class="kicker">Provérbios para a Vida &middot; Ministério Infantil</div>
+    <h1>Lição 16: Deus Dirige os Passos</h1>
+    <div class="base">Texto Base: Provérbios 16</div>
+    <div class="tag">GUIA DO PROFESSOR</div>
+  </div>
+  <div class="foot">Material de Apoio para Ministração Infantil</div>
+  <div class="bar bottom"></div>
+</div>
+<div class="lesson-page">
+<div class="lesson-header" data-num="16">
+  <div class="lesson-eyebrow">Lição 16 de 31</div>
+  <h1 class="lesson-title">Deus Dirige os Passos</h1>
+  <p class="lesson-subtitle">Provérbios 16</p>
+</div>
+<div class="lesson-content">
+<div class="section">
+<div class="section-label">Introdução Pastoral</div>
+<div class="section-title">Deus Dirige os Passos</div>
+<p>Provérbios 16:9 apresenta uma verdade que traz um equilíbrio importante para a vida cristã: "o coração do homem considera o seu caminho, mas o Senhor lhe dirige os passos." Note que o versículo não diz que planejar é errado — pelo contrário, ele reconhece que faz parte da natureza humana "considerar o caminho", ou seja, pensar, planejar, decidir.</p>
+<p><strong>Provérbios 16</strong> — Compreender que podemos planejar, mas é Deus quem soberanamente dirige nossos passos, e que essa verdade traz descanso, não ansiedade, para quem confia em Cristo.</p>
+<div class="callout gold"><div class="callout-title">Catecismo da Sabedoria</div><p><strong>Pergunta:</strong> Quem realmente dirige os nossos passos?</p><p><strong>Resposta:</strong> Nós podemos planejar nosso caminho, mas é o Senhor quem, em Sua sabedoria e soberania, dirige de fato os nossos passos.</p></div>
+</div>
+<div class="section essencial-section">
+<div class="essencial-box">
+<div class="essencial-title">&#9733; O que você precisa saber para ensinar isso hoje</div>
+<p>Podemos planejar com cuidado, mas é Deus quem realmente dirige o resultado final — isso liberta de uma ansiedade de precisar controlar tudo. Mesmo o pior plano humano (a crucificação de Jesus) foi usado por Deus para o maior bem já feito: nossa salvação. Se Deus fez isso ali, Ele pode dirigir também os nossos passos quando os planos não saem como esperávamos.</p>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Fundamento Bíblico</div>
+<div class="section-title">O que a Bíblia diz</div>
+<div class="bible-text">
+<div class="bible-ref">Pv 16:9</div>
+<div class="bible-quote">&ldquo;O coração do homem considera o seu caminho, mas o Senhor lhe dirige os passos.&rdquo;</div>
+<div class="bible-explain"><p><em>Este é o versículo-âncora da lição. Leia em voz alta com as crianças antes de prosseguir — a explicação completa vem na próxima seção.</em></p></div>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Para o Professor</div>
+<div class="section-title">Erros que o Professor Deve Evitar</div>
+<div class="callout warning"><div class="callout-title">Resumo rápido antes de ensinar</div><ul class="styled-list"><li><strong>Não diga:</strong> algo como &ldquo;Você precisa controlar cada detalhe da sua vida para ter sucesso.&rdquo;</li><li><strong>Não diga:</strong> algo como &ldquo;Se seus planos falharam, tudo está perdido e sem sentido.&rdquo;</li><li><strong>Não diga:</strong> algo como &ldquo;Confie totalmente na sua própria capacidade de planejar tudo.&rdquo;</li><li><strong>Diga:</strong> Nós podemos planejar nosso caminho, mas é o Senhor quem, em Sua sabedoria e soberania, dirige de fato os nossos passos.</li></ul></div>
+</div>
+<details class="aprofunde" open>
+<summary class="aprofunde-summary">Aprofunde-se: Fundamentação Teológica Completa<span class="aprofunde-note">Leitura opcional, para o professor que quiser estudar o tema com mais profundidade. O essencial para dar a aula já está no resumo acima.</span></summary>
+<div class="aprofunde-content">
+<div class="section">
+<div class="section-label">Entendendo a Doutrina</div>
+<div class="section-title">Entendendo a Palavra</div>
+<p>Provérbios 16:9 apresenta uma verdade que traz um equilíbrio importante para a vida cristã: "o coração do homem considera o seu caminho, mas o Senhor lhe dirige os passos." Note que o versículo não diz que planejar é errado — pelo contrário, ele reconhece que faz parte da natureza humana "considerar o caminho", ou seja, pensar, planejar, decidir. Mas, no fim, é Deus quem realmente determina o resultado e a direção final.</p>
+<p>Esse tema aparece repetidas vezes em Provérbios 16: "os pensamentos se preparam no coração do homem, mas a resposta da boca vem do Senhor" (v. 1); "entrega ao Senhor as tuas obras, e teus pensamentos serão bem-sucedidos" (v. 3); "o Senhor fez todas as coisas para si mesmo, e até ao ímpio para o dia do mal" (v. 4); e depois, ainda mais claro: "há muitos pensamentos no coração do homem, mas o conselho do Senhor permanecerá" (v. 21, parte, do capítulo 19 que ecoa o mesmo tema).</p>
+<p>Isso é uma libertação enorme para quem tende a viver ansioso, tentando controlar cada detalhe do futuro. A Bíblia não pede que abandonemos o planejamento — pelo contrário, ensina a "entregar ao Senhor as tuas obras" (v. 3), ou seja, planejar com sabedoria e, ao mesmo tempo, confiar o resultado final a Deus. Isso muda a forma de lidar com incertezas: uma criança pode se esforçar, estudar, se preparar para uma prova ou uma competição, mas o resultado final está nas mãos de Deus, que sempre age com sabedoria e bondade para quem O ama.</p>
+<p>O capítulo também fala sobre humildade diante dos planos de Deus: "a soberba precede a ruína, e a altivez do espírito precede a queda" (v. 18) — mostrando que confiar demais na própria capacidade de controlar tudo é, na verdade, um caminho perigoso. A verdadeira sabedoria reconhece os limites humanos e descansa na direção soberana de Deus.</p>
+</div>
+<div class="section">
+<div class="section-label">O Evangelho na Lição</div>
+<div class="section-title">Cristo e a Sabedoria</div>
+<p>Nenhuma vida ilustra melhor a verdade de Provérbios 16:9 do que a vida de Jesus. Humanamente falando, os planos que os líderes religiosos e o Império Romano tinham para Jesus eram de destruí-Lo completamente. Eles "consideraram seu caminho" com toda a maldade possível. Mas, no fim, foi Deus quem dirigiu os passos de toda essa história para cumprir Seu plano eterno de salvação. Atos 4:27-28 diz claramente que aqueles que se ajuntaram contra Jesus fizeram "tudo o que a tua mão e o teu conselho tinham anteriormente determinado que se havia de fazer" — mesmo as piores intenções humanas foram usadas por Deus para cumprir Seu propósito de graça.</p>
+<p>Isso nos dá uma esperança profunda: se Deus foi capaz de dirigir até os passos daqueles que planejavam o mal contra Jesus, transformando a pior injustiça da história na maior demonstração de amor e salvação, quanto mais Ele pode dirigir os nossos passos, mesmo quando os planos não saem como esperávamos!</p>
+<p>Quando confiamos em Cristo, não precisamos mais viver com o peso de precisar controlar cada detalhe do futuro. Podemos "considerar o nosso caminho" com sabedoria e esforço, orando e planejando com responsabilidade, mas descansando na certeza de que "sabemos que todas as coisas contribuem juntamente para o bem daqueles que amam a Deus" (Romanos 8:28). Isso não significa que tudo o que acontece é bom em si mesmo, mas que Deus, em Sua soberania, é capaz de tecer até as dificuldades e os planos que dão errado para um propósito bom, para aqueles que são Seus, por causa de Cristo.</p>
+</div>
+</div>
+</details>
+<div class="section">
+<div class="section-label">Dinâmica</div>
+<div class="section-title">Pensando Biblicamente: Mundo x Deus</div>
+<p>Leia cada frase do "mundo" e pergunte às crianças se concordam. Depois revele o que Deus realmente diz.</p>
+<div class="example"><div class="example-title">Sobre controle do futuro</div><p class="wrong">Mundo diz: "Você precisa controlar cada detalhe da sua vida para ter sucesso."</p><p class="right">Deus diz: "O coração do homem considera o seu caminho, mas o Senhor lhe dirige os passos." (Pv 16:9)</p></div>
+<div class="example"><div class="example-title">Sobre planos que dão errado</div><p class="wrong">Mundo diz: "Se seus planos falharam, tudo está perdido e sem sentido."</p><p class="right">Deus diz: "Sabemos que todas as coisas contribuem juntamente para o bem daqueles que amam a Deus." (Rm 8:28)</p></div>
+<div class="example"><div class="example-title">Sobre confiança excessiva em si mesmo</div><p class="wrong">Mundo diz: "Confie totalmente na sua própria capacidade de planejar tudo."</p><p class="right">Deus diz: "A soberba precede a ruína, e a altivez do espírito precede a queda." (Pv 16:18)</p></div>
+<div class="example"><div class="example-title">Sobre ansiedade com o futuro</div><p class="wrong">Mundo diz: "Você precisa se preocupar constantemente para garantir que tudo dê certo."</p><p class="right">Deus diz: "Entrega ao Senhor as tuas obras, e teus pensamentos serão bem-sucedidos." (Pv 16:3)</p></div>
+</div>
+<div class="section">
+<div class="section-label">Aplicação Prática</div>
+<div class="section-title">Desafios da Vida Real</div>
+<div class="example"><div class="example-title">Situação 1 — Na Escola</div><p>Apesar de estudar muito para uma prova importante, Igor não conseguiu a nota que esperava e ficou muito frustrado.</p><p class="right">Reflita: Como Provérbios 16:9 ajuda Igor a entender que ele fez sua parte, mas o resultado final está nas mãos de Deus? Isso significa que estudar não teve valor?</p></div>
+<div class="example"><div class="example-title">Situação 2 — Com os Amigos</div><p>Manoela planejou uma festa de aniversário com muito cuidado, mas choveu e teve que mudar tudo de última hora.</p><p class="right">Reflita: Como confiar que Deus dirige os passos ajuda Manoela a lidar com uma mudança de planos frustrante? O que ela pode aprender sobre flexibilidade e confiança?</p></div>
+<div class="example"><div class="example-title">Situação 3 — Em Família</div><p>A família de Bento precisou se mudar de cidade inesperadamente por causa do trabalho dos pais, e isso não era o que planejavam.</p><p class="right">Reflita: Como a história de José no Egito (que sofreu injustiças, mas Deus usou tudo para o bem) se relaciona com essa mudança inesperada? Como a família pode confiar em Deus nesse processo?</p></div>
+<div class="example"><div class="example-title">Situação 4 — Nos Jogos e Redes</div><p>Sofia planejou cuidadosamente uma estratégia em um jogo competitivo, mas perdeu de qualquer forma, mesmo fazendo tudo certo.</p><p class="right">Reflita: O que isso ensina sobre a diferença entre "considerar o caminho" (nosso esforço) e "o Senhor dirige os passos" (o resultado final)? Como lidar bem com a frustração de fazer o certo e ainda assim não ter o resultado esperado?</p></div>
+</div>
+<div class="section">
+<div class="section-label">Perguntas para Discussão</div>
+<div class="section-title">Conversa em Família</div>
+<ol class="questions-list"><li>Consegue se lembrar de um plano familiar que não saiu como esperado, mas que Deus usou para um bem maior depois?</li><li>Como podemos, como família, planejar com responsabilidade e ao mesmo tempo confiar o resultado a Deus?</li><li>Existe alguma ansiedade atual sobre o futuro que precisamos entregar a Deus em oração?</li><li>Como a história de Jesus (planos maus dos homens usados para o bem por Deus) nos dá esperança em situações difíceis?</li><li>Que decisão futura da nossa família podemos começar a entregar a Deus em oração desde já?</li></ol>
+</div>
+<div class="challenge-box">
+<div class="challenge-title">&#10022; Desafio da Semana</div>
+<p><strong>Versículo para memorizar:</strong> &ldquo;O coração do homem considera o seu caminho, mas o Senhor lhe dirige os passos.&rdquo; (Pv 16:9)</p>
+<p>Faça um plano simples para algo importante esta semana (um estudo, uma tarefa, um relacionamento), mas ore entregando esse plano a Deus todos os dias, pedindo que Ele dirija os seus passos, seja qual for o resultado. Anote o que aconteceu.</p>
+<div class="reading-plan">
+<div class="reading-day"><strong>Dia 1</strong>Romanos 8:28</div>
+<div class="reading-day"><strong>Dia 2</strong>Releia Provérbios 16</div>
+</div>
+<div class="prayer-box"><div class="callout-title">Oração Final (leia em voz alta com as crianças)</div><p>Senhor, muitas vezes tentamos controlar cada detalhe do nosso futuro, e ficamos ansiosos quando as coisas não saem como planejamos. Perdoa-nos pela falta de confiança em Ti. Obrigado porque, mesmo nos piores planos humanos contra Jesus, Tu estavas dirigindo tudo para a nossa salvação. Ensina-nos a planejar com sabedoria e responsabilidade, mas a entregar os resultados em Tuas mãos, confiando que Tu diriges os nossos passos com bondade e sabedoria perfeitas. Dá-nos paz no meio da incerteza, sabendo que estamos seguros em Ti. Em nome de Jesus. Amém.</p></div>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var KEY='pv_fontscale', min=0.8, max=1.8, step=0.1;
+  var wrap = document.getElementById('pv-scale-wrap');
+  var saved = parseFloat(localStorage.getItem(KEY)) || 1;
+  function apply(v){ if(wrap){ wrap.style.zoom = v; } try{ localStorage.setItem(KEY, v); }catch(e){} }
+  apply(saved);
+  var mEl = document.getElementById('pv-a11y-minus'), pEl = document.getElementById('pv-a11y-plus'), rEl = document.getElementById('pv-a11y-reset');
+  if(mEl) mEl.onclick = function(){ saved = Math.max(min, +(saved-step).toFixed(2)); apply(saved); };
+  if(pEl) pEl.onclick = function(){ saved = Math.min(max, +(saved+step).toFixed(2)); apply(saved); };
+  if(rEl) rEl.onclick = function(){ saved = 1; apply(saved); };
+})();
+</script>
+
+</body>
+</html>

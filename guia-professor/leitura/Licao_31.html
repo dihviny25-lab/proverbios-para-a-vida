@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia do Professor - Lição 31: A Pessoa que Teme ao Senhor</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+:root {
+  --bg: #EFEBE0;
+  --surface: #FAFAF7;
+  --primary: #1B3A2D;
+  --primary-light: #2D5C45;
+  --accent: #C4941A;
+  --accent-light: #F5EDCF;
+  --text: #1C1A17;
+  --text-muted: #6B6557;
+  --border: #DDD8CC;
+  --radius: 10px;
+}
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.7; font-size:10.6pt; }
+.lesson-header { background:var(--primary); color:#fff; padding:52px 40px 40px; text-align:center; position:relative; overflow:hidden; }
+.lesson-header::before { content: attr(data-num); position:absolute; font-family:'Playfair Display',serif; font-weight:700; font-size:170px; top:50%; left:50%; transform:translate(-50%,-50%); opacity:0.06; line-height:1; }
+.lesson-eyebrow { font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--accent); margin-bottom:12px; }
+.lesson-title { font-family:'Playfair Display',serif; font-size:27pt; font-weight:700; line-height:1.2; margin-bottom:10px; }
+.lesson-subtitle { font-size:12.5pt; opacity:0.75; max-width:520px; margin:0 auto; }
+.lesson-content { max-width: 100%; padding: 30px 40px 50px; }
+.section { margin-bottom:30px; page-break-inside: avoid; }
+.section-label { font-size:9px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--accent); margin-bottom:5px; }
+.section-title { font-family:'Playfair Display',serif; font-size:16pt; font-weight:700; color:var(--primary); margin-bottom:14px; padding-bottom:9px; border-bottom:1px solid var(--border); }
+.section p { margin-bottom:9px; font-size:10.4pt; }
+h3.subsection { font-family:'Playfair Display',serif; font-size:12.5pt; color:var(--primary); margin:16px 0 8px; }
+.bible-text { background:var(--surface); border-left:3px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:14px 18px; margin:14px 0; page-break-inside: avoid; }
+.bible-ref { font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--accent); margin-bottom:7px; }
+.bible-quote { font-family:'Playfair Display',serif; font-style:italic; font-size:12pt; line-height:1.55; color:var(--primary); margin-bottom:10px; }
+.bible-explain p { font-size:10pt; margin-bottom:6px; }
+.callout { background:var(--surface); border-radius:var(--radius); padding:14px 18px; margin:12px 0; border:1px solid var(--border); page-break-inside: avoid; }
+.callout.warning { border-left:4px solid #E85D04; background:#FFF8F4; }
+.callout.tip { border-left:4px solid var(--primary-light); background:#F0F7F4; }
+.callout.gold { border-left:4px solid var(--accent); background:var(--accent-light); }
+.callout-title { font-weight:700; font-size:9.5pt; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:6px; color:var(--text-muted); }
+.callout p { font-size:10pt; margin-bottom:5px; }
+.styled-list { list-style:none; margin:10px 0; }
+.styled-list li { padding:6px 0 6px 18px; position:relative; font-size:10.2pt; border-bottom:1px solid var(--border); }
+.styled-list li:last-child { border-bottom:none; }
+.styled-list li::before { content:'—'; position:absolute; left:0; color:var(--accent); font-weight:700; }
+.questions-list { counter-reset:question; list-style:none; margin:8px 0; }
+.questions-list li { counter-increment:question; padding:8px 0 8px 34px; position:relative; font-size:10.2pt; border-bottom:1px solid var(--border); }
+.questions-list li:last-child { border-bottom:none; }
+.questions-list li::before { content:counter(question); position:absolute; left:0; width:22px; height:22px; background:var(--primary); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:9.5pt; font-weight:700; top:7px; }
+.example { background:var(--surface); border-radius:var(--radius); padding:14px 18px; margin:10px 0; border:1px solid var(--border); page-break-inside: avoid; }
+.example-title { font-weight:700; font-size:10pt; color:var(--primary); margin-bottom:8px; }
+.example-title::before { content:'→ '; color:var(--accent); }
+.example p { font-size:10pt; margin-bottom:5px; }
+.example .wrong { color:#C0392B; font-size:9.3pt; font-style:italic; }
+.example .right { color:#1B7A3E; font-size:9.3pt; font-style:italic; }
+.challenge-box { background:var(--primary); color:#fff; border-radius:var(--radius); padding:22px 24px; margin-top:20px; page-break-inside: avoid; }
+.challenge-title { font-family:'Playfair Display',serif; font-size:14.5pt; font-weight:700; margin-bottom:14px; color:var(--accent); }
+.challenge-box p { font-size: 10pt; opacity:0.9; margin-bottom: 8px;}
+.reading-plan { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:12px; }
+.reading-day { background:rgba(255,255,255,0.08); border-radius:8px; padding:8px 10px; font-size:9.3pt; }
+.reading-day strong { display:block; color:var(--accent); font-size:8.6pt; letter-spacing:0.8px; text-transform:uppercase; margin-bottom:3px; }
+.verse-inline { font-style:italic; color:var(--primary); font-family:'Playfair Display',serif; }
+.prayer-box { background:var(--accent-light); border-left:4px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:16px 20px; margin-top:10px; color:var(--text); }
+.prayer-box p { font-style:italic; font-size:10pt; color:var(--text); }
+.prayer-box .callout-title { color: var(--text-muted); }
+
+.essencial-box { background:var(--primary); color:#fff; border-radius:var(--radius); padding:18px 22px; margin:4px 0 24px; border-left:5px solid var(--accent); page-break-inside: avoid; }
+.essencial-title { font-family:'Playfair Display',serif; font-weight:700; font-size:12.5pt; color:var(--accent); margin-bottom:8px; }
+.essencial-box p { font-size:10.4pt; margin-bottom:6px; opacity:0.96; color:#fff; }
+.essencial-box ul.styled-list li { border-bottom-color: rgba(255,255,255,0.15); color:#fff; }
+.essencial-box ul.styled-list li::before { color: var(--accent); }
+details.aprofunde { margin: 10px 0 28px; border:1px solid var(--border); border-radius:var(--radius); background:#F4F2EA; }
+details.aprofunde summary.aprofunde-summary { cursor:pointer; padding:14px 20px; font-family:'Playfair Display',serif; font-weight:700; font-size:12pt; color:var(--text-muted); list-style:none; }
+details.aprofunde summary.aprofunde-summary::-webkit-details-marker { display:none; }
+details.aprofunde summary.aprofunde-summary::marker { content:''; }
+details.aprofunde summary.aprofunde-summary::before { content:'▸  '; color:var(--accent); }
+details.aprofunde[open] summary.aprofunde-summary::before { content:'▾  '; }
+details.aprofunde .aprofunde-note { font-weight:400; font-size:9pt; text-transform:none; letter-spacing:0; color:var(--text-muted); display:block; margin-top:3px; }
+details.aprofunde > .aprofunde-content { padding:2px 20px 18px; color: var(--text-muted); display:none; }
+details.aprofunde[open] > .aprofunde-content { display:block; }
+details.aprofunde .aprofunde-content .section-title { color: var(--text-muted); border-bottom-color: var(--border); }
+details.aprofunde .aprofunde-content .section-label { color: var(--text-muted); opacity:0.7; }
+details.aprofunde .aprofunde-content p { color: var(--text-muted); }
+details.aprofunde .aprofunde-content h3.subsection { color: var(--text-muted); }
+details.aprofunde .aprofunde-content .section { page-break-inside: auto; margin-bottom: 14px; }
+
+@page { size: A4; margin: 0 0 1.6cm 0; }
+@page cover { margin: 0; }
+.print-cover { page-break-after: always; background:var(--primary); color:#fff; width:21cm; height:29.7cm; position:relative; }
+.print-cover .bar { background:var(--accent); height:12px; width:100%; position:absolute; left:0; }
+.print-cover .bar.top { top:0; } .print-cover .bar.bottom { bottom:0; }
+.print-cover .content { position:absolute; top:42%; left:0; right:0; text-align:center; padding:0 2.4cm; }
+.print-cover .kicker { color:var(--accent); letter-spacing:2.5px; font-size:11pt; text-transform:uppercase; margin-bottom:16px; font-weight:600; }
+.print-cover h1 { font-family:'Playfair Display',serif; font-size:30pt; margin-bottom:22px; font-weight:700; line-height:1.25; }
+.print-cover .base { color:#dcd0b0; font-style:italic; font-size:12.5pt; margin-bottom:8px; }
+.print-cover .tag { color:var(--accent); font-size:11pt; letter-spacing:1.5px; }
+.print-cover .foot { position:absolute; bottom:60px; left:0; right:0; text-align:center; color:#c9bd9a; font-size:9.5pt; }
+.lesson-page { page-break-after: always; }
+
+body { background: #fff; }
+
+
+#pv-a11y-bar { position:fixed; top:14px; right:14px; z-index:9999; display:flex; align-items:center; gap:2px; background:#1B3A2D; border-radius:999px; padding:5px 6px; box-shadow:0 4px 16px rgba(0,0,0,0.28); font-family:'Inter',sans-serif; }
+#pv-a11y-bar a.pv-link { all:unset; cursor:pointer; color:#fff; font-size:12px; font-weight:600; padding:6px 10px; border-radius:999px; white-space:nowrap; }
+#pv-a11y-bar a.pv-link:hover { background:rgba(255,255,255,0.16); color:#F5EDCF; }
+#pv-a11y-bar .pv-sep { width:1px; height:18px; background:rgba(255,255,255,0.25); margin:0 3px; }
+#pv-a11y-bar button.pv-fbtn { all:unset; cursor:pointer; color:#fff; font-weight:700; font-size:12.5px; width:28px; height:28px; display:flex; align-items:center; justify-content:center; border-radius:50%; }
+#pv-a11y-bar button.pv-fbtn:hover { background:rgba(255,255,255,0.18); }
+#pv-a11y-bar .pv-lbl { color:#C4941A; font-size:9.5px; font-weight:700; letter-spacing:1px; padding:0 3px; text-transform:uppercase; }
+@media print { #pv-a11y-bar { display:none !important; } }
+@media (max-width:560px) { #pv-a11y-bar .pv-lbl { display:none; } #pv-a11y-bar a.pv-link { padding:6px 8px; font-size:11.5px; } #pv-a11y-bar { top:8px; right:8px; } }
+
+#pv-scale-wrap { transition: zoom .08s; }
+body { padding-top:56px; }
+</style>
+</head>
+<body>
+<div id="pv-a11y-bar"><a class="pv-link" href="../../licoes/licao-31.html">&larr; Voltar à lição</a><a class="pv-link" href="../pdfs/Guia_Professor_Licao_31_A_Pessoa_que_Teme_ao_Senhor.pdf">Baixar PDF</a><div class="pv-sep"></div><span class="pv-lbl">Fonte</span><button class="pv-fbtn" id="pv-a11y-minus" title="Diminuir fonte">A-</button><button class="pv-fbtn" id="pv-a11y-reset" title="Tamanho padrão">A</button><button class="pv-fbtn" id="pv-a11y-plus" title="Aumentar fonte">A+</button></div>
+<div id="pv-scale-wrap">
+
+<div class="print-cover">
+  <div class="bar top"></div>
+  <div class="content">
+    <div class="kicker">Provérbios para a Vida &middot; Ministério Infantil</div>
+    <h1>Lição 31: A Pessoa que Teme ao Senhor</h1>
+    <div class="base">Texto Base: Provérbios 31</div>
+    <div class="tag">GUIA DO PROFESSOR</div>
+  </div>
+  <div class="foot">Material de Apoio para Ministração Infantil</div>
+  <div class="bar bottom"></div>
+</div>
+<div class="lesson-page">
+<div class="lesson-header" data-num="31">
+  <div class="lesson-eyebrow">Lição 31 de 31</div>
+  <h1 class="lesson-title">A Pessoa que Teme ao Senhor</h1>
+  <p class="lesson-subtitle">Provérbios 31</p>
+</div>
+<div class="lesson-content">
+<div class="section">
+<div class="section-label">Introdução Pastoral</div>
+<div class="section-title">A Pessoa que Teme ao Senhor</div>
+<p>Chegamos ao último capítulo de Provérbios, e é apropriado que ele termine exatamente onde começamos: com o temor do Senhor.</p>
+<p><strong>Provérbios 31</strong> — Concluir a jornada por Provérbios entendendo que o temor do Senhor — tema com que começamos na Lição 1 — é também o que dá verdadeiro valor e beleza duradoura a uma vida, cumprida perfeitamente em Cristo.</p>
+<div class="callout gold"><div class="callout-title">Catecismo da Sabedoria</div><p><strong>Pergunta:</strong> O que realmente torna uma pessoa digna de louvor?</p><p><strong>Resposta:</strong> Não a aparência externa nem os encantos passageiros, mas o temor do Senhor — reverência, amor e confiança em Deus — é o que verdadeiramente merece louvor.</p></div>
+</div>
+<div class="section essencial-section">
+<div class="essencial-box">
+<div class="essencial-title">&#9733; O que você precisa saber para ensinar isso hoje</div>
+<p>O livro termina onde começou: o que dá valor duradouro a uma vida não é aparência, popularidade ou sucesso passageiro, mas o temor do Senhor. Esta lição final é a oportunidade de amarrar as 31 semanas: Jesus viveu perfeitamente tudo o que Provérbios ensina, e é Sua obra — não o nosso esforço — que nos torna sábios diante de Deus.</p>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Fundamento Bíblico</div>
+<div class="section-title">O que a Bíblia diz</div>
+<div class="bible-text">
+<div class="bible-ref">Pv 31:30</div>
+<div class="bible-quote">&ldquo;Enganosa é a graça e vã a formosura, mas a mulher que teme ao Senhor, essa será louvada.&rdquo;</div>
+<div class="bible-explain"><p><em>Este é o versículo-âncora da lição. Leia em voz alta com as crianças antes de prosseguir — a explicação completa vem na próxima seção.</em></p></div>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Para o Professor</div>
+<div class="section-title">Erros que o Professor Deve Evitar</div>
+<div class="callout warning"><div class="callout-title">Resumo rápido antes de ensinar</div><ul class="styled-list"><li><strong>Não diga:</strong> algo como &ldquo;Beleza, popularidade e sucesso são o que realmente definem o valor de alguém.&rdquo;</li><li><strong>Não diga:</strong> algo como &ldquo;Você precisa se esforçar sozinho, seguindo regras rígidas, para se tornar uma boa pessoa.&rdquo;</li><li><strong>Não diga:</strong> algo como &ldquo;Uma vida de sucesso é construída sobre talento, esforço e sorte.&rdquo;</li><li><strong>Diga:</strong> Não a aparência externa nem os encantos passageiros, mas o temor do Senhor — reverência, amor e confiança em Deus — é o que verdadeiramente merece louvor.</li></ul></div>
+</div>
+<details class="aprofunde" open>
+<summary class="aprofunde-summary">Aprofunde-se: Fundamentação Teológica Completa<span class="aprofunde-note">Leitura opcional, para o professor que quiser estudar o tema com mais profundidade. O essencial para dar a aula já está no resumo acima.</span></summary>
+<div class="aprofunde-content">
+<div class="section">
+<div class="section-label">Entendendo a Doutrina</div>
+<div class="section-title">Entendendo a Palavra</div>
+<p>Chegamos ao último capítulo de Provérbios, e é apropriado que ele termine exatamente onde começamos: com o temor do Senhor. Provérbios 31:30 diz: "enganosa é a graça e vã a formosura, mas a mulher que teme ao Senhor, essa será louvada." Depois de descrever, nos versículos anteriores, uma mulher virtuosa — trabalhadora, sábia, generosa, cuidadosa com sua família e comunidade (v. 10-29) —, o capítulo revela a verdadeira fonte de todo esse caráter admirável: não a beleza física, que "é vã" (passageira, que não dura), mas o temor do Senhor.</p>
+<p>Esse retrato da "mulher virtuosa" não deve ser lido como uma lista impossível de tarefas que uma pessoa precisa realizar para ser aprovada, mas como um poema que celebra o fruto de uma vida vivida no temor do Senhor: sabedoria nas palavras (v. 26), diligência no trabalho (v. 13, 27), generosidade com os necessitados (v. 20), força e dignidade de caráter (v. 25). Tudo isso não nasce de esforço isolado, mas é fruto de um coração enraizado no temor do Senhor — exatamente o tema que abriu todo o livro em Provérbios 1:7: "o temor do Senhor é o princípio da sabedoria."</p>
+<p>É bonito perceber esse círculo completo: o livro de Provérbios começa dizendo que o temor do Senhor é o "princípio" (o fundamento) da sabedoria, e termina mostrando o que uma vida construída sobre esse fundamento produz — um caráter admirável, útil, generoso e digno de verdadeiro louvor, muito além de aparências passageiras. Beleza física, popularidade, riquezas — tudo isso é "vaidade" (vão, passageiro) se comparado à permanência de um caráter formado pelo temor do Senhor.</p>
+<p>Para uma criança que está concluindo esta jornada de 31 lições, a mensagem final é clara: o que realmente importa, o que realmente forma uma vida de valor duradouro, não é a aparência, a popularidade ou o sucesso momentâneo, mas um coração que teme, ama e confia no Senhor — exatamente onde tudo começou.</p>
+</div>
+<div class="section">
+<div class="section-label">O Evangelho na Lição</div>
+<div class="section-title">Cristo e a Sabedoria</div>
+<p>Ao longo destas 31 lições, vimos repetidamente que a sabedoria de Provérbios, em última análise, aponta para uma Pessoa: Jesus Cristo, "a sabedoria de Deus" (1 Coríntios 1:24), Aquele que "se nos tornou, da parte de Deus, sabedoria, e justiça, e santificação, e redenção" (1 Coríntios 1:30). Ele viveu perfeitamente cada princípio que estudamos — temeu ao Senhor com perfeição, guardou Seu coração sem falha, confiou totalmente no Pai, foi absolutamente íntegro e honesto, usou palavras que traziam saúde, teve domínio próprio perfeito, foi o amigo mais fiel, liderou servindo, e temeu ao Senhor de um jeito que nós, por nós mesmos, nunca conseguiríamos.</p>
+<p>Jesus é, em certo sentido, o cumprimento definitivo da "pessoa virtuosa" de Provérbios 31 — não apenas um exemplo distante para admirarmos, mas Aquele cuja obra perfeita nos é dada como presente quando confiamos nEle. Não precisamos, e nunca conseguiríamos, produzir por nós mesmos o caráter completo descrito neste capítulo. Mas, através da fé em Cristo, recebemos Sua justiça perfeita, e o Espírito Santo começa, ao longo da vida, a produzir em nós, aos poucos, esse mesmo caráter — não como um fardo pesado de regras a cumprir, mas como fruto de um coração que já foi transformado pela graça.</p>
+<p>Ao concluir esta jornada por Provérbios, a pergunta final não é "quão bem você seguiu todas as 31 lições?", mas "você conhece a Jesus, a sabedoria de Deus encarnada, que viveu tudo isso perfeitamente por você, e que agora, pelo Espírito Santo, transforma seu coração de dentro para fora?" O temor do Senhor, que abriu o livro, agora se cumpre plenamente: reverência, respeito e amor confiante em um Deus que, em Cristo, nos amou primeiro, nos salvou pela graça, e continua nos moldando, dia após dia, à imagem de Seu Filho.</p>
+</div>
+</div>
+</details>
+<div class="section">
+<div class="section-label">Dinâmica</div>
+<div class="section-title">Pensando Biblicamente: Mundo x Deus</div>
+<p>Leia cada frase do "mundo" e pergunte às crianças se concordam. Depois revele o que Deus realmente diz.</p>
+<div class="example"><div class="example-title">Sobre o que dá valor a uma pessoa</div><p class="wrong">Mundo diz: "Beleza, popularidade e sucesso são o que realmente definem o valor de alguém."</p><p class="right">Deus diz: "Enganosa é a graça e vã a formosura, mas a mulher que teme ao Senhor, essa será louvada." (Pv 31:30)</p></div>
+<div class="example"><div class="example-title">Sobre como alcançar um bom caráter</div><p class="wrong">Mundo diz: "Você precisa se esforçar sozinho, seguindo regras rígidas, para se tornar uma boa pessoa."</p><p class="right">Deus diz: "Aquele que começou em vós a boa obra a aperfeiçoará." (Fp 1:6)</p></div>
+<div class="example"><div class="example-title">Sobre o fundamento de uma vida sábia</div><p class="wrong">Mundo diz: "Uma vida de sucesso é construída sobre talento, esforço e sorte."</p><p class="right">Deus diz: "O temor do Senhor é o princípio da sabedoria." (Pv 1:7 e 31:30, formando um círculo completo)</p></div>
+<div class="example"><div class="example-title">Sobre onde encontrar a sabedoria perfeita</div><p class="wrong">Mundo diz: "A sabedoria perfeita é um ideal inalcançável, apenas uma meta distante."</p><p class="right">Deus diz: "Cristo... se nos fez, da parte de Deus, sabedoria." (1 Co 1:30)</p></div>
+</div>
+<div class="section">
+<div class="section-label">Aplicação Prática</div>
+<div class="section-title">Desafios da Vida Real</div>
+<div class="example"><div class="example-title">Situação 1 — Na Escola</div><p>Ao final do ano letivo, Beatriz reflete sobre o que realmente importou: as notas altas, a popularidade, ou o caráter que ela desenvolveu.</p><p class="right">Reflita: Como Provérbios 31:30 desafia a forma como medimos sucesso e valor pessoal? O que Beatriz pode levar consigo para o próximo ano?</p></div>
+<div class="example"><div class="example-title">Situação 2 — Com os Amigos</div><p>Ao se despedir de um grupo de amigos no fim do ano, Thiago se pergunta que tipo de amigo ele foi ao longo desse tempo.</p><p class="right">Reflita: Olhando para as 31 lições estudadas, que características de um bom amigo (fidelidade, honestidade, palavras que edificam) Thiago pode continuar cultivando?</p></div>
+<div class="example"><div class="example-title">Situação 3 — Em Família</div><p>A família de Clara decide reservar um tempo para conversar sobre tudo o que aprenderam ao longo do estudo de Provérbios.</p><p class="right">Reflita: Qual foi a lição mais marcante para cada membro da família? Como podem continuar aplicando esses princípios no dia a dia?</p></div>
+<div class="example"><div class="example-title">Situação 4 — Olhando para o Futuro</div><p>Ao concluir esta apostila, uma criança se pergunta como vai continuar crescendo em sabedoria depois que o estudo terminar.</p><p class="right">Reflita: Que hábitos (leitura bíblica, oração, memorização, conversas em família) podem continuar depois desta apostila? Como o Espírito Santo continua o trabalho de moldar o caráter mesmo depois que "as lições acabam"?</p></div>
+</div>
+<div class="section">
+<div class="section-label">Perguntas para Discussão</div>
+<div class="section-title">Conversa em Família</div>
+<ol class="questions-list"><li>Ao longo destas 31 lições, qual foi o ensinamento que mais impactou nossa família?</li><li>Como podemos continuar cultivando o temor do Senhor em nossa casa, mesmo depois de terminar esta apostila?</li><li>De que forma vimos Jesus, a sabedoria de Deus, presente em cada lição que estudamos?</li><li>Que hábitos (leitura bíblica, oração, conversas como esta) queremos manter daqui para frente?</li><li>Vamos orar juntos, agradecendo a Deus por essa jornada e pedindo que Ele continue Sua obra de transformação em cada um de nós?</li></ol>
+</div>
+<div class="challenge-box">
+<div class="challenge-title">&#10022; Desafio da Semana</div>
+<p><strong>Versículo para memorizar:</strong> &ldquo;Enganosa é a graça e vã a formosura, mas a mulher que teme ao Senhor, essa será louvada.&rdquo; (Pv 31:30)</p>
+<p>Escreva uma carta curta para si mesmo (ou peça ajuda a um adulto para isso), descrevendo o que você aprendeu ao longo destas 31 lições sobre o temor do Senhor e sobre Jesus. Guarde essa carta e releia-a daqui a um ano, para ver como Deus continuou moldando seu caráter.</p>
+<div class="reading-plan">
+<div class="reading-day"><strong>Dia 1</strong>1 Coríntios 1:24</div>
+<div class="reading-day"><strong>Dia 2</strong>1 Coríntios 1:30</div>
+<div class="reading-day"><strong>Dia 3</strong>Releia Provérbios 31</div>
+</div>
+<div class="prayer-box"><div class="callout-title">Oração Final (leia em voz alta com as crianças)</div><p>Senhor, chegamos ao final desta jornada por Provérbios, e Te agradecemos por tudo o que aprendemos sobre Tua sabedoria, sobre nosso próprio coração, e, acima de tudo, sobre Jesus Cristo, que é a sabedoria de Deus em pessoa. Reconhecemos que a beleza e o sucesso deste mundo são passageiros, mas que o temor do Senhor — reverência, respeito e amor confiante em Ti — é o que realmente dá valor duradouro a uma vida. Perdoa-nos pelas vezes em que buscamos nosso valor em outras coisas. Obrigado porque Jesus viveu perfeitamente tudo o que este livro ensina, e nos oferece Sua justiça como presente. Continua, pelo Teu Espírito Santo, moldando nosso caráter dia após dia, para que, ao longo de toda a nossa vida, sejamos pessoas que temem ao Senhor e refletem Cristo em tudo o que fazemos. Em nome de Jesus, o único Salvador e a única Sabedoria verdadeira. Amém.
+
+*"O temor do Senhor é o pri</p></div>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var KEY='pv_fontscale', min=0.8, max=1.8, step=0.1;
+  var wrap = document.getElementById('pv-scale-wrap');
+  var saved = parseFloat(localStorage.getItem(KEY)) || 1;
+  function apply(v){ if(wrap){ wrap.style.zoom = v; } try{ localStorage.setItem(KEY, v); }catch(e){} }
+  apply(saved);
+  var mEl = document.getElementById('pv-a11y-minus'), pEl = document.getElementById('pv-a11y-plus'), rEl = document.getElementById('pv-a11y-reset');
+  if(mEl) mEl.onclick = function(){ saved = Math.max(min, +(saved-step).toFixed(2)); apply(saved); };
+  if(pEl) pEl.onclick = function(){ saved = Math.min(max, +(saved+step).toFixed(2)); apply(saved); };
+  if(rEl) rEl.onclick = function(){ saved = 1; apply(saved); };
+})();
+</script>
+
+</body>
+</html>

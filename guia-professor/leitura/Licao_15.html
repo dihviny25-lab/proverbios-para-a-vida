@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia do Professor - Lição 15: A Resposta Branda</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+:root {
+  --bg: #EFEBE0;
+  --surface: #FAFAF7;
+  --primary: #1B3A2D;
+  --primary-light: #2D5C45;
+  --accent: #C4941A;
+  --accent-light: #F5EDCF;
+  --text: #1C1A17;
+  --text-muted: #6B6557;
+  --border: #DDD8CC;
+  --radius: 10px;
+}
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.7; font-size:10.6pt; }
+.lesson-header { background:var(--primary); color:#fff; padding:52px 40px 40px; text-align:center; position:relative; overflow:hidden; }
+.lesson-header::before { content: attr(data-num); position:absolute; font-family:'Playfair Display',serif; font-weight:700; font-size:170px; top:50%; left:50%; transform:translate(-50%,-50%); opacity:0.06; line-height:1; }
+.lesson-eyebrow { font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--accent); margin-bottom:12px; }
+.lesson-title { font-family:'Playfair Display',serif; font-size:27pt; font-weight:700; line-height:1.2; margin-bottom:10px; }
+.lesson-subtitle { font-size:12.5pt; opacity:0.75; max-width:520px; margin:0 auto; }
+.lesson-content { max-width: 100%; padding: 30px 40px 50px; }
+.section { margin-bottom:30px; page-break-inside: avoid; }
+.section-label { font-size:9px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--accent); margin-bottom:5px; }
+.section-title { font-family:'Playfair Display',serif; font-size:16pt; font-weight:700; color:var(--primary); margin-bottom:14px; padding-bottom:9px; border-bottom:1px solid var(--border); }
+.section p { margin-bottom:9px; font-size:10.4pt; }
+h3.subsection { font-family:'Playfair Display',serif; font-size:12.5pt; color:var(--primary); margin:16px 0 8px; }
+.bible-text { background:var(--surface); border-left:3px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:14px 18px; margin:14px 0; page-break-inside: avoid; }
+.bible-ref { font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--accent); margin-bottom:7px; }
+.bible-quote { font-family:'Playfair Display',serif; font-style:italic; font-size:12pt; line-height:1.55; color:var(--primary); margin-bottom:10px; }
+.bible-explain p { font-size:10pt; margin-bottom:6px; }
+.callout { background:var(--surface); border-radius:var(--radius); padding:14px 18px; margin:12px 0; border:1px solid var(--border); page-break-inside: avoid; }
+.callout.warning { border-left:4px solid #E85D04; background:#FFF8F4; }
+.callout.tip { border-left:4px solid var(--primary-light); background:#F0F7F4; }
+.callout.gold { border-left:4px solid var(--accent); background:var(--accent-light); }
+.callout-title { font-weight:700; font-size:9.5pt; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:6px; color:var(--text-muted); }
+.callout p { font-size:10pt; margin-bottom:5px; }
+.styled-list { list-style:none; margin:10px 0; }
+.styled-list li { padding:6px 0 6px 18px; position:relative; font-size:10.2pt; border-bottom:1px solid var(--border); }
+.styled-list li:last-child { border-bottom:none; }
+.styled-list li::before { content:'—'; position:absolute; left:0; color:var(--accent); font-weight:700; }
+.questions-list { counter-reset:question; list-style:none; margin:8px 0; }
+.questions-list li { counter-increment:question; padding:8px 0 8px 34px; position:relative; font-size:10.2pt; border-bottom:1px solid var(--border); }
+.questions-list li:last-child { border-bottom:none; }
+.questions-list li::before { content:counter(question); position:absolute; left:0; width:22px; height:22px; background:var(--primary); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:9.5pt; font-weight:700; top:7px; }
+.example { background:var(--surface); border-radius:var(--radius); padding:14px 18px; margin:10px 0; border:1px solid var(--border); page-break-inside: avoid; }
+.example-title { font-weight:700; font-size:10pt; color:var(--primary); margin-bottom:8px; }
+.example-title::before { content:'→ '; color:var(--accent); }
+.example p { font-size:10pt; margin-bottom:5px; }
+.example .wrong { color:#C0392B; font-size:9.3pt; font-style:italic; }
+.example .right { color:#1B7A3E; font-size:9.3pt; font-style:italic; }
+.challenge-box { background:var(--primary); color:#fff; border-radius:var(--radius); padding:22px 24px; margin-top:20px; page-break-inside: avoid; }
+.challenge-title { font-family:'Playfair Display',serif; font-size:14.5pt; font-weight:700; margin-bottom:14px; color:var(--accent); }
+.challenge-box p { font-size: 10pt; opacity:0.9; margin-bottom: 8px;}
+.reading-plan { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:12px; }
+.reading-day { background:rgba(255,255,255,0.08); border-radius:8px; padding:8px 10px; font-size:9.3pt; }
+.reading-day strong { display:block; color:var(--accent); font-size:8.6pt; letter-spacing:0.8px; text-transform:uppercase; margin-bottom:3px; }
+.verse-inline { font-style:italic; color:var(--primary); font-family:'Playfair Display',serif; }
+.prayer-box { background:var(--accent-light); border-left:4px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:16px 20px; margin-top:10px; color:var(--text); }
+.prayer-box p { font-style:italic; font-size:10pt; color:var(--text); }
+.prayer-box .callout-title { color: var(--text-muted); }
+
+.essencial-box { background:var(--primary); color:#fff; border-radius:var(--radius); padding:18px 22px; margin:4px 0 24px; border-left:5px solid var(--accent); page-break-inside: avoid; }
+.essencial-title { font-family:'Playfair Display',serif; font-weight:700; font-size:12.5pt; color:var(--accent); margin-bottom:8px; }
+.essencial-box p { font-size:10.4pt; margin-bottom:6px; opacity:0.96; color:#fff; }
+.essencial-box ul.styled-list li { border-bottom-color: rgba(255,255,255,0.15); color:#fff; }
+.essencial-box ul.styled-list li::before { color: var(--accent); }
+details.aprofunde { margin: 10px 0 28px; border:1px solid var(--border); border-radius:var(--radius); background:#F4F2EA; }
+details.aprofunde summary.aprofunde-summary { cursor:pointer; padding:14px 20px; font-family:'Playfair Display',serif; font-weight:700; font-size:12pt; color:var(--text-muted); list-style:none; }
+details.aprofunde summary.aprofunde-summary::-webkit-details-marker { display:none; }
+details.aprofunde summary.aprofunde-summary::marker { content:''; }
+details.aprofunde summary.aprofunde-summary::before { content:'▸  '; color:var(--accent); }
+details.aprofunde[open] summary.aprofunde-summary::before { content:'▾  '; }
+details.aprofunde .aprofunde-note { font-weight:400; font-size:9pt; text-transform:none; letter-spacing:0; color:var(--text-muted); display:block; margin-top:3px; }
+details.aprofunde > .aprofunde-content { padding:2px 20px 18px; color: var(--text-muted); display:none; }
+details.aprofunde[open] > .aprofunde-content { display:block; }
+details.aprofunde .aprofunde-content .section-title { color: var(--text-muted); border-bottom-color: var(--border); }
+details.aprofunde .aprofunde-content .section-label { color: var(--text-muted); opacity:0.7; }
+details.aprofunde .aprofunde-content p { color: var(--text-muted); }
+details.aprofunde .aprofunde-content h3.subsection { color: var(--text-muted); }
+details.aprofunde .aprofunde-content .section { page-break-inside: auto; margin-bottom: 14px; }
+
+@page { size: A4; margin: 0 0 1.6cm 0; }
+@page cover { margin: 0; }
+.print-cover { page-break-after: always; background:var(--primary); color:#fff; width:21cm; height:29.7cm; position:relative; }
+.print-cover .bar { background:var(--accent); height:12px; width:100%; position:absolute; left:0; }
+.print-cover .bar.top { top:0; } .print-cover .bar.bottom { bottom:0; }
+.print-cover .content { position:absolute; top:42%; left:0; right:0; text-align:center; padding:0 2.4cm; }
+.print-cover .kicker { color:var(--accent); letter-spacing:2.5px; font-size:11pt; text-transform:uppercase; margin-bottom:16px; font-weight:600; }
+.print-cover h1 { font-family:'Playfair Display',serif; font-size:30pt; margin-bottom:22px; font-weight:700; line-height:1.25; }
+.print-cover .base { color:#dcd0b0; font-style:italic; font-size:12.5pt; margin-bottom:8px; }
+.print-cover .tag { color:var(--accent); font-size:11pt; letter-spacing:1.5px; }
+.print-cover .foot { position:absolute; bottom:60px; left:0; right:0; text-align:center; color:#c9bd9a; font-size:9.5pt; }
+.lesson-page { page-break-after: always; }
+
+body { background: #fff; }
+
+
+#pv-a11y-bar { position:fixed; top:14px; right:14px; z-index:9999; display:flex; align-items:center; gap:2px; background:#1B3A2D; border-radius:999px; padding:5px 6px; box-shadow:0 4px 16px rgba(0,0,0,0.28); font-family:'Inter',sans-serif; }
+#pv-a11y-bar a.pv-link { all:unset; cursor:pointer; color:#fff; font-size:12px; font-weight:600; padding:6px 10px; border-radius:999px; white-space:nowrap; }
+#pv-a11y-bar a.pv-link:hover { background:rgba(255,255,255,0.16); color:#F5EDCF; }
+#pv-a11y-bar .pv-sep { width:1px; height:18px; background:rgba(255,255,255,0.25); margin:0 3px; }
+#pv-a11y-bar button.pv-fbtn { all:unset; cursor:pointer; color:#fff; font-weight:700; font-size:12.5px; width:28px; height:28px; display:flex; align-items:center; justify-content:center; border-radius:50%; }
+#pv-a11y-bar button.pv-fbtn:hover { background:rgba(255,255,255,0.18); }
+#pv-a11y-bar .pv-lbl { color:#C4941A; font-size:9.5px; font-weight:700; letter-spacing:1px; padding:0 3px; text-transform:uppercase; }
+@media print { #pv-a11y-bar { display:none !important; } }
+@media (max-width:560px) { #pv-a11y-bar .pv-lbl { display:none; } #pv-a11y-bar a.pv-link { padding:6px 8px; font-size:11.5px; } #pv-a11y-bar { top:8px; right:8px; } }
+
+#pv-scale-wrap { transition: zoom .08s; }
+body { padding-top:56px; }
+</style>
+</head>
+<body>
+<div id="pv-a11y-bar"><a class="pv-link" href="../../licoes/licao-15.html">&larr; Voltar à lição</a><a class="pv-link" href="../pdfs/Guia_Professor_Licao_15_A_Resposta_Branda.pdf">Baixar PDF</a><div class="pv-sep"></div><span class="pv-lbl">Fonte</span><button class="pv-fbtn" id="pv-a11y-minus" title="Diminuir fonte">A-</button><button class="pv-fbtn" id="pv-a11y-reset" title="Tamanho padrão">A</button><button class="pv-fbtn" id="pv-a11y-plus" title="Aumentar fonte">A+</button></div>
+<div id="pv-scale-wrap">
+
+<div class="print-cover">
+  <div class="bar top"></div>
+  <div class="content">
+    <div class="kicker">Provérbios para a Vida &middot; Ministério Infantil</div>
+    <h1>Lição 15: A Resposta Branda</h1>
+    <div class="base">Texto Base: Provérbios 15</div>
+    <div class="tag">GUIA DO PROFESSOR</div>
+  </div>
+  <div class="foot">Material de Apoio para Ministração Infantil</div>
+  <div class="bar bottom"></div>
+</div>
+<div class="lesson-page">
+<div class="lesson-header" data-num="15">
+  <div class="lesson-eyebrow">Lição 15 de 31</div>
+  <h1 class="lesson-title">A Resposta Branda</h1>
+  <p class="lesson-subtitle">Provérbios 15</p>
+</div>
+<div class="lesson-content">
+<div class="section">
+<div class="section-label">Introdução Pastoral</div>
+<div class="section-title">A Resposta Branda</div>
+<p>Provérbios 15:1 descreve algo que todos já experimentamos, seja como quem fala ou como quem ouve: "a resposta branda desvia o furor, mas a palavra dura suscita a ira." Imagine dois cenários: em um, alguém grita com você, e você grita de volta — o resultado quase sempre é que a briga cresce, cada um mais bravo que o outro.</p>
+<p><strong>Provérbios 15</strong> — Aprender que a gentileza nas palavras pode desarmar conflitos, enquanto a dureza os inflama, e que essa mansidão só floresce plenamente em quem conhece a mansidão de Cristo.</p>
+<div class="callout gold"><div class="callout-title">Catecismo da Sabedoria</div><p><strong>Pergunta:</strong> Como podemos desviar a raiva de uma situação de conflito?</p><p><strong>Resposta:</strong> Uma resposta branda e gentil desvia o furor, mas uma palavra dura e ríspida só aumenta a raiva; devemos pedir a Deus mansidão para responder assim.</p></div>
+</div>
+<div class="section essencial-section">
+<div class="essencial-box">
+<div class="essencial-title">&#9733; O que você precisa saber para ensinar isso hoje</div>
+<p>Responder com brandura desarma o conflito; responder com dureza o inflama — brandura não é fraqueza, é força sob controle. Isso não significa nunca se posicionar, mas escolher a gentileza mesmo quando temos motivo para reagir mal. Jesus, diante da pior injustiça, respondeu com mansidão perfeita e ainda orou por quem O maltratava; é dEle que vem a mansidão que conseguimos praticar.</p>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Fundamento Bíblico</div>
+<div class="section-title">O que a Bíblia diz</div>
+<div class="bible-text">
+<div class="bible-ref">Pv 15:1</div>
+<div class="bible-quote">&ldquo;A resposta branda desvia o furor, mas a palavra dura suscita a ira.&rdquo;</div>
+<div class="bible-explain"><p><em>Este é o versículo-âncora da lição. Leia em voz alta com as crianças antes de prosseguir — a explicação completa vem na próxima seção.</em></p></div>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Para o Professor</div>
+<div class="section-title">Erros que o Professor Deve Evitar</div>
+<div class="callout warning"><div class="callout-title">Resumo rápido antes de ensinar</div><ul class="styled-list"><li><strong>Não diga:</strong> algo como &ldquo;Se alguém for duro com você, revide na mesma moeda, ou até mais forte.&rdquo;</li><li><strong>Não diga:</strong> algo como &ldquo;Ser gentil é sinal de fraqueza; pessoas fortes impõem respeito com dureza.&rdquo;</li><li><strong>Não diga:</strong> algo como &ldquo;Quem te fez mal merece sofrer o mesmo ou pior.&rdquo;</li><li><strong>Diga:</strong> Uma resposta branda e gentil desvia o furor, mas uma palavra dura e ríspida só aumenta a raiva; devemos pedir a Deus mansidão para responder assim.</li></ul></div>
+</div>
+<details class="aprofunde" open>
+<summary class="aprofunde-summary">Aprofunde-se: Fundamentação Teológica Completa<span class="aprofunde-note">Leitura opcional, para o professor que quiser estudar o tema com mais profundidade. O essencial para dar a aula já está no resumo acima.</span></summary>
+<div class="aprofunde-content">
+<div class="section">
+<div class="section-label">Entendendo a Doutrina</div>
+<div class="section-title">Entendendo a Palavra</div>
+<p>Provérbios 15:1 descreve algo que todos já experimentamos, seja como quem fala ou como quem ouve: "a resposta branda desvia o furor, mas a palavra dura suscita a ira." Imagine dois cenários: em um, alguém grita com você, e você grita de volta — o resultado quase sempre é que a briga cresce, cada um mais bravo que o outro. No segundo cenário, alguém grita com você, mas você responde com calma e gentileza — muitas vezes isso "tira o fôlego" da raiva da outra pessoa, como jogar água mansa sobre um fogo, em vez de gasolina.</p>
+<p>Isso não significa que a pessoa que responde com brandura está sempre "certa" ou que ela deve aceitar tudo passivamente. Brandura não é fraqueza — é força sob controle. É a capacidade de responder com calma mesmo quando se tem todo o direito de reagir com raiva. O restante do capítulo reforça esse tema: "o coração alegre aformoseia o rosto, mas pela dor do coração o espírito se abate" (v. 13), e "o que atenta ao ensino achará o bem, e o que confia no Senhor será bem-aventurado" (v. 20, parte).</p>
+<p>Provérbios 15 também fala sobre como Deus vê os pensamentos e planos das pessoas: "os pensamentos dos justos são retos, mas os conselhos dos ímpios são falsos" (v. 26), e sobre a importância de saber ouvir correção: "o ouvido que escuta a repreensão da vida no meio dos sábios habitará" (v. 31). Todo o capítulo mostra como as palavras e as atitudes de um coração sábio produzem paz, enquanto um coração duro e orgulhoso produz conflito.</p>
+<p>Para uma criança, isso é extremamente prático: quando alguém te provoca, te acusa injustamente, ou está bravo com você, existe sempre uma escolha sobre como responder. A escolha pela brandura não é natural — nosso instinto costuma ser revidar. Mas Provérbios ensina que a resposta gentil, ainda que mais difícil no momento, é o caminho da sabedoria e da paz.</p>
+</div>
+<div class="section">
+<div class="section-label">O Evangelho na Lição</div>
+<div class="section-title">Cristo e a Sabedoria</div>
+<p>Jesus descreveu a Si mesmo com uma palavra rara e bonita: "manso e humilde de coração" (Mateus 11:29). Mansidão não é fraqueza — é o maior poder do universo sob perfeito controle, escolhendo responder com gentileza mesmo quando teria todo o direito de reagir com força. Quando Jesus foi preso injustamente, um de Seus discípulos tentou defendê-Lo com violência, cortando a orelha de um servo. Jesus não apenas repreendeu essa reação, mas curou o homem ferido (Lucas 22:50-51) — respondendo a um momento de extrema tensão com um ato de cura, não de vingança.</p>
+<p>Diante dos que O acusavam falsamente, zombavam dEle e O maltratavam durante o julgamento e a crucificação, Jesus "como a ovelha muda perante os que a tosquiam, não abriu a boca" (Isaías 53:7) — Ele não abriu a boca para se vingar. Essa é a resposta branda mais extraordinária já registrada: o próprio Filho de Deus, sofrendo a maior injustiça da história, escolheu não devolver mal com mal, mas entregar Sua causa ao Pai e, ainda assim, orar por perdão para quem O crucificava.</p>
+<p>O motivo pelo qual conseguimos, ainda que imperfeitamente, responder com brandura em nossos próprios conflitos não é força de vontade — é a graça de Cristo trabalhando em nós. Quando entendemos o quanto fomos perdoados por Deus, mesmo merecendo julgamento, começamos a ter mais paciência e gentileza com quem nos ofende. O Espírito Santo, que habita no cristão, produz mansidão como fruto (Gálatas 5:23) — não uma mansidão fingida ou fraca, mas uma força controlada, que reflete o próprio caráter de Jesus.</p>
+</div>
+</div>
+</details>
+<div class="section">
+<div class="section-label">Dinâmica</div>
+<div class="section-title">Pensando Biblicamente: Mundo x Deus</div>
+<p>Leia cada frase do "mundo" e pergunte às crianças se concordam. Depois revele o que Deus realmente diz.</p>
+<div class="example"><div class="example-title">Sobre responder a provocações</div><p class="wrong">Mundo diz: "Se alguém for duro com você, revide na mesma moeda, ou até mais forte."</p><p class="right">Deus diz: "A resposta branda desvia o furor, mas a palavra dura suscita a ira." (Pv 15:1)</p></div>
+<div class="example"><div class="example-title">Sobre mansidão</div><p class="wrong">Mundo diz: "Ser gentil é sinal de fraqueza; pessoas fortes impõem respeito com dureza."</p><p class="right">Deus diz: "Aprendei de mim, que sou manso e humilde de coração." (Mt 11:29)</p></div>
+<div class="example"><div class="example-title">Sobre vingança</div><p class="wrong">Mundo diz: "Quem te fez mal merece sofrer o mesmo ou pior."</p><p class="right">Deus diz: "Pai, perdoa-lhes, porque não sabem o que fazem." (Lc 23:34)</p></div>
+<div class="example"><div class="example-title">Sobre receber correção</div><p class="wrong">Mundo diz: "Ninguém deveria te dizer que você está errado; isso fere a autoestima."</p><p class="right">Deus diz: "O ouvido que escuta a repreensão da vida no meio dos sábios habitará." (Pv 15:31)</p></div>
+</div>
+<div class="section">
+<div class="section-label">Aplicação Prática</div>
+<div class="section-title">Desafios da Vida Real</div>
+<div class="example"><div class="example-title">Situação 1 — Na Escola</div><p>Um colega acusa Nicole injustamente de algo que ela não fez, na frente de toda a turma, e ela sente vontade de gritar de volta.</p><p class="right">Reflita: Como uma "resposta branda" poderia mudar o rumo dessa situação, comparado a uma "palavra dura"? Isso significa que Nicole não pode se defender?</p></div>
+<div class="example"><div class="example-title">Situação 2 — Com os Amigos</div><p>Dois amigos de Samuel discutem feio, e cada um pede que Samuel "tome um lado" e fale mal do outro.</p><p class="right">Reflita: Como Samuel pode responder com brandura a essa pressão, sem alimentar o conflito? O que isso ensina sobre o papel da gentileza em meio a brigas alheias?</p></div>
+<div class="example"><div class="example-title">Situação 3 — Em Família</div><p>Depois de ser repreendido pelos pais, Matheus responde com grosseria, achando que estão sendo injustos.</p><p class="right">Reflita: O que Provérbios 15:31 ensina sobre a importância de ouvir a repreensão com humildade? Como Matheus poderia responder de forma diferente?</p></div>
+<div class="example"><div class="example-title">Situação 4 — Nos Jogos e Redes</div><p>Durante um jogo online, um jogador desconhecido começa a insultar Luiza depois de ela vencer uma partida.</p><p class="right">Reflita: Como Luiza pode aplicar Provérbios 15:1 nessa situação online? O que fazer quando a resposta branda não muda o comportamento da outra pessoa?</p></div>
+</div>
+<div class="section">
+<div class="section-label">Perguntas para Discussão</div>
+<div class="section-title">Conversa em Família</div>
+<ol class="questions-list"><li>Em que momentos, em casa, costumamos responder com dureza em vez de brandura?</li><li>Como podemos ajudar uns aos outros a responder com mais calma em momentos de tensão?</li><li>Já vimos, na prática, uma resposta gentil "desviar o furor" de alguém?</li><li>Como o exemplo de Jesus diante da injustiça nos desafia sobre como reagimos quando somos ofendidos?</li><li>Que frase ou oração podemos usar como família quando sentirmos raiva crescendo, antes de responder?</li></ol>
+</div>
+<div class="challenge-box">
+<div class="challenge-title">&#10022; Desafio da Semana</div>
+<p><strong>Versículo para memorizar:</strong> &ldquo;A resposta branda desvia o furor, mas a palavra dura suscita a ira.&rdquo; (Pv 15:1)</p>
+<p>Esta semana, escolha uma situação de possível conflito (com um irmão, colega ou amigo) e pratique conscientemente responder com brandura, mesmo quando tiver vontade de reagir duramente. Anote o que aconteceu e como a outra pessoa reagiu.</p>
+<div class="reading-plan">
+<div class="reading-day"><strong>Dia 1</strong>Mateus 11:29</div>
+<div class="reading-day"><strong>Dia 2</strong>Lucas 22:50-51</div>
+<div class="reading-day"><strong>Dia 3</strong>Isaías 53:7</div>
+<div class="reading-day"><strong>Dia 4</strong>Gálatas 5:23</div>
+<div class="reading-day"><strong>Dia 5</strong>Releia Provérbios 15</div>
+</div>
+<div class="prayer-box"><div class="callout-title">Oração Final (leia em voz alta com as crianças)</div><p>Senhor, reconhecemos que muitas vezes respondemos com dureza quando somos provocados, alimentando conflitos que poderiam ter sido evitados com uma palavra gentil. Perdoa-nos pela falta de mansidão. Obrigado porque Jesus, mesmo diante da maior injustiça, respondeu com uma mansidão que vem só de Ti, e ainda orou por perdão para quem O maltratava. Enche-nos do Teu Espírito Santo para que a mansidão cresça em nós como fruto, e nos ajude a responder com brandura, mesmo quando é difícil, para que sejamos instrumentos de paz onde quer que estejamos. Em nome de Jesus. Amém.</p></div>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var KEY='pv_fontscale', min=0.8, max=1.8, step=0.1;
+  var wrap = document.getElementById('pv-scale-wrap');
+  var saved = parseFloat(localStorage.getItem(KEY)) || 1;
+  function apply(v){ if(wrap){ wrap.style.zoom = v; } try{ localStorage.setItem(KEY, v); }catch(e){} }
+  apply(saved);
+  var mEl = document.getElementById('pv-a11y-minus'), pEl = document.getElementById('pv-a11y-plus'), rEl = document.getElementById('pv-a11y-reset');
+  if(mEl) mEl.onclick = function(){ saved = Math.max(min, +(saved-step).toFixed(2)); apply(saved); };
+  if(pEl) pEl.onclick = function(){ saved = Math.min(max, +(saved+step).toFixed(2)); apply(saved); };
+  if(rEl) rEl.onclick = function(){ saved = 1; apply(saved); };
+})();
+</script>
+
+</body>
+</html>

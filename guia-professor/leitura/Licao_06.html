@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia do Professor - Lição 6: Prudência</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+:root {
+  --bg: #EFEBE0;
+  --surface: #FAFAF7;
+  --primary: #1B3A2D;
+  --primary-light: #2D5C45;
+  --accent: #C4941A;
+  --accent-light: #F5EDCF;
+  --text: #1C1A17;
+  --text-muted: #6B6557;
+  --border: #DDD8CC;
+  --radius: 10px;
+}
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.7; font-size:10.6pt; }
+.lesson-header { background:var(--primary); color:#fff; padding:52px 40px 40px; text-align:center; position:relative; overflow:hidden; }
+.lesson-header::before { content: attr(data-num); position:absolute; font-family:'Playfair Display',serif; font-weight:700; font-size:170px; top:50%; left:50%; transform:translate(-50%,-50%); opacity:0.06; line-height:1; }
+.lesson-eyebrow { font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--accent); margin-bottom:12px; }
+.lesson-title { font-family:'Playfair Display',serif; font-size:27pt; font-weight:700; line-height:1.2; margin-bottom:10px; }
+.lesson-subtitle { font-size:12.5pt; opacity:0.75; max-width:520px; margin:0 auto; }
+.lesson-content { max-width: 100%; padding: 30px 40px 50px; }
+.section { margin-bottom:30px; page-break-inside: avoid; }
+.section-label { font-size:9px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--accent); margin-bottom:5px; }
+.section-title { font-family:'Playfair Display',serif; font-size:16pt; font-weight:700; color:var(--primary); margin-bottom:14px; padding-bottom:9px; border-bottom:1px solid var(--border); }
+.section p { margin-bottom:9px; font-size:10.4pt; }
+h3.subsection { font-family:'Playfair Display',serif; font-size:12.5pt; color:var(--primary); margin:16px 0 8px; }
+.bible-text { background:var(--surface); border-left:3px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:14px 18px; margin:14px 0; page-break-inside: avoid; }
+.bible-ref { font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--accent); margin-bottom:7px; }
+.bible-quote { font-family:'Playfair Display',serif; font-style:italic; font-size:12pt; line-height:1.55; color:var(--primary); margin-bottom:10px; }
+.bible-explain p { font-size:10pt; margin-bottom:6px; }
+.callout { background:var(--surface); border-radius:var(--radius); padding:14px 18px; margin:12px 0; border:1px solid var(--border); page-break-inside: avoid; }
+.callout.warning { border-left:4px solid #E85D04; background:#FFF8F4; }
+.callout.tip { border-left:4px solid var(--primary-light); background:#F0F7F4; }
+.callout.gold { border-left:4px solid var(--accent); background:var(--accent-light); }
+.callout-title { font-weight:700; font-size:9.5pt; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:6px; color:var(--text-muted); }
+.callout p { font-size:10pt; margin-bottom:5px; }
+.styled-list { list-style:none; margin:10px 0; }
+.styled-list li { padding:6px 0 6px 18px; position:relative; font-size:10.2pt; border-bottom:1px solid var(--border); }
+.styled-list li:last-child { border-bottom:none; }
+.styled-list li::before { content:'—'; position:absolute; left:0; color:var(--accent); font-weight:700; }
+.questions-list { counter-reset:question; list-style:none; margin:8px 0; }
+.questions-list li { counter-increment:question; padding:8px 0 8px 34px; position:relative; font-size:10.2pt; border-bottom:1px solid var(--border); }
+.questions-list li:last-child { border-bottom:none; }
+.questions-list li::before { content:counter(question); position:absolute; left:0; width:22px; height:22px; background:var(--primary); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:9.5pt; font-weight:700; top:7px; }
+.example { background:var(--surface); border-radius:var(--radius); padding:14px 18px; margin:10px 0; border:1px solid var(--border); page-break-inside: avoid; }
+.example-title { font-weight:700; font-size:10pt; color:var(--primary); margin-bottom:8px; }
+.example-title::before { content:'→ '; color:var(--accent); }
+.example p { font-size:10pt; margin-bottom:5px; }
+.example .wrong { color:#C0392B; font-size:9.3pt; font-style:italic; }
+.example .right { color:#1B7A3E; font-size:9.3pt; font-style:italic; }
+.challenge-box { background:var(--primary); color:#fff; border-radius:var(--radius); padding:22px 24px; margin-top:20px; page-break-inside: avoid; }
+.challenge-title { font-family:'Playfair Display',serif; font-size:14.5pt; font-weight:700; margin-bottom:14px; color:var(--accent); }
+.challenge-box p { font-size: 10pt; opacity:0.9; margin-bottom: 8px;}
+.reading-plan { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:12px; }
+.reading-day { background:rgba(255,255,255,0.08); border-radius:8px; padding:8px 10px; font-size:9.3pt; }
+.reading-day strong { display:block; color:var(--accent); font-size:8.6pt; letter-spacing:0.8px; text-transform:uppercase; margin-bottom:3px; }
+.verse-inline { font-style:italic; color:var(--primary); font-family:'Playfair Display',serif; }
+.prayer-box { background:var(--accent-light); border-left:4px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:16px 20px; margin-top:10px; color:var(--text); }
+.prayer-box p { font-style:italic; font-size:10pt; color:var(--text); }
+.prayer-box .callout-title { color: var(--text-muted); }
+
+.essencial-box { background:var(--primary); color:#fff; border-radius:var(--radius); padding:18px 22px; margin:4px 0 24px; border-left:5px solid var(--accent); page-break-inside: avoid; }
+.essencial-title { font-family:'Playfair Display',serif; font-weight:700; font-size:12.5pt; color:var(--accent); margin-bottom:8px; }
+.essencial-box p { font-size:10.4pt; margin-bottom:6px; opacity:0.96; color:#fff; }
+.essencial-box ul.styled-list li { border-bottom-color: rgba(255,255,255,0.15); color:#fff; }
+.essencial-box ul.styled-list li::before { color: var(--accent); }
+details.aprofunde { margin: 10px 0 28px; border:1px solid var(--border); border-radius:var(--radius); background:#F4F2EA; }
+details.aprofunde summary.aprofunde-summary { cursor:pointer; padding:14px 20px; font-family:'Playfair Display',serif; font-weight:700; font-size:12pt; color:var(--text-muted); list-style:none; }
+details.aprofunde summary.aprofunde-summary::-webkit-details-marker { display:none; }
+details.aprofunde summary.aprofunde-summary::marker { content:''; }
+details.aprofunde summary.aprofunde-summary::before { content:'▸  '; color:var(--accent); }
+details.aprofunde[open] summary.aprofunde-summary::before { content:'▾  '; }
+details.aprofunde .aprofunde-note { font-weight:400; font-size:9pt; text-transform:none; letter-spacing:0; color:var(--text-muted); display:block; margin-top:3px; }
+details.aprofunde > .aprofunde-content { padding:2px 20px 18px; color: var(--text-muted); display:none; }
+details.aprofunde[open] > .aprofunde-content { display:block; }
+details.aprofunde .aprofunde-content .section-title { color: var(--text-muted); border-bottom-color: var(--border); }
+details.aprofunde .aprofunde-content .section-label { color: var(--text-muted); opacity:0.7; }
+details.aprofunde .aprofunde-content p { color: var(--text-muted); }
+details.aprofunde .aprofunde-content h3.subsection { color: var(--text-muted); }
+details.aprofunde .aprofunde-content .section { page-break-inside: auto; margin-bottom: 14px; }
+
+@page { size: A4; margin: 0 0 1.6cm 0; }
+@page cover { margin: 0; }
+.print-cover { page-break-after: always; background:var(--primary); color:#fff; width:21cm; height:29.7cm; position:relative; }
+.print-cover .bar { background:var(--accent); height:12px; width:100%; position:absolute; left:0; }
+.print-cover .bar.top { top:0; } .print-cover .bar.bottom { bottom:0; }
+.print-cover .content { position:absolute; top:42%; left:0; right:0; text-align:center; padding:0 2.4cm; }
+.print-cover .kicker { color:var(--accent); letter-spacing:2.5px; font-size:11pt; text-transform:uppercase; margin-bottom:16px; font-weight:600; }
+.print-cover h1 { font-family:'Playfair Display',serif; font-size:30pt; margin-bottom:22px; font-weight:700; line-height:1.25; }
+.print-cover .base { color:#dcd0b0; font-style:italic; font-size:12.5pt; margin-bottom:8px; }
+.print-cover .tag { color:var(--accent); font-size:11pt; letter-spacing:1.5px; }
+.print-cover .foot { position:absolute; bottom:60px; left:0; right:0; text-align:center; color:#c9bd9a; font-size:9.5pt; }
+.lesson-page { page-break-after: always; }
+
+body { background: #fff; }
+
+
+#pv-a11y-bar { position:fixed; top:14px; right:14px; z-index:9999; display:flex; align-items:center; gap:2px; background:#1B3A2D; border-radius:999px; padding:5px 6px; box-shadow:0 4px 16px rgba(0,0,0,0.28); font-family:'Inter',sans-serif; }
+#pv-a11y-bar a.pv-link { all:unset; cursor:pointer; color:#fff; font-size:12px; font-weight:600; padding:6px 10px; border-radius:999px; white-space:nowrap; }
+#pv-a11y-bar a.pv-link:hover { background:rgba(255,255,255,0.16); color:#F5EDCF; }
+#pv-a11y-bar .pv-sep { width:1px; height:18px; background:rgba(255,255,255,0.25); margin:0 3px; }
+#pv-a11y-bar button.pv-fbtn { all:unset; cursor:pointer; color:#fff; font-weight:700; font-size:12.5px; width:28px; height:28px; display:flex; align-items:center; justify-content:center; border-radius:50%; }
+#pv-a11y-bar button.pv-fbtn:hover { background:rgba(255,255,255,0.18); }
+#pv-a11y-bar .pv-lbl { color:#C4941A; font-size:9.5px; font-weight:700; letter-spacing:1px; padding:0 3px; text-transform:uppercase; }
+@media print { #pv-a11y-bar { display:none !important; } }
+@media (max-width:560px) { #pv-a11y-bar .pv-lbl { display:none; } #pv-a11y-bar a.pv-link { padding:6px 8px; font-size:11.5px; } #pv-a11y-bar { top:8px; right:8px; } }
+
+#pv-scale-wrap { transition: zoom .08s; }
+body { padding-top:56px; }
+</style>
+</head>
+<body>
+<div id="pv-a11y-bar"><a class="pv-link" href="../../licoes/licao-06.html">&larr; Voltar à lição</a><a class="pv-link" href="../pdfs/Guia_Professor_Licao_06_Prudência.pdf">Baixar PDF</a><div class="pv-sep"></div><span class="pv-lbl">Fonte</span><button class="pv-fbtn" id="pv-a11y-minus" title="Diminuir fonte">A-</button><button class="pv-fbtn" id="pv-a11y-reset" title="Tamanho padrão">A</button><button class="pv-fbtn" id="pv-a11y-plus" title="Aumentar fonte">A+</button></div>
+<div id="pv-scale-wrap">
+
+<div class="print-cover">
+  <div class="bar top"></div>
+  <div class="content">
+    <div class="kicker">Provérbios para a Vida &middot; Ministério Infantil</div>
+    <h1>Lição 6: Prudência</h1>
+    <div class="base">Texto Base: Provérbios 6</div>
+    <div class="tag">GUIA DO PROFESSOR</div>
+  </div>
+  <div class="foot">Material de Apoio para Ministração Infantil</div>
+  <div class="bar bottom"></div>
+</div>
+<div class="lesson-page">
+<div class="lesson-header" data-num="6">
+  <div class="lesson-eyebrow">Lição 6 de 31</div>
+  <h1 class="lesson-title">Prudência</h1>
+  <p class="lesson-subtitle">Provérbios 6</p>
+</div>
+<div class="lesson-content">
+<div class="section">
+<div class="section-label">Introdução Pastoral</div>
+<div class="section-title">Prudência</div>
+<p>Provérbios 6 começa com um convite curioso: "Vai-te para a formiga, ó preguiçoso; considera os seus caminhos, e sê sábio." Salomão, o homem mais sábio que existiu, manda o preguiçoso estudar..</p>
+<p><strong>Provérbios 6</strong> — Aprender com o exemplo da formiga que a prudência envolve planejamento, diligência e disciplina, e que essa disciplina, no cristão, floresce da graça de Deus e não do medo.</p>
+<div class="callout gold"><div class="callout-title">Catecismo da Sabedoria</div><p><strong>Pergunta:</strong> O que a formiga nos ensina sobre prudência?</p><p><strong>Resposta:</strong> A formiga trabalha e se prepara sem precisar de alguém mandando, nos ensinando que a pessoa prudente planeja e age com diligência, confiando em Deus para o resultado.</p></div>
+</div>
+<div class="section essencial-section">
+<div class="essencial-box">
+<div class="essencial-title">&#9733; O que você precisa saber para ensinar isso hoje</div>
+<p>A formiga trabalha e se prepara sem que ninguém precise mandar — esse é o retrato bíblico da prudência: pensar à frente e agir com disciplina antes que a necessidade vire urgência. Isso vale para tarefas da escola, dinheiro e responsabilidades de casa. Jesus foi o mais diligente de todos, nunca desperdiçando um dia da Sua missão de nos salvar; nEle encontramos motivação para a disciplina, não medo.</p>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Fundamento Bíblico</div>
+<div class="section-title">O que a Bíblia diz</div>
+<div class="bible-text">
+<div class="bible-ref">Pv 6:6</div>
+<div class="bible-quote">&ldquo;Vai-te para a formiga, ó preguiçoso; considera os seus caminhos, e sê sábio.&rdquo;</div>
+<div class="bible-explain"><p><em>Este é o versículo-âncora da lição. Leia em voz alta com as crianças antes de prosseguir — a explicação completa vem na próxima seção.</em></p></div>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Para o Professor</div>
+<div class="section-title">Erros que o Professor Deve Evitar</div>
+<div class="callout warning"><div class="callout-title">Resumo rápido antes de ensinar</div><ul class="styled-list"><li><strong>Não diga:</strong> algo como &ldquo;Aproveite agora, deixe as responsabilidades para depois.&rdquo;</li><li><strong>Não diga:</strong> algo como &ldquo;Viva o momento, não se preocupe com o futuro.&rdquo;</li><li><strong>Não diga:</strong> algo como &ldquo;Disciplina tira a diversão da vida.&rdquo;</li><li><strong>Diga:</strong> A formiga trabalha e se prepara sem precisar de alguém mandando, nos ensinando que a pessoa prudente planeja e age com diligência, confiando em Deus para o resultado.</li></ul></div>
+</div>
+<details class="aprofunde" open>
+<summary class="aprofunde-summary">Aprofunde-se: Fundamentação Teológica Completa<span class="aprofunde-note">Leitura opcional, para o professor que quiser estudar o tema com mais profundidade. O essencial para dar a aula já está no resumo acima.</span></summary>
+<div class="aprofunde-content">
+<div class="section">
+<div class="section-label">Entendendo a Doutrina</div>
+<div class="section-title">Entendendo a Palavra</div>
+<p>Provérbios 6 começa com um convite curioso: "Vai-te para a formiga, ó preguiçoso; considera os seus caminhos, e sê sábio." Salomão, o homem mais sábio que existiu, manda o preguiçoso estudar... uma formiga. Por que uma criatura tão pequena mereceria tanta atenção?</p>
+<p>A resposta vem no versículo seguinte: "não tendo ela superior, nem oficial, nem dominador, prepara no verão o seu pão, e ajunta na sega o seu mantimento" (v. 7-8). A formiga não precisa que ninguém fique de olho nela, mandando trabalhar. Ela mesma, por instinto dado por Deus, se organiza, trabalha enquanto há tempo e se prepara para o futuro. Ninguém precisa cobrar da formiga; ela simplesmente faz o que precisa ser feito, no tempo certo.</p>
+<p>Isso contrasta com o preguiçoso, descrito logo depois: "Até quando, ó preguiçoso, ficarás deitado? Quando te levantarás do teu sono? Um pouco de sono, um pouco de folga, um pouco de cruzar as mãos, deitado" (v. 9-10). O texto não está condenando o descanso — Deus criou o sono e o descanso como bons. O problema é o hábito de adiar responsabilidades, de esperar que as coisas "se resolvam sozinhas", de nunca planejar à frente. A consequência, diz o texto, é que "a tua pobreza virá como o caminhante, e a tua necessidade, como um homem armado" (v. 11) — de repente, sem aviso, como um ladrão.</p>
+<p>Prudência, segundo Provérbios, não é apenas "ser cuidadoso" no sentido de evitar riscos. É a capacidade de olhar à frente, perceber o que precisa ser feito antes que se torne urgente, e agir com disciplina mesmo quando ninguém está cobrando. Isso vale para os deveres da escola que podem ser feitos aos poucos em vez de na última hora, para guardar dinheiro em vez de gastar tudo impulsivamente, para cuidar da saúde e das responsabilidades de casa. A formiga nos ensina que a prudência trabalha "no verão" — no tempo de oportunidade — para não ser pega desprevenida "no inverno" — no tempo de necessidade.</p>
+</div>
+<div class="section">
+<div class="section-label">O Evangelho na Lição</div>
+<div class="section-title">Cristo e a Sabedoria</div>
+<p>Pode parecer que este capítulo é só sobre "ser mais disciplinado" — e, à primeira vista, isso pode soar cansativo, como mais uma lista de coisas que precisamos fazer sozinhos para sermos bons o suficiente. Mas o evangelho transforma completamente a razão pela qual buscamos a prudência e a diligência.</p>
+<p>Jesus foi o mais prudente de todos os que já viveram. Ele nunca desperdiçou um momento do Seu propósito. Desde jovem, disse: "não sabíeis que me convinha estar nas coisas de meu Pai?" (Lucas 2:49). Ele viveu cada dia com intencionalidade, sabendo exatamente para onde estava indo — até a cruz. E, ao contrário de nós, que muitas vezes procrastinamos e adiamos o que é certo, Jesus não adiou Sua obra de salvar Seu povo, mesmo sabendo o alto custo que isso teria.</p>
+<p>A boa notícia é que a diligência de Jesus não foi apenas um exemplo distante para admirarmos — foi uma obra feita a nosso favor. Quando confiamos nEle, Sua obediência perfeita, incluindo Sua diligência e prudência, é contada como nossa diante de Deus. Isso significa que não precisamos trabalhar e nos disciplinar para conquistar o amor de Deus — já o temos em Cristo. Mas, como resposta agradecida a essa graça, o Espírito Santo trabalha em nós produzindo o fruto do "domínio próprio" (Gálatas 5:23), que é justamente a capacidade de agir com prudência, planejamento e disciplina, não por medo de punição, mas porque queremos honrar Aquele que nos amou primeiro.</p>
+</div>
+</div>
+</details>
+<div class="section">
+<div class="section-label">Dinâmica</div>
+<div class="section-title">Pensando Biblicamente: Mundo x Deus</div>
+<p>Leia cada frase do "mundo" e pergunte às crianças se concordam. Depois revele o que Deus realmente diz.</p>
+<div class="example"><div class="example-title">Sobre trabalho e responsabilidade</div><p class="wrong">Mundo diz: "Aproveite agora, deixe as responsabilidades para depois."</p><p class="right">Deus diz: "Vai-te para a formiga, ó preguiçoso; considera os seus caminhos, e sê sábio." (Pv 6:6)</p></div>
+<div class="example"><div class="example-title">Sobre planejamento</div><p class="wrong">Mundo diz: "Viva o momento, não se preocupe com o futuro."</p><p class="right">Deus diz: "Prepara no verão o seu pão, e ajunta na sega o seu mantimento." (Pv 6:8)</p></div>
+<div class="example"><div class="example-title">Sobre disciplina</div><p class="wrong">Mundo diz: "Disciplina tira a diversão da vida."</p><p class="right">Deus diz: "O que ama a disciplina ama o conhecimento." (Pv 12:1)</p></div>
+<div class="example"><div class="example-title">Sobre por que trabalhamos com afinco</div><p class="wrong">Mundo diz: "Trabalhe duro só para ter o que você merece."</p><p class="right">Deus diz: "Tudo o que fizerdes, fazei-o de todo o coração, como ao Senhor." (Cl 3:23)</p></div>
+</div>
+<div class="section">
+<div class="section-label">Aplicação Prática</div>
+<div class="section-title">Desafios da Vida Real</div>
+<div class="example"><div class="example-title">Situação 1 — Na Escola</div><p>Felipe tem uma semana inteira para fazer um trabalho, mas decide deixar tudo para a última noite antes da entrega.</p><p class="right">Reflita: O que a formiga faria diferente de Felipe? Como planejar com antecedência é uma forma de sabedoria prática?</p></div>
+<div class="example"><div class="example-title">Situação 2 — Com os Amigos</div><p>Um amigo de Júlia sempre espera que ela faça o trabalho em grupo sozinha, "porque no fim vai dar tudo certo mesmo".</p><p class="right">Reflita: Como a preguiça de uma pessoa pode sobrecarregar outras? O que Júlia poderia fazer para incentivar diligência no grupo, com gentileza?</p></div>
+<div class="example"><div class="example-title">Situação 3 — Em Família</div><p>Os pais de Nicolas pedem que ele guarde parte da mesada em vez de gastar tudo assim que recebe.</p><p class="right">Reflita: Como isso se relaciona com o exemplo da formiga guardando comida no verão? O que muda quando pensamos no futuro em vez de só no presente?</p></div>
+<div class="example"><div class="example-title">Situação 4 — Nos Jogos e Telas</div><p>Larissa sempre adia terminar seus deveres de casa "só mais uma partida" no videogame, e no fim acaba sem tempo e estressada.</p><p class="right">Reflita: Que padrão de preguiça Provérbios 6 descreve que se parece com essa situação? O que Larissa poderia fazer diferente?</p></div>
+</div>
+<div class="section">
+<div class="section-label">Perguntas para Discussão</div>
+<div class="section-title">Conversa em Família</div>
+<ol class="questions-list"><li>Em que áreas nossa família tem agido como a formiga, e em que áreas temos sido preguiçosos?</li><li>Como podemos nos ajudar mutuamente a planejar melhor o tempo e as responsabilidades?</li><li>Existe algo que temos adiado e que deveríamos "guardar no verão" antes que vire uma necessidade urgente?</li><li>Como a diligência de Jesus em cumprir a vontade do Pai nos inspira?</li><li>Que hábito prático podemos criar em casa para incentivar mais prudência e menos procrastinação?</li></ol>
+</div>
+<div class="challenge-box">
+<div class="challenge-title">&#10022; Desafio da Semana</div>
+<p><strong>Versículo para memorizar:</strong> &ldquo;Vai-te para a formiga, ó preguiçoso; considera os seus caminhos, e sê sábio.&rdquo; (Pv 6:6)</p>
+<p>Escolha uma tarefa que você costuma deixar para depois (estudar, arrumar o quarto, uma responsabilidade em casa) e faça um pequeno "plano de formiga": divida em partes pequenas e faça um pouco a cada dia, sem deixar para a última hora. Anote o que fez cada dia.</p>
+<div class="reading-plan">
+<div class="reading-day"><strong>Dia 1</strong>Lucas 2:49</div>
+<div class="reading-day"><strong>Dia 2</strong>Gálatas 5:23</div>
+<div class="reading-day"><strong>Dia 3</strong>Releia Provérbios 6</div>
+</div>
+<div class="prayer-box"><div class="callout-title">Oração Final (leia em voz alta com as crianças)</div><p>Senhor, perdoa-nos pelas vezes em que adiamos o que deveríamos fazer, confiando que tudo se resolveria sozinho. Ensina-nos com o exemplo da formiga a olhar para frente, a planejar com sabedoria e a trabalhar com diligência, não por medo, mas por gratidão à graça que já recebemos em Cristo. Obrigado porque Jesus nunca desperdiçou um só dia da Sua missão de nos salvar. Pelo Teu Espírito, produze em nós o fruto do domínio próprio, para que sejamos prudentes em tudo o que fazemos, para Tua glória. Em nome de Jesus. Amém.</p></div>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var KEY='pv_fontscale', min=0.8, max=1.8, step=0.1;
+  var wrap = document.getElementById('pv-scale-wrap');
+  var saved = parseFloat(localStorage.getItem(KEY)) || 1;
+  function apply(v){ if(wrap){ wrap.style.zoom = v; } try{ localStorage.setItem(KEY, v); }catch(e){} }
+  apply(saved);
+  var mEl = document.getElementById('pv-a11y-minus'), pEl = document.getElementById('pv-a11y-plus'), rEl = document.getElementById('pv-a11y-reset');
+  if(mEl) mEl.onclick = function(){ saved = Math.max(min, +(saved-step).toFixed(2)); apply(saved); };
+  if(pEl) pEl.onclick = function(){ saved = Math.min(max, +(saved+step).toFixed(2)); apply(saved); };
+  if(rEl) rEl.onclick = function(){ saved = 1; apply(saved); };
+})();
+</script>
+
+</body>
+</html>

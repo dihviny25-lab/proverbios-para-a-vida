@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia do Professor - Lição 24: Coragem para Fazer o Certo</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+:root {
+  --bg: #EFEBE0;
+  --surface: #FAFAF7;
+  --primary: #1B3A2D;
+  --primary-light: #2D5C45;
+  --accent: #C4941A;
+  --accent-light: #F5EDCF;
+  --text: #1C1A17;
+  --text-muted: #6B6557;
+  --border: #DDD8CC;
+  --radius: 10px;
+}
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.7; font-size:10.6pt; }
+.lesson-header { background:var(--primary); color:#fff; padding:52px 40px 40px; text-align:center; position:relative; overflow:hidden; }
+.lesson-header::before { content: attr(data-num); position:absolute; font-family:'Playfair Display',serif; font-weight:700; font-size:170px; top:50%; left:50%; transform:translate(-50%,-50%); opacity:0.06; line-height:1; }
+.lesson-eyebrow { font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--accent); margin-bottom:12px; }
+.lesson-title { font-family:'Playfair Display',serif; font-size:27pt; font-weight:700; line-height:1.2; margin-bottom:10px; }
+.lesson-subtitle { font-size:12.5pt; opacity:0.75; max-width:520px; margin:0 auto; }
+.lesson-content { max-width: 100%; padding: 30px 40px 50px; }
+.section { margin-bottom:30px; page-break-inside: avoid; }
+.section-label { font-size:9px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--accent); margin-bottom:5px; }
+.section-title { font-family:'Playfair Display',serif; font-size:16pt; font-weight:700; color:var(--primary); margin-bottom:14px; padding-bottom:9px; border-bottom:1px solid var(--border); }
+.section p { margin-bottom:9px; font-size:10.4pt; }
+h3.subsection { font-family:'Playfair Display',serif; font-size:12.5pt; color:var(--primary); margin:16px 0 8px; }
+.bible-text { background:var(--surface); border-left:3px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:14px 18px; margin:14px 0; page-break-inside: avoid; }
+.bible-ref { font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--accent); margin-bottom:7px; }
+.bible-quote { font-family:'Playfair Display',serif; font-style:italic; font-size:12pt; line-height:1.55; color:var(--primary); margin-bottom:10px; }
+.bible-explain p { font-size:10pt; margin-bottom:6px; }
+.callout { background:var(--surface); border-radius:var(--radius); padding:14px 18px; margin:12px 0; border:1px solid var(--border); page-break-inside: avoid; }
+.callout.warning { border-left:4px solid #E85D04; background:#FFF8F4; }
+.callout.tip { border-left:4px solid var(--primary-light); background:#F0F7F4; }
+.callout.gold { border-left:4px solid var(--accent); background:var(--accent-light); }
+.callout-title { font-weight:700; font-size:9.5pt; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:6px; color:var(--text-muted); }
+.callout p { font-size:10pt; margin-bottom:5px; }
+.styled-list { list-style:none; margin:10px 0; }
+.styled-list li { padding:6px 0 6px 18px; position:relative; font-size:10.2pt; border-bottom:1px solid var(--border); }
+.styled-list li:last-child { border-bottom:none; }
+.styled-list li::before { content:'—'; position:absolute; left:0; color:var(--accent); font-weight:700; }
+.questions-list { counter-reset:question; list-style:none; margin:8px 0; }
+.questions-list li { counter-increment:question; padding:8px 0 8px 34px; position:relative; font-size:10.2pt; border-bottom:1px solid var(--border); }
+.questions-list li:last-child { border-bottom:none; }
+.questions-list li::before { content:counter(question); position:absolute; left:0; width:22px; height:22px; background:var(--primary); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:9.5pt; font-weight:700; top:7px; }
+.example { background:var(--surface); border-radius:var(--radius); padding:14px 18px; margin:10px 0; border:1px solid var(--border); page-break-inside: avoid; }
+.example-title { font-weight:700; font-size:10pt; color:var(--primary); margin-bottom:8px; }
+.example-title::before { content:'→ '; color:var(--accent); }
+.example p { font-size:10pt; margin-bottom:5px; }
+.example .wrong { color:#C0392B; font-size:9.3pt; font-style:italic; }
+.example .right { color:#1B7A3E; font-size:9.3pt; font-style:italic; }
+.challenge-box { background:var(--primary); color:#fff; border-radius:var(--radius); padding:22px 24px; margin-top:20px; page-break-inside: avoid; }
+.challenge-title { font-family:'Playfair Display',serif; font-size:14.5pt; font-weight:700; margin-bottom:14px; color:var(--accent); }
+.challenge-box p { font-size: 10pt; opacity:0.9; margin-bottom: 8px;}
+.reading-plan { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:12px; }
+.reading-day { background:rgba(255,255,255,0.08); border-radius:8px; padding:8px 10px; font-size:9.3pt; }
+.reading-day strong { display:block; color:var(--accent); font-size:8.6pt; letter-spacing:0.8px; text-transform:uppercase; margin-bottom:3px; }
+.verse-inline { font-style:italic; color:var(--primary); font-family:'Playfair Display',serif; }
+.prayer-box { background:var(--accent-light); border-left:4px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:16px 20px; margin-top:10px; color:var(--text); }
+.prayer-box p { font-style:italic; font-size:10pt; color:var(--text); }
+.prayer-box .callout-title { color: var(--text-muted); }
+
+.essencial-box { background:var(--primary); color:#fff; border-radius:var(--radius); padding:18px 22px; margin:4px 0 24px; border-left:5px solid var(--accent); page-break-inside: avoid; }
+.essencial-title { font-family:'Playfair Display',serif; font-weight:700; font-size:12.5pt; color:var(--accent); margin-bottom:8px; }
+.essencial-box p { font-size:10.4pt; margin-bottom:6px; opacity:0.96; color:#fff; }
+.essencial-box ul.styled-list li { border-bottom-color: rgba(255,255,255,0.15); color:#fff; }
+.essencial-box ul.styled-list li::before { color: var(--accent); }
+details.aprofunde { margin: 10px 0 28px; border:1px solid var(--border); border-radius:var(--radius); background:#F4F2EA; }
+details.aprofunde summary.aprofunde-summary { cursor:pointer; padding:14px 20px; font-family:'Playfair Display',serif; font-weight:700; font-size:12pt; color:var(--text-muted); list-style:none; }
+details.aprofunde summary.aprofunde-summary::-webkit-details-marker { display:none; }
+details.aprofunde summary.aprofunde-summary::marker { content:''; }
+details.aprofunde summary.aprofunde-summary::before { content:'▸  '; color:var(--accent); }
+details.aprofunde[open] summary.aprofunde-summary::before { content:'▾  '; }
+details.aprofunde .aprofunde-note { font-weight:400; font-size:9pt; text-transform:none; letter-spacing:0; color:var(--text-muted); display:block; margin-top:3px; }
+details.aprofunde > .aprofunde-content { padding:2px 20px 18px; color: var(--text-muted); display:none; }
+details.aprofunde[open] > .aprofunde-content { display:block; }
+details.aprofunde .aprofunde-content .section-title { color: var(--text-muted); border-bottom-color: var(--border); }
+details.aprofunde .aprofunde-content .section-label { color: var(--text-muted); opacity:0.7; }
+details.aprofunde .aprofunde-content p { color: var(--text-muted); }
+details.aprofunde .aprofunde-content h3.subsection { color: var(--text-muted); }
+details.aprofunde .aprofunde-content .section { page-break-inside: auto; margin-bottom: 14px; }
+
+@page { size: A4; margin: 0 0 1.6cm 0; }
+@page cover { margin: 0; }
+.print-cover { page-break-after: always; background:var(--primary); color:#fff; width:21cm; height:29.7cm; position:relative; }
+.print-cover .bar { background:var(--accent); height:12px; width:100%; position:absolute; left:0; }
+.print-cover .bar.top { top:0; } .print-cover .bar.bottom { bottom:0; }
+.print-cover .content { position:absolute; top:42%; left:0; right:0; text-align:center; padding:0 2.4cm; }
+.print-cover .kicker { color:var(--accent); letter-spacing:2.5px; font-size:11pt; text-transform:uppercase; margin-bottom:16px; font-weight:600; }
+.print-cover h1 { font-family:'Playfair Display',serif; font-size:30pt; margin-bottom:22px; font-weight:700; line-height:1.25; }
+.print-cover .base { color:#dcd0b0; font-style:italic; font-size:12.5pt; margin-bottom:8px; }
+.print-cover .tag { color:var(--accent); font-size:11pt; letter-spacing:1.5px; }
+.print-cover .foot { position:absolute; bottom:60px; left:0; right:0; text-align:center; color:#c9bd9a; font-size:9.5pt; }
+.lesson-page { page-break-after: always; }
+
+body { background: #fff; }
+
+
+#pv-a11y-bar { position:fixed; top:14px; right:14px; z-index:9999; display:flex; align-items:center; gap:2px; background:#1B3A2D; border-radius:999px; padding:5px 6px; box-shadow:0 4px 16px rgba(0,0,0,0.28); font-family:'Inter',sans-serif; }
+#pv-a11y-bar a.pv-link { all:unset; cursor:pointer; color:#fff; font-size:12px; font-weight:600; padding:6px 10px; border-radius:999px; white-space:nowrap; }
+#pv-a11y-bar a.pv-link:hover { background:rgba(255,255,255,0.16); color:#F5EDCF; }
+#pv-a11y-bar .pv-sep { width:1px; height:18px; background:rgba(255,255,255,0.25); margin:0 3px; }
+#pv-a11y-bar button.pv-fbtn { all:unset; cursor:pointer; color:#fff; font-weight:700; font-size:12.5px; width:28px; height:28px; display:flex; align-items:center; justify-content:center; border-radius:50%; }
+#pv-a11y-bar button.pv-fbtn:hover { background:rgba(255,255,255,0.18); }
+#pv-a11y-bar .pv-lbl { color:#C4941A; font-size:9.5px; font-weight:700; letter-spacing:1px; padding:0 3px; text-transform:uppercase; }
+@media print { #pv-a11y-bar { display:none !important; } }
+@media (max-width:560px) { #pv-a11y-bar .pv-lbl { display:none; } #pv-a11y-bar a.pv-link { padding:6px 8px; font-size:11.5px; } #pv-a11y-bar { top:8px; right:8px; } }
+
+#pv-scale-wrap { transition: zoom .08s; }
+body { padding-top:56px; }
+</style>
+</head>
+<body>
+<div id="pv-a11y-bar"><a class="pv-link" href="../../licoes/licao-24.html">&larr; Voltar à lição</a><a class="pv-link" href="../pdfs/Guia_Professor_Licao_24_Coragem_para_Fazer_o_Certo.pdf">Baixar PDF</a><div class="pv-sep"></div><span class="pv-lbl">Fonte</span><button class="pv-fbtn" id="pv-a11y-minus" title="Diminuir fonte">A-</button><button class="pv-fbtn" id="pv-a11y-reset" title="Tamanho padrão">A</button><button class="pv-fbtn" id="pv-a11y-plus" title="Aumentar fonte">A+</button></div>
+<div id="pv-scale-wrap">
+
+<div class="print-cover">
+  <div class="bar top"></div>
+  <div class="content">
+    <div class="kicker">Provérbios para a Vida &middot; Ministério Infantil</div>
+    <h1>Lição 24: Coragem para Fazer o Certo</h1>
+    <div class="base">Texto Base: Provérbios 24</div>
+    <div class="tag">GUIA DO PROFESSOR</div>
+  </div>
+  <div class="foot">Material de Apoio para Ministração Infantil</div>
+  <div class="bar bottom"></div>
+</div>
+<div class="lesson-page">
+<div class="lesson-header" data-num="24">
+  <div class="lesson-eyebrow">Lição 24 de 31</div>
+  <h1 class="lesson-title">Coragem para Fazer o Certo</h1>
+  <p class="lesson-subtitle">Provérbios 24</p>
+</div>
+<div class="lesson-content">
+<div class="section">
+<div class="section-label">Introdução Pastoral</div>
+<div class="section-title">Coragem para Fazer o Certo</div>
+<p>Provérbios 24:10 é direto e desafiador: "se te mostrares frouxo no dia da angústia, a tua força será pequena." Esse versículo reconhece uma realidade da vida: todos nós vamos enfrentar "dias de angústia" — momentos difíceis, situações que exigem coragem, decisões que custam caro.</p>
+<p><strong>Provérbios 24</strong> — Aprender que a coragem para fazer o certo, mesmo nos dias difíceis, é fortalecida pela fé em Cristo, que nos dá força quando a nossa própria falha.</p>
+<div class="callout gold"><div class="callout-title">Catecismo da Sabedoria</div><p><strong>Pergunta:</strong> O que acontece se desistirmos nos dias difíceis?</p><p><strong>Resposta:</strong> Se nos mostrarmos frouxos no dia da angústia, nossa força será pequena; por isso buscamos em Cristo a força que não temos em nós mesmos.</p></div>
+</div>
+<div class="section essencial-section">
+<div class="essencial-box">
+<div class="essencial-title">&#9733; O que você precisa saber para ensinar isso hoje</div>
+<p>Todo mundo enfrenta "dias de angústia" que exigem coragem — defender alguém, falar a verdade, resistir à pressão do grupo. Ficar "frouxo" nesses momentos enfraquece ainda mais. Jesus enfrentou a maior angústia no Getsêmani e não recuou do plano do Pai; é dEle, e não da nossa força própria, que vem a coragem para os nossos próprios momentos difíceis.</p>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Fundamento Bíblico</div>
+<div class="section-title">O que a Bíblia diz</div>
+<div class="bible-text">
+<div class="bible-ref">Pv 24:10</div>
+<div class="bible-quote">&ldquo;Se te mostrares frouxo no dia da angústia, a tua força será pequena.&rdquo;</div>
+<div class="bible-explain"><p><em>Este é o versículo-âncora da lição. Leia em voz alta com as crianças antes de prosseguir — a explicação completa vem na próxima seção.</em></p></div>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Para o Professor</div>
+<div class="section-title">Erros que o Professor Deve Evitar</div>
+<div class="callout warning"><div class="callout-title">Resumo rápido antes de ensinar</div><ul class="styled-list"><li><strong>Não diga:</strong> algo como &ldquo;Se não é problema seu, é melhor não se envolver e seguir em frente.&rdquo;</li><li><strong>Não diga:</strong> algo como &ldquo;Você precisa encontrar força dentro de si mesmo para enfrentar qualquer dificuldade.&rdquo;</li><li><strong>Não diga:</strong> algo como &ldquo;É normal e aceitável ceder à pressão quando a situação é realmente difícil.&rdquo;</li><li><strong>Diga:</strong> Se nos mostrarmos frouxos no dia da angústia, nossa força será pequena; por isso buscamos em Cristo a força que não temos em nós mesmos.</li></ul></div>
+</div>
+<details class="aprofunde" open>
+<summary class="aprofunde-summary">Aprofunde-se: Fundamentação Teológica Completa<span class="aprofunde-note">Leitura opcional, para o professor que quiser estudar o tema com mais profundidade. O essencial para dar a aula já está no resumo acima.</span></summary>
+<div class="aprofunde-content">
+<div class="section">
+<div class="section-label">Entendendo a Doutrina</div>
+<div class="section-title">Entendendo a Palavra</div>
+<p>Provérbios 24:10 é direto e desafiador: "se te mostrares frouxo no dia da angústia, a tua força será pequena." Esse versículo reconhece uma realidade da vida: todos nós vamos enfrentar "dias de angústia" — momentos difíceis, situações que exigem coragem, decisões que custam caro. A pergunta não é se esses dias virão, mas como responderemos quando chegarem.</p>
+<p>O capítulo continua com um exemplo prático e sério dessa coragem: "livra os que estão arrastados para a morte, e detém os que vacilam, indo para a matança. Se disseres: eis que não o sabíamos, porventura aquele que pesa os corações não o percebe?" (v. 11-12). Este é um chamado direto para agir em defesa de quem está em perigo, mesmo quando seria mais fácil "não se envolver" ou fingir que não percebeu a situação. Deus, que "pesa os corações", vê quando escolhemos a passividade covarde em vez da coragem que poderia salvar alguém.</p>
+<p>O capítulo também fala sobre não invejar os ímpios, mesmo quando parecem prósperos no momento (v. 1, 19-20), e sobre a importância da diligência, usando novamente a imagem de um campo negligenciado que se enche de espinhos (v. 30-34) — reforçando que a falta de coragem para agir no tempo certo (seja para cuidar de responsabilidades, seja para defender o que é certo) traz consequências reais e visíveis.</p>
+<p>Para uma criança, este capítulo ensina que existem momentos que exigem coragem — falar a verdade quando é mais fácil mentir, defender um colega que está sendo maltratado, admitir um erro em vez de esconder, resistir a uma pressão do grupo. Esses são os "dias de angústia" de Provérbios 24, e a Bíblia nos avisa que, se nos acostumarmos a ser "frouxos" (covardes, passivos, acomodados) nesses momentos, essa fraqueza só vai crescer.</p>
+</div>
+<div class="section">
+<div class="section-label">O Evangelho na Lição</div>
+<div class="section-title">Cristo e a Sabedoria</div>
+<p>Se a força para os "dias de angústia" dependesse apenas da nossa própria coragem natural, estaríamos em apuros — porque todos nós já fomos "frouxos" em algum momento, escolhendo o silêncio confortável em vez da coragem custosa. Mas o evangelho nos aponta para Jesus, que enfrentou o maior "dia de angústia" que já existiu — o Getsêmani e a cruz — sem se mostrar frouxo.</p>
+<p>No jardim do Getsêmani, Jesus sentiu uma angústia tão profunda que "o seu suor tornou-se como grandes gotas de sangue, que corriam até ao chão" (Lucas 22:44). Ele sentiu o peso completo do que estava por vir. E, ainda assim, escolheu não fugir, não recuar, não se mostrar frouxo: "não seja feita a minha vontade, mas a tua" (Lucas 22:42). Jesus enfrentou o maior sofrimento com uma força que vinha de uma submissão completa ao Pai, e essa força O levou até a cruz, para nos salvar.</p>
+<p>A boa notícia é que essa mesma força está disponível para nós através do Espírito Santo. Não precisamos enfrentar nossos "dias de angústia" com força própria, que sabemos ser limitada. Paulo escreveu: "tudo posso naquele que me fortalece" (Filipenses 4:13) — não como uma afirmação de autoconfiança, mas como uma dependência total de Cristo, que nos fortalece quando somos fracos. Quando confessamos nossa fraqueza a Deus, Ele nos dá coragem para os momentos que mais exigem — para defender quem precisa de ajuda, para falar a verdade quando custa caro, para permanecer firmes quando seria mais fácil ceder. E, quando falhamos em ser corajosos, o mesmo Jesus que enfrentou a cruz por nós também nos perdoa e nos levanta para tentar de novo.</p>
+</div>
+</div>
+</details>
+<div class="section">
+<div class="section-label">Dinâmica</div>
+<div class="section-title">Pensando Biblicamente: Mundo x Deus</div>
+<p>Leia cada frase do "mundo" e pergunte às crianças se concordam. Depois revele o que Deus realmente diz.</p>
+<div class="example"><div class="example-title">Sobre se envolver em situações difíceis</div><p class="wrong">Mundo diz: "Se não é problema seu, é melhor não se envolver e seguir em frente."</p><p class="right">Deus diz: "Livra os que estão arrastados para a morte." (Pv 24:11)</p></div>
+<div class="example"><div class="example-title">Sobre força pessoal</div><p class="wrong">Mundo diz: "Você precisa encontrar força dentro de si mesmo para enfrentar qualquer dificuldade."</p><p class="right">Deus diz: "Tudo posso naquele que me fortalece." (Fp 4:13)</p></div>
+<div class="example"><div class="example-title">Sobre momentos de pressão</div><p class="wrong">Mundo diz: "É normal e aceitável ceder à pressão quando a situação é realmente difícil."</p><p class="right">Deus diz: "Se te mostrares frouxo no dia da angústia, a tua força será pequena." (Pv 24:10)</p></div>
+<div class="example"><div class="example-title">Sobre inveja de quem parece próspero fazendo o errado</div><p class="wrong">Mundo diz: "Faça o que for preciso para ter sucesso, mesmo que não seja o caminho certo."</p><p class="right">Deus diz: "Não tenhas inveja dos homens malignos." (Pv 24:1)</p></div>
+</div>
+<div class="section">
+<div class="section-label">Aplicação Prática</div>
+<div class="section-title">Desafios da Vida Real</div>
+<div class="example"><div class="example-title">Situação 1 — Na Escola</div><p>Diego vê um colega sendo intimidado por um grupo maior e sente medo de se envolver, com receio de se tornar o próximo alvo.</p><p class="right">Reflita: O que Provérbios 24:11-12 ensina sobre defender quem está em perigo, mesmo com medo? Que forma de coragem, mesmo pequena, Diego poderia ter nessa situação?</p></div>
+<div class="example"><div class="example-title">Situação 2 — Com os Amigos</div><p>Um grupo de amigos pressiona Beatriz a participar de uma mentira coletiva para não se meterem em problemas.</p><p class="right">Reflita: Que "dia de angústia" essa pressão representa para Beatriz? Como ela pode encontrar coragem para dizer a verdade, mesmo sendo difícil?</p></div>
+<div class="example"><div class="example-title">Situação 3 — Em Família</div><p>Miguel percebe que cometeu um erro sério, mas tem medo de contar aos pais e enfrentar as consequências.</p><p class="right">Reflita: Que tipo de coragem Miguel precisa para admitir o erro? Como a graça de Cristo pode ajudá-lo a não temer tanto a confissão?</p></div>
+<div class="example"><div class="example-title">Situação 4 — Nos Jogos e Redes</div><p>Júlia percebe que um grupo está planejando excluir e humilhar outro colega em um jogo online, e ela poderia facilmente ficar calada e não se envolver.</p><p class="right">Reflita: O que significaria, nessa situação, não ser "frouxa no dia da angústia"? Que passos pequenos de coragem ela poderia tomar?</p></div>
+</div>
+<div class="section">
+<div class="section-label">Perguntas para Discussão</div>
+<div class="section-title">Conversa em Família</div>
+<ol class="questions-list"><li>Já enfrentamos, como família, um "dia de angústia" que exigiu coragem incomum?</li><li>Em que situações tendemos a ficar "frouxos" e evitar agir, mesmo sabendo o que é certo?</li><li>Como o exemplo de Jesus no Getsêmani nos inspira a enfrentar nossos próprios momentos difíceis?</li><li>Como podemos nos apoiar mutuamente para termos mais coragem nos momentos que exigem isso?</li><li>Que oração podemos fazer juntos, pedindo força de Deus para os desafios que vêm pela frente?</li></ol>
+</div>
+<div class="challenge-box">
+<div class="challenge-title">&#10022; Desafio da Semana</div>
+<p><strong>Versículo para memorizar:</strong> &ldquo;Se te mostrares frouxo no dia da angústia, a tua força será pequena.&rdquo; (Pv 24:10)</p>
+<p>Esta semana, esteja atento a um "dia de angústia" — um momento que exige coragem para fazer o certo — e, em vez de ficar frouxo ou passivo, ore pedindo força a Deus e aja com coragem. Anote o que aconteceu.</p>
+<div class="reading-plan">
+<div class="reading-day"><strong>Dia 1</strong>Lucas 22:44</div>
+<div class="reading-day"><strong>Dia 2</strong>Lucas 22:42</div>
+<div class="reading-day"><strong>Dia 3</strong>Filipenses 4:13</div>
+<div class="reading-day"><strong>Dia 4</strong>Releia Provérbios 24</div>
+</div>
+<div class="prayer-box"><div class="callout-title">Oração Final (leia em voz alta com as crianças)</div><p>Senhor, reconhecemos que muitas vezes nos mostramos frouxos diante de dias difíceis, escolhendo o silêncio ou a passividade em vez da coragem que Tu nos chamas a ter. Perdoa-nos por essas vezes em que fugimos do que era certo por medo. Obrigado porque Jesus, mesmo em profunda angústia no Getsêmani, não desistiu do plano de nos salvar, e foi até a cruz por nós. Fortalece-nos pelo Teu Espírito Santo para os nossos próprios dias de angústia, dando-nos coragem para defender o que é certo, falar a verdade e agir com firmeza, confiando que a força vem de Ti. Em nome de Jesus. Amém.</p></div>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var KEY='pv_fontscale', min=0.8, max=1.8, step=0.1;
+  var wrap = document.getElementById('pv-scale-wrap');
+  var saved = parseFloat(localStorage.getItem(KEY)) || 1;
+  function apply(v){ if(wrap){ wrap.style.zoom = v; } try{ localStorage.setItem(KEY, v); }catch(e){} }
+  apply(saved);
+  var mEl = document.getElementById('pv-a11y-minus'), pEl = document.getElementById('pv-a11y-plus'), rEl = document.getElementById('pv-a11y-reset');
+  if(mEl) mEl.onclick = function(){ saved = Math.max(min, +(saved-step).toFixed(2)); apply(saved); };
+  if(pEl) pEl.onclick = function(){ saved = Math.min(max, +(saved+step).toFixed(2)); apply(saved); };
+  if(rEl) rEl.onclick = function(){ saved = 1; apply(saved); };
+})();
+</script>
+
+</body>
+</html>

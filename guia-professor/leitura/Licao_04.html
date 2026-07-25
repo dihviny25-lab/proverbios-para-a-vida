@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia do Professor - Lição 4: Guardando o Coração</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+:root {
+  --bg: #EFEBE0;
+  --surface: #FAFAF7;
+  --primary: #1B3A2D;
+  --primary-light: #2D5C45;
+  --accent: #C4941A;
+  --accent-light: #F5EDCF;
+  --text: #1C1A17;
+  --text-muted: #6B6557;
+  --border: #DDD8CC;
+  --radius: 10px;
+}
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.7; font-size:10.6pt; }
+.lesson-header { background:var(--primary); color:#fff; padding:52px 40px 40px; text-align:center; position:relative; overflow:hidden; }
+.lesson-header::before { content: attr(data-num); position:absolute; font-family:'Playfair Display',serif; font-weight:700; font-size:170px; top:50%; left:50%; transform:translate(-50%,-50%); opacity:0.06; line-height:1; }
+.lesson-eyebrow { font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--accent); margin-bottom:12px; }
+.lesson-title { font-family:'Playfair Display',serif; font-size:27pt; font-weight:700; line-height:1.2; margin-bottom:10px; }
+.lesson-subtitle { font-size:12.5pt; opacity:0.75; max-width:520px; margin:0 auto; }
+.lesson-content { max-width: 100%; padding: 30px 40px 50px; }
+.section { margin-bottom:30px; page-break-inside: avoid; }
+.section-label { font-size:9px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--accent); margin-bottom:5px; }
+.section-title { font-family:'Playfair Display',serif; font-size:16pt; font-weight:700; color:var(--primary); margin-bottom:14px; padding-bottom:9px; border-bottom:1px solid var(--border); }
+.section p { margin-bottom:9px; font-size:10.4pt; }
+h3.subsection { font-family:'Playfair Display',serif; font-size:12.5pt; color:var(--primary); margin:16px 0 8px; }
+.bible-text { background:var(--surface); border-left:3px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:14px 18px; margin:14px 0; page-break-inside: avoid; }
+.bible-ref { font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--accent); margin-bottom:7px; }
+.bible-quote { font-family:'Playfair Display',serif; font-style:italic; font-size:12pt; line-height:1.55; color:var(--primary); margin-bottom:10px; }
+.bible-explain p { font-size:10pt; margin-bottom:6px; }
+.callout { background:var(--surface); border-radius:var(--radius); padding:14px 18px; margin:12px 0; border:1px solid var(--border); page-break-inside: avoid; }
+.callout.warning { border-left:4px solid #E85D04; background:#FFF8F4; }
+.callout.tip { border-left:4px solid var(--primary-light); background:#F0F7F4; }
+.callout.gold { border-left:4px solid var(--accent); background:var(--accent-light); }
+.callout-title { font-weight:700; font-size:9.5pt; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:6px; color:var(--text-muted); }
+.callout p { font-size:10pt; margin-bottom:5px; }
+.styled-list { list-style:none; margin:10px 0; }
+.styled-list li { padding:6px 0 6px 18px; position:relative; font-size:10.2pt; border-bottom:1px solid var(--border); }
+.styled-list li:last-child { border-bottom:none; }
+.styled-list li::before { content:'—'; position:absolute; left:0; color:var(--accent); font-weight:700; }
+.questions-list { counter-reset:question; list-style:none; margin:8px 0; }
+.questions-list li { counter-increment:question; padding:8px 0 8px 34px; position:relative; font-size:10.2pt; border-bottom:1px solid var(--border); }
+.questions-list li:last-child { border-bottom:none; }
+.questions-list li::before { content:counter(question); position:absolute; left:0; width:22px; height:22px; background:var(--primary); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:9.5pt; font-weight:700; top:7px; }
+.example { background:var(--surface); border-radius:var(--radius); padding:14px 18px; margin:10px 0; border:1px solid var(--border); page-break-inside: avoid; }
+.example-title { font-weight:700; font-size:10pt; color:var(--primary); margin-bottom:8px; }
+.example-title::before { content:'→ '; color:var(--accent); }
+.example p { font-size:10pt; margin-bottom:5px; }
+.example .wrong { color:#C0392B; font-size:9.3pt; font-style:italic; }
+.example .right { color:#1B7A3E; font-size:9.3pt; font-style:italic; }
+.challenge-box { background:var(--primary); color:#fff; border-radius:var(--radius); padding:22px 24px; margin-top:20px; page-break-inside: avoid; }
+.challenge-title { font-family:'Playfair Display',serif; font-size:14.5pt; font-weight:700; margin-bottom:14px; color:var(--accent); }
+.challenge-box p { font-size: 10pt; opacity:0.9; margin-bottom: 8px;}
+.reading-plan { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:12px; }
+.reading-day { background:rgba(255,255,255,0.08); border-radius:8px; padding:8px 10px; font-size:9.3pt; }
+.reading-day strong { display:block; color:var(--accent); font-size:8.6pt; letter-spacing:0.8px; text-transform:uppercase; margin-bottom:3px; }
+.verse-inline { font-style:italic; color:var(--primary); font-family:'Playfair Display',serif; }
+.prayer-box { background:var(--accent-light); border-left:4px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:16px 20px; margin-top:10px; color:var(--text); }
+.prayer-box p { font-style:italic; font-size:10pt; color:var(--text); }
+.prayer-box .callout-title { color: var(--text-muted); }
+
+.essencial-box { background:var(--primary); color:#fff; border-radius:var(--radius); padding:18px 22px; margin:4px 0 24px; border-left:5px solid var(--accent); page-break-inside: avoid; }
+.essencial-title { font-family:'Playfair Display',serif; font-weight:700; font-size:12.5pt; color:var(--accent); margin-bottom:8px; }
+.essencial-box p { font-size:10.4pt; margin-bottom:6px; opacity:0.96; color:#fff; }
+.essencial-box ul.styled-list li { border-bottom-color: rgba(255,255,255,0.15); color:#fff; }
+.essencial-box ul.styled-list li::before { color: var(--accent); }
+details.aprofunde { margin: 10px 0 28px; border:1px solid var(--border); border-radius:var(--radius); background:#F4F2EA; }
+details.aprofunde summary.aprofunde-summary { cursor:pointer; padding:14px 20px; font-family:'Playfair Display',serif; font-weight:700; font-size:12pt; color:var(--text-muted); list-style:none; }
+details.aprofunde summary.aprofunde-summary::-webkit-details-marker { display:none; }
+details.aprofunde summary.aprofunde-summary::marker { content:''; }
+details.aprofunde summary.aprofunde-summary::before { content:'▸  '; color:var(--accent); }
+details.aprofunde[open] summary.aprofunde-summary::before { content:'▾  '; }
+details.aprofunde .aprofunde-note { font-weight:400; font-size:9pt; text-transform:none; letter-spacing:0; color:var(--text-muted); display:block; margin-top:3px; }
+details.aprofunde > .aprofunde-content { padding:2px 20px 18px; color: var(--text-muted); display:none; }
+details.aprofunde[open] > .aprofunde-content { display:block; }
+details.aprofunde .aprofunde-content .section-title { color: var(--text-muted); border-bottom-color: var(--border); }
+details.aprofunde .aprofunde-content .section-label { color: var(--text-muted); opacity:0.7; }
+details.aprofunde .aprofunde-content p { color: var(--text-muted); }
+details.aprofunde .aprofunde-content h3.subsection { color: var(--text-muted); }
+details.aprofunde .aprofunde-content .section { page-break-inside: auto; margin-bottom: 14px; }
+
+@page { size: A4; margin: 0 0 1.6cm 0; }
+@page cover { margin: 0; }
+.print-cover { page-break-after: always; background:var(--primary); color:#fff; width:21cm; height:29.7cm; position:relative; }
+.print-cover .bar { background:var(--accent); height:12px; width:100%; position:absolute; left:0; }
+.print-cover .bar.top { top:0; } .print-cover .bar.bottom { bottom:0; }
+.print-cover .content { position:absolute; top:42%; left:0; right:0; text-align:center; padding:0 2.4cm; }
+.print-cover .kicker { color:var(--accent); letter-spacing:2.5px; font-size:11pt; text-transform:uppercase; margin-bottom:16px; font-weight:600; }
+.print-cover h1 { font-family:'Playfair Display',serif; font-size:30pt; margin-bottom:22px; font-weight:700; line-height:1.25; }
+.print-cover .base { color:#dcd0b0; font-style:italic; font-size:12.5pt; margin-bottom:8px; }
+.print-cover .tag { color:var(--accent); font-size:11pt; letter-spacing:1.5px; }
+.print-cover .foot { position:absolute; bottom:60px; left:0; right:0; text-align:center; color:#c9bd9a; font-size:9.5pt; }
+.lesson-page { page-break-after: always; }
+
+body { background: #fff; }
+
+
+#pv-a11y-bar { position:fixed; top:14px; right:14px; z-index:9999; display:flex; align-items:center; gap:2px; background:#1B3A2D; border-radius:999px; padding:5px 6px; box-shadow:0 4px 16px rgba(0,0,0,0.28); font-family:'Inter',sans-serif; }
+#pv-a11y-bar a.pv-link { all:unset; cursor:pointer; color:#fff; font-size:12px; font-weight:600; padding:6px 10px; border-radius:999px; white-space:nowrap; }
+#pv-a11y-bar a.pv-link:hover { background:rgba(255,255,255,0.16); color:#F5EDCF; }
+#pv-a11y-bar .pv-sep { width:1px; height:18px; background:rgba(255,255,255,0.25); margin:0 3px; }
+#pv-a11y-bar button.pv-fbtn { all:unset; cursor:pointer; color:#fff; font-weight:700; font-size:12.5px; width:28px; height:28px; display:flex; align-items:center; justify-content:center; border-radius:50%; }
+#pv-a11y-bar button.pv-fbtn:hover { background:rgba(255,255,255,0.18); }
+#pv-a11y-bar .pv-lbl { color:#C4941A; font-size:9.5px; font-weight:700; letter-spacing:1px; padding:0 3px; text-transform:uppercase; }
+@media print { #pv-a11y-bar { display:none !important; } }
+@media (max-width:560px) { #pv-a11y-bar .pv-lbl { display:none; } #pv-a11y-bar a.pv-link { padding:6px 8px; font-size:11.5px; } #pv-a11y-bar { top:8px; right:8px; } }
+
+#pv-scale-wrap { transition: zoom .08s; }
+body { padding-top:56px; }
+</style>
+</head>
+<body>
+<div id="pv-a11y-bar"><a class="pv-link" href="../../licoes/licao-04.html">&larr; Voltar à lição</a><a class="pv-link" href="../pdfs/Guia_Professor_Licao_04_Guardando_o_Coração.pdf">Baixar PDF</a><div class="pv-sep"></div><span class="pv-lbl">Fonte</span><button class="pv-fbtn" id="pv-a11y-minus" title="Diminuir fonte">A-</button><button class="pv-fbtn" id="pv-a11y-reset" title="Tamanho padrão">A</button><button class="pv-fbtn" id="pv-a11y-plus" title="Aumentar fonte">A+</button></div>
+<div id="pv-scale-wrap">
+
+<div class="print-cover">
+  <div class="bar top"></div>
+  <div class="content">
+    <div class="kicker">Provérbios para a Vida &middot; Ministério Infantil</div>
+    <h1>Lição 4: Guardando o Coração</h1>
+    <div class="base">Texto Base: Provérbios 4</div>
+    <div class="tag">GUIA DO PROFESSOR</div>
+  </div>
+  <div class="foot">Material de Apoio para Ministração Infantil</div>
+  <div class="bar bottom"></div>
+</div>
+<div class="lesson-page">
+<div class="lesson-header" data-num="4">
+  <div class="lesson-eyebrow">Lição 4 de 31</div>
+  <h1 class="lesson-title">Guardando o Coração</h1>
+  <p class="lesson-subtitle">Provérbios 4</p>
+</div>
+<div class="lesson-content">
+<div class="section">
+<div class="section-label">Introdução Pastoral</div>
+<div class="section-title">Guardando o Coração</div>
+<p>Na Bíblia, "coração" não significa apenas os sentimentos ou o órgão que bombeia sangue.</p>
+<p><strong>Provérbios 4</strong> — Entender que o coração é a fonte de todas as nossas ações e palavras, e que guardá-lo bem exige mais do que esforço próprio — exige um coração novo, dado por Deus em Cristo.</p>
+<div class="callout gold"><div class="callout-title">Catecismo da Sabedoria</div><p><strong>Pergunta:</strong> Por que devemos guardar o nosso coração acima de tudo?</p><p><strong>Resposta:</strong> Porque do coração procedem todas as coisas que fazemos e falamos, e só um coração guardado por Deus produz uma vida que O agrada.</p></div>
+</div>
+<div class="section essencial-section">
+<div class="essencial-box">
+<div class="essencial-title">&#9733; O que você precisa saber para ensinar isso hoje</div>
+<p>O coração é a fonte de tudo o que fazemos e falamos — por isso guardá-lo bem importa mais do que controlar só o comportamento externo. Sozinhos não conseguimos: o coração humano engana a si mesmo (Jr 17:9). A boa notícia é que Deus promete um coração novo (Ez 36:26), e é isso que Jesus, através do Espírito Santo, faz em quem crê nEle.</p>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Fundamento Bíblico</div>
+<div class="section-title">O que a Bíblia diz</div>
+<div class="bible-text">
+<div class="bible-ref">Pv 4:23</div>
+<div class="bible-quote">&ldquo;Sobre tudo o que se deve guardar, guarda o teu coração, porque dele procedem as saídas da vida.&rdquo;</div>
+<div class="bible-explain"><p><em>Este é o versículo-âncora da lição. Leia em voz alta com as crianças antes de prosseguir — a explicação completa vem na próxima seção.</em></p></div>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Para o Professor</div>
+<div class="section-title">Erros que o Professor Deve Evitar</div>
+<div class="callout warning"><div class="callout-title">Resumo rápido antes de ensinar</div><ul class="styled-list"><li><strong>Não diga:</strong> algo como &ldquo;O problema está sempre lá fora — nas outras pessoas, nas circunstâncias, no azar.&rdquo;</li><li><strong>Não diga:</strong> algo como &ldquo;Assista, jogue e leia o que quiser, isso não muda quem você é.&rdquo;</li><li><strong>Não diga:</strong> algo como &ldquo;Você pode se transformar sozinho, com força de vontade e disciplina.&rdquo;</li><li><strong>Diga:</strong> Porque do coração procedem todas as coisas que fazemos e falamos, e só um coração guardado por Deus produz uma vida que O agrada.</li></ul></div>
+</div>
+<details class="aprofunde" open>
+<summary class="aprofunde-summary">Aprofunde-se: Fundamentação Teológica Completa<span class="aprofunde-note">Leitura opcional, para o professor que quiser estudar o tema com mais profundidade. O essencial para dar a aula já está no resumo acima.</span></summary>
+<div class="aprofunde-content">
+<div class="section">
+<div class="section-label">Entendendo a Doutrina</div>
+<div class="section-title">Entendendo a Palavra</div>
+<p>Na Bíblia, "coração" não significa apenas os sentimentos ou o órgão que bombeia sangue. O coração representa o centro de tudo o que você é: seus pensamentos, desejos, vontades e decisões mais profundas. É o "painel de controle" da vida. Por isso Salomão diz: "sobre tudo o que se deve guardar, guarda o teu coração, porque dele procedem as saídas da vida" (Pv 4:23).</p>
+<p>A palavra "saídas" aqui é importante. Pense num rio: tudo que sai de uma nascente reflete a qualidade daquela nascente. Se a nascente está poluída, o rio inteiro fica poluído, não importa quão bonito pareça o leito do rio por onde ele passa. Da mesma forma, tudo o que "sai" de você — suas palavras, suas escolhas, suas reações quando algo dá errado — nasce do que está guardado no seu coração.</p>
+<p>É por isso que Provérbios 4 começa falando sobre buscar sabedoria e entendimento como prioridade máxima: "A sabedoria é a coisa principal; adquire, pois, a sabedoria" (v. 7). O capítulo também alerta sobre o que deve ficar longe do coração: "Desvia de ti a tortuosidade da boca, e afasta de ti a perversidade dos lábios" (v. 24), e sobre onde os olhos e os pés devem ir: "Não declines nem para a direita nem para a esquerda; retira o teu pé do mal" (v. 27).</p>
+<p>Uma criança muitas vezes pensa que o problema está "fora" dela — no colega que provoca, na situação injusta, no jogo viciante. Mas Jesus mais tarde ensinaria algo parecido com Provérbios 4: "do coração é que procedem os maus pensamentos, homicídios, adultérios..." (Mateus 15:19). O verdadeiro campo de batalha não é o mundo lá fora, é o coração. Guardar o coração significa proteger cuidadosamente o que você deixa entrar nele — pelos olhos, pelos ouvidos, pelas companhias — e cultivar ali a Palavra de Deus, para que dali saia uma vida que reflete sabedoria e não loucura.</p>
+</div>
+<div class="section">
+<div class="section-label">O Evangelho na Lição</div>
+<div class="section-title">Cristo e a Sabedoria</div>
+<p>Aqui está uma verdade importante e, ao mesmo tempo, humilhante: por mais que nos esforcemos, nenhum de nós consegue guardar perfeitamente o próprio coração. Jeremias 17:9 diz que "enganoso é o coração, mais do que todas as coisas, e perverso; quem o conhecerá?" Sozinhos, não temos a capacidade de manter nosso coração puro o tempo todo. Precisamos de algo — ou melhor, de Alguém — que vá além do nosso esforço.</p>
+<p>A grande promessa do evangelho é que Deus não apenas nos manda "guardar o coração", mas Ele mesmo promete nos dar um coração novo: "Também vos darei um coração novo... e tirarei o coração de pedra da vossa carne, e vos darei um coração de carne" (Ezequiel 36:26). Esse coração novo é dado a todo aquele que confia em Jesus Cristo. Jesus viveu com um coração perfeitamente guardado — nunca um pensamento impuro, nunca uma palavra que não glorificasse o Pai, nunca uma reação de orgulho ou vingança. E Ele ofereceu esse coração perfeito em nosso lugar, morrendo na cruz para que o nosso coração pecaminoso pudesse ser perdoado e transformado.</p>
+<p>Quando cremos em Jesus, o Espírito Santo vem morar em nós e começa a "guardar" o nosso coração de dentro para fora — não apenas nos ajudando a evitar o mal externamente, mas mudando nossos desejos mais profundos. Guardar o coração, para o cristão, não é uma tarefa solitária de força de vontade; é cooperar com o Espírito Santo que já começou essa boa obra em nós (Filipenses 1:6), alimentando o coração com a Palavra de Deus e pedindo, todos os dias, que Ele continue essa transformação.</p>
+</div>
+</div>
+</details>
+<div class="section">
+<div class="section-label">Dinâmica</div>
+<div class="section-title">Pensando Biblicamente: Mundo x Deus</div>
+<p>Leia cada frase do "mundo" e pergunte às crianças se concordam. Depois revele o que Deus realmente diz.</p>
+<div class="example"><div class="example-title">Sobre o problema real da vida</div><p class="wrong">Mundo diz: "O problema está sempre lá fora — nas outras pessoas, nas circunstâncias, no azar."</p><p class="right">Deus diz: "Sobre tudo o que se deve guardar, guarda o teu coração, porque dele procedem as saídas da vida." (Pv 4:23)</p></div>
+<div class="example"><div class="example-title">Sobre o que entra na mente</div><p class="wrong">Mundo diz: "Assista, jogue e leia o que quiser, isso não muda quem você é."</p><p class="right">Deus diz: "Não declines nem para a direita nem para a esquerda; retira o teu pé do mal." (Pv 4:27)</p></div>
+<div class="example"><div class="example-title">Sobre mudança pessoal</div><p class="wrong">Mundo diz: "Você pode se transformar sozinho, com força de vontade e disciplina."</p><p class="right">Deus diz: "Também vos darei um coração novo." (Ez 36:26)</p></div>
+<div class="example"><div class="example-title">Sobre o que realmente somos</div><p class="wrong">Mundo diz: "As pessoas são basicamente boas por dentro."</p><p class="right">Deus diz: "Enganoso é o coração, mais do que todas as coisas." (Jr 17:9)</p></div>
+</div>
+<div class="section">
+<div class="section-label">Aplicação Prática</div>
+<div class="section-title">Desafios da Vida Real</div>
+<div class="example"><div class="example-title">Situação 1 — Na Escola</div><p>Um colega provoca Lucas todos os dias, e Lucas sente uma raiva crescendo dentro dele, com vontade de revidar com xingamentos.</p><p class="right">Reflita: De onde vem a reação de Lucas, segundo Provérbios 4:23 — de fora ou de dentro? Como guardar o coração pode mudar a forma como ele reage à provocação?</p></div>
+<div class="example"><div class="example-title">Situação 2 — Com os Amigos</div><p>Duda percebe que, quando está perto de um certo grupo de amigas, ela começa a falar mal das outras pessoas, mesmo sem querer.</p><p class="right">Reflita: Como as companhias que escolhemos afetam o que guardamos no coração? O que Duda poderia fazer para proteger seu coração nessa amizade?</p></div>
+<div class="example"><div class="example-title">Situação 3 — Em Família</div><p>Gabriel fica horas assistindo a vídeos de conteúdo violento e depois percebe que fica mais agressivo com os irmãos.</p><p class="right">Reflita: Por que o que "entra" pelos olhos e ouvidos afeta o que "sai" do coração? O que Gabriel pode fazer para guardar melhor seu coração nesse hábito?</p></div>
+<div class="example"><div class="example-title">Situação 4 — Na Internet</div><p>Isabela segue muitos perfis nas redes que mostram vidas aparentemente perfeitas, e ela começa a se sentir triste e insatisfeita com a própria vida.</p><p class="right">Reflita: O que Isabela está "deixando entrar" no coração? Como isso está afetando suas "saídas" — pensamentos, humor, atitudes?</p></div>
+</div>
+<div class="section">
+<div class="section-label">Perguntas para Discussão</div>
+<div class="section-title">Conversa em Família</div>
+<ol class="questions-list"><li>O que temos deixado "entrar" mais em nossos corações como família: a Palavra de Deus ou outras vozes?</li><li>Consegue identificar um momento recente em que uma atitude sua "saiu" de algo guardado no coração (bom ou ruim)?</li><li>Como podemos ajudar uns aos outros a guardar melhor o coração em casa?</li><li>Por que só Deus pode nos dar um coração verdadeiramente novo?</li><li>Que hábito familiar poderia nos ajudar a guardar melhor nossos corações juntos?</li></ol>
+</div>
+<div class="challenge-box">
+<div class="challenge-title">&#10022; Desafio da Semana</div>
+<p><strong>Versículo para memorizar:</strong> &ldquo;Sobre tudo o que se deve guardar, guarda o teu coração, porque dele procedem as saídas da vida.&rdquo; (Pv 4:23)</p>
+<p>Escolha uma coisa que você vai "deixar entrar" a mais no seu coração esta semana (um tempo diário de leitura bíblica ou oração) e uma coisa que vai proteger mais (um conteúdo, hábito ou situação que precisa de mais cuidado). Anote diariamente como isso afetou seu humor e suas atitudes.</p>
+<div class="reading-plan">
+<div class="reading-day"><strong>Dia 1</strong>Pv 4:23</div>
+<div class="reading-day"><strong>Dia 2</strong>Mateus 15:19</div>
+<div class="reading-day"><strong>Dia 3</strong>Ezequiel 36:26</div>
+<div class="reading-day"><strong>Dia 4</strong>Filipenses 1:6</div>
+<div class="reading-day"><strong>Dia 5</strong>Releia Provérbios 4</div>
+</div>
+<div class="prayer-box"><div class="callout-title">Oração Final (leia em voz alta com as crianças)</div><p>Senhor, Tu conheces o nosso coração melhor do que nós mesmos, e sabes como ele é facilmente enganado. Confessamos que muitas vezes deixamos entrar coisas que poluem o que há de mais profundo em nós, e depois nos surpreendemos com as palavras e atitudes que saem de dentro. Obrigado porque, em Cristo, Tu nos prometes um coração novo. Enche-nos do Teu Espírito Santo para que Ele guarde nosso coração de dentro para fora, nos ajudando a amar o que é bom e a rejeitar o que nos afasta de Ti. Ensina-nos a alimentar nosso coração com Tua Palavra todos os dias. Em nome de Jesus. Amém.</p></div>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var KEY='pv_fontscale', min=0.8, max=1.8, step=0.1;
+  var wrap = document.getElementById('pv-scale-wrap');
+  var saved = parseFloat(localStorage.getItem(KEY)) || 1;
+  function apply(v){ if(wrap){ wrap.style.zoom = v; } try{ localStorage.setItem(KEY, v); }catch(e){} }
+  apply(saved);
+  var mEl = document.getElementById('pv-a11y-minus'), pEl = document.getElementById('pv-a11y-plus'), rEl = document.getElementById('pv-a11y-reset');
+  if(mEl) mEl.onclick = function(){ saved = Math.max(min, +(saved-step).toFixed(2)); apply(saved); };
+  if(pEl) pEl.onclick = function(){ saved = Math.min(max, +(saved+step).toFixed(2)); apply(saved); };
+  if(rEl) rEl.onclick = function(){ saved = 1; apply(saved); };
+})();
+</script>
+
+</body>
+</html>

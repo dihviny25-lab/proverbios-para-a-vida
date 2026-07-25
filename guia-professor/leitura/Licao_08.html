@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia do Professor - Lição 8: O Convite da Sabedoria</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+:root {
+  --bg: #EFEBE0;
+  --surface: #FAFAF7;
+  --primary: #1B3A2D;
+  --primary-light: #2D5C45;
+  --accent: #C4941A;
+  --accent-light: #F5EDCF;
+  --text: #1C1A17;
+  --text-muted: #6B6557;
+  --border: #DDD8CC;
+  --radius: 10px;
+}
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.7; font-size:10.6pt; }
+.lesson-header { background:var(--primary); color:#fff; padding:52px 40px 40px; text-align:center; position:relative; overflow:hidden; }
+.lesson-header::before { content: attr(data-num); position:absolute; font-family:'Playfair Display',serif; font-weight:700; font-size:170px; top:50%; left:50%; transform:translate(-50%,-50%); opacity:0.06; line-height:1; }
+.lesson-eyebrow { font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--accent); margin-bottom:12px; }
+.lesson-title { font-family:'Playfair Display',serif; font-size:27pt; font-weight:700; line-height:1.2; margin-bottom:10px; }
+.lesson-subtitle { font-size:12.5pt; opacity:0.75; max-width:520px; margin:0 auto; }
+.lesson-content { max-width: 100%; padding: 30px 40px 50px; }
+.section { margin-bottom:30px; page-break-inside: avoid; }
+.section-label { font-size:9px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--accent); margin-bottom:5px; }
+.section-title { font-family:'Playfair Display',serif; font-size:16pt; font-weight:700; color:var(--primary); margin-bottom:14px; padding-bottom:9px; border-bottom:1px solid var(--border); }
+.section p { margin-bottom:9px; font-size:10.4pt; }
+h3.subsection { font-family:'Playfair Display',serif; font-size:12.5pt; color:var(--primary); margin:16px 0 8px; }
+.bible-text { background:var(--surface); border-left:3px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:14px 18px; margin:14px 0; page-break-inside: avoid; }
+.bible-ref { font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--accent); margin-bottom:7px; }
+.bible-quote { font-family:'Playfair Display',serif; font-style:italic; font-size:12pt; line-height:1.55; color:var(--primary); margin-bottom:10px; }
+.bible-explain p { font-size:10pt; margin-bottom:6px; }
+.callout { background:var(--surface); border-radius:var(--radius); padding:14px 18px; margin:12px 0; border:1px solid var(--border); page-break-inside: avoid; }
+.callout.warning { border-left:4px solid #E85D04; background:#FFF8F4; }
+.callout.tip { border-left:4px solid var(--primary-light); background:#F0F7F4; }
+.callout.gold { border-left:4px solid var(--accent); background:var(--accent-light); }
+.callout-title { font-weight:700; font-size:9.5pt; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:6px; color:var(--text-muted); }
+.callout p { font-size:10pt; margin-bottom:5px; }
+.styled-list { list-style:none; margin:10px 0; }
+.styled-list li { padding:6px 0 6px 18px; position:relative; font-size:10.2pt; border-bottom:1px solid var(--border); }
+.styled-list li:last-child { border-bottom:none; }
+.styled-list li::before { content:'—'; position:absolute; left:0; color:var(--accent); font-weight:700; }
+.questions-list { counter-reset:question; list-style:none; margin:8px 0; }
+.questions-list li { counter-increment:question; padding:8px 0 8px 34px; position:relative; font-size:10.2pt; border-bottom:1px solid var(--border); }
+.questions-list li:last-child { border-bottom:none; }
+.questions-list li::before { content:counter(question); position:absolute; left:0; width:22px; height:22px; background:var(--primary); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:9.5pt; font-weight:700; top:7px; }
+.example { background:var(--surface); border-radius:var(--radius); padding:14px 18px; margin:10px 0; border:1px solid var(--border); page-break-inside: avoid; }
+.example-title { font-weight:700; font-size:10pt; color:var(--primary); margin-bottom:8px; }
+.example-title::before { content:'→ '; color:var(--accent); }
+.example p { font-size:10pt; margin-bottom:5px; }
+.example .wrong { color:#C0392B; font-size:9.3pt; font-style:italic; }
+.example .right { color:#1B7A3E; font-size:9.3pt; font-style:italic; }
+.challenge-box { background:var(--primary); color:#fff; border-radius:var(--radius); padding:22px 24px; margin-top:20px; page-break-inside: avoid; }
+.challenge-title { font-family:'Playfair Display',serif; font-size:14.5pt; font-weight:700; margin-bottom:14px; color:var(--accent); }
+.challenge-box p { font-size: 10pt; opacity:0.9; margin-bottom: 8px;}
+.reading-plan { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:12px; }
+.reading-day { background:rgba(255,255,255,0.08); border-radius:8px; padding:8px 10px; font-size:9.3pt; }
+.reading-day strong { display:block; color:var(--accent); font-size:8.6pt; letter-spacing:0.8px; text-transform:uppercase; margin-bottom:3px; }
+.verse-inline { font-style:italic; color:var(--primary); font-family:'Playfair Display',serif; }
+.prayer-box { background:var(--accent-light); border-left:4px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; padding:16px 20px; margin-top:10px; color:var(--text); }
+.prayer-box p { font-style:italic; font-size:10pt; color:var(--text); }
+.prayer-box .callout-title { color: var(--text-muted); }
+
+.essencial-box { background:var(--primary); color:#fff; border-radius:var(--radius); padding:18px 22px; margin:4px 0 24px; border-left:5px solid var(--accent); page-break-inside: avoid; }
+.essencial-title { font-family:'Playfair Display',serif; font-weight:700; font-size:12.5pt; color:var(--accent); margin-bottom:8px; }
+.essencial-box p { font-size:10.4pt; margin-bottom:6px; opacity:0.96; color:#fff; }
+.essencial-box ul.styled-list li { border-bottom-color: rgba(255,255,255,0.15); color:#fff; }
+.essencial-box ul.styled-list li::before { color: var(--accent); }
+details.aprofunde { margin: 10px 0 28px; border:1px solid var(--border); border-radius:var(--radius); background:#F4F2EA; }
+details.aprofunde summary.aprofunde-summary { cursor:pointer; padding:14px 20px; font-family:'Playfair Display',serif; font-weight:700; font-size:12pt; color:var(--text-muted); list-style:none; }
+details.aprofunde summary.aprofunde-summary::-webkit-details-marker { display:none; }
+details.aprofunde summary.aprofunde-summary::marker { content:''; }
+details.aprofunde summary.aprofunde-summary::before { content:'▸  '; color:var(--accent); }
+details.aprofunde[open] summary.aprofunde-summary::before { content:'▾  '; }
+details.aprofunde .aprofunde-note { font-weight:400; font-size:9pt; text-transform:none; letter-spacing:0; color:var(--text-muted); display:block; margin-top:3px; }
+details.aprofunde > .aprofunde-content { padding:2px 20px 18px; color: var(--text-muted); display:none; }
+details.aprofunde[open] > .aprofunde-content { display:block; }
+details.aprofunde .aprofunde-content .section-title { color: var(--text-muted); border-bottom-color: var(--border); }
+details.aprofunde .aprofunde-content .section-label { color: var(--text-muted); opacity:0.7; }
+details.aprofunde .aprofunde-content p { color: var(--text-muted); }
+details.aprofunde .aprofunde-content h3.subsection { color: var(--text-muted); }
+details.aprofunde .aprofunde-content .section { page-break-inside: auto; margin-bottom: 14px; }
+
+@page { size: A4; margin: 0 0 1.6cm 0; }
+@page cover { margin: 0; }
+.print-cover { page-break-after: always; background:var(--primary); color:#fff; width:21cm; height:29.7cm; position:relative; }
+.print-cover .bar { background:var(--accent); height:12px; width:100%; position:absolute; left:0; }
+.print-cover .bar.top { top:0; } .print-cover .bar.bottom { bottom:0; }
+.print-cover .content { position:absolute; top:42%; left:0; right:0; text-align:center; padding:0 2.4cm; }
+.print-cover .kicker { color:var(--accent); letter-spacing:2.5px; font-size:11pt; text-transform:uppercase; margin-bottom:16px; font-weight:600; }
+.print-cover h1 { font-family:'Playfair Display',serif; font-size:30pt; margin-bottom:22px; font-weight:700; line-height:1.25; }
+.print-cover .base { color:#dcd0b0; font-style:italic; font-size:12.5pt; margin-bottom:8px; }
+.print-cover .tag { color:var(--accent); font-size:11pt; letter-spacing:1.5px; }
+.print-cover .foot { position:absolute; bottom:60px; left:0; right:0; text-align:center; color:#c9bd9a; font-size:9.5pt; }
+.lesson-page { page-break-after: always; }
+
+body { background: #fff; }
+
+
+#pv-a11y-bar { position:fixed; top:14px; right:14px; z-index:9999; display:flex; align-items:center; gap:2px; background:#1B3A2D; border-radius:999px; padding:5px 6px; box-shadow:0 4px 16px rgba(0,0,0,0.28); font-family:'Inter',sans-serif; }
+#pv-a11y-bar a.pv-link { all:unset; cursor:pointer; color:#fff; font-size:12px; font-weight:600; padding:6px 10px; border-radius:999px; white-space:nowrap; }
+#pv-a11y-bar a.pv-link:hover { background:rgba(255,255,255,0.16); color:#F5EDCF; }
+#pv-a11y-bar .pv-sep { width:1px; height:18px; background:rgba(255,255,255,0.25); margin:0 3px; }
+#pv-a11y-bar button.pv-fbtn { all:unset; cursor:pointer; color:#fff; font-weight:700; font-size:12.5px; width:28px; height:28px; display:flex; align-items:center; justify-content:center; border-radius:50%; }
+#pv-a11y-bar button.pv-fbtn:hover { background:rgba(255,255,255,0.18); }
+#pv-a11y-bar .pv-lbl { color:#C4941A; font-size:9.5px; font-weight:700; letter-spacing:1px; padding:0 3px; text-transform:uppercase; }
+@media print { #pv-a11y-bar { display:none !important; } }
+@media (max-width:560px) { #pv-a11y-bar .pv-lbl { display:none; } #pv-a11y-bar a.pv-link { padding:6px 8px; font-size:11.5px; } #pv-a11y-bar { top:8px; right:8px; } }
+
+#pv-scale-wrap { transition: zoom .08s; }
+body { padding-top:56px; }
+</style>
+</head>
+<body>
+<div id="pv-a11y-bar"><a class="pv-link" href="../../licoes/licao-08.html">&larr; Voltar à lição</a><a class="pv-link" href="../pdfs/Guia_Professor_Licao_08_O_Convite_da_Sabedoria.pdf">Baixar PDF</a><div class="pv-sep"></div><span class="pv-lbl">Fonte</span><button class="pv-fbtn" id="pv-a11y-minus" title="Diminuir fonte">A-</button><button class="pv-fbtn" id="pv-a11y-reset" title="Tamanho padrão">A</button><button class="pv-fbtn" id="pv-a11y-plus" title="Aumentar fonte">A+</button></div>
+<div id="pv-scale-wrap">
+
+<div class="print-cover">
+  <div class="bar top"></div>
+  <div class="content">
+    <div class="kicker">Provérbios para a Vida &middot; Ministério Infantil</div>
+    <h1>Lição 8: O Convite da Sabedoria</h1>
+    <div class="base">Texto Base: Provérbios 8</div>
+    <div class="tag">GUIA DO PROFESSOR</div>
+  </div>
+  <div class="foot">Material de Apoio para Ministração Infantil</div>
+  <div class="bar bottom"></div>
+</div>
+<div class="lesson-page">
+<div class="lesson-header" data-num="8">
+  <div class="lesson-eyebrow">Lição 8 de 31</div>
+  <h1 class="lesson-title">O Convite da Sabedoria</h1>
+  <p class="lesson-subtitle">Provérbios 8</p>
+</div>
+<div class="lesson-content">
+<div class="section">
+<div class="section-label">Introdução Pastoral</div>
+<div class="section-title">O Convite da Sabedoria</div>
+<p>Provérbios 8 é diferente de muitos outros capítulos do livro: aqui, a sabedoria é descrita como se fosse uma pessoa, clamando publicamente para que todos a ouçam.</p>
+<p><strong>Provérbios 8</strong> — Ver que a sabedoria, personificada em Provérbios 8, convida abertamente a todos para encontrá-la e receber vida — um convite que se cumpre plenamente em Jesus Cristo, que nos chama a Si.</p>
+<div class="callout gold"><div class="callout-title">Catecismo da Sabedoria</div><p><strong>Pergunta:</strong> O que acontece com quem encontra a sabedoria?</p><p><strong>Resposta:</strong> Quem encontra a sabedoria encontra a vida e alcança o favor do Senhor, pois a verdadeira sabedoria nos conduz a Cristo, a fonte de toda vida.</p></div>
+</div>
+<div class="section essencial-section">
+<div class="essencial-box">
+<div class="essencial-title">&#9733; O que você precisa saber para ensinar isso hoje</div>
+<p>A sabedoria bíblica não é um clube exclusivo para os mais espertos ou religiosos — ela clama publicamente, convidando "todos os filhos dos homens", sem exceção. Esse convite amplo se cumpre em Jesus, que chama todo aquele que está cansado a vir a Ele (Mt 11:28). Encontrar a sabedoria é encontrar a vida verdadeira — e isso nunca depende de já sermos bons o bastante antes de vir.</p>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Fundamento Bíblico</div>
+<div class="section-title">O que a Bíblia diz</div>
+<div class="bible-text">
+<div class="bible-ref">Pv 8:35</div>
+<div class="bible-quote">&ldquo;Porque o que me achar a mim achará a vida, e alcançará favor do Senhor.&rdquo;</div>
+<div class="bible-explain"><p><em>Este é o versículo-âncora da lição. Leia em voz alta com as crianças antes de prosseguir — a explicação completa vem na próxima seção.</em></p></div>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Para o Professor</div>
+<div class="section-title">Erros que o Professor Deve Evitar</div>
+<div class="callout warning"><div class="callout-title">Resumo rápido antes de ensinar</div><ul class="styled-list"><li><strong>Não diga:</strong> algo como &ldquo;Só pessoas especiais, religiosas ou perfeitas merecem estar perto de Deus.&rdquo;</li><li><strong>Não diga:</strong> algo como &ldquo;Dinheiro, fama e posses são os maiores tesouros da vida.&rdquo;</li><li><strong>Não diga:</strong> algo como &ldquo;O universo é fruto do acaso, sem propósito nem criador.&rdquo;</li><li><strong>Diga:</strong> Quem encontra a sabedoria encontra a vida e alcança o favor do Senhor, pois a verdadeira sabedoria nos conduz a Cristo, a fonte de toda vida.</li></ul></div>
+</div>
+<details class="aprofunde" open>
+<summary class="aprofunde-summary">Aprofunde-se: Fundamentação Teológica Completa<span class="aprofunde-note">Leitura opcional, para o professor que quiser estudar o tema com mais profundidade. O essencial para dar a aula já está no resumo acima.</span></summary>
+<div class="aprofunde-content">
+<div class="section">
+<div class="section-label">Entendendo a Doutrina</div>
+<div class="section-title">Entendendo a Palavra</div>
+<p>Provérbios 8 é diferente de muitos outros capítulos do livro: aqui, a sabedoria é descrita como se fosse uma pessoa, clamando publicamente para que todos a ouçam. "Não clama, porventura, a sabedoria, e a inteligência não faz soar a sua voz? No cume das alturas, junto ao caminho, nas encruzilhadas das veredas, se põe" (v. 1-2). A sabedoria não se esconde em lugares secretos, acessível só para poucos privilegiados. Ela grita nas praças, nos portões da cidade, nos lugares onde todo tipo de pessoa passa (v. 3).</p>
+<p>O convite da sabedoria é surpreendentemente amplo: "A vós, ó homens, clamo; e a minha voz se dirige aos filhos dos homens" (v. 4). Não é um convite só para os mais inteligentes, os mais ricos ou os mais religiosos — é para todos, sem exceção. A sabedoria oferece o que há de mais valioso: "Melhor é a minha instrução do que a prata, e o meu conhecimento, mais do que o ouro fino escolhido. Porque a sabedoria é melhor do que os rubis; e de tudo o que se deseja nada se pode comparar a ela" (v. 10-11).</p>
+<p>A partir do versículo 22, o capítulo toma um rumo ainda mais surpreendente: a sabedoria descreve sua própria origem eterna, dizendo que estava com Deus "antes de haver abismos" (v. 24), "antes que os montes se houvessem assentado" (v. 25), presente desde a criação do mundo, "brincando perante ele em todo o tempo" (v. 30). Essa linguagem vai muito além de uma simples personificação poética — ela aponta para algo, ou melhor, Alguém, que sempre existiu junto de Deus e que participou da criação de todas as coisas.</p>
+<p>O capítulo termina com o convite mais direto de todos: "bem-aventurado o homem que me dá ouvidos... Porque o que me achar a mim achará a vida, e alcançará favor do Senhor" (v. 34-35). Encontrar a sabedoria não é apenas ficar mais esperto — é encontrar vida verdadeira e o favor de Deus.</p>
+</div>
+<div class="section">
+<div class="section-label">O Evangelho na Lição</div>
+<div class="section-title">Cristo e a Sabedoria</div>
+<p>A descrição da sabedoria em Provérbios 8 — eterna, presente na criação, com Deus desde o princípio — encontra seu significado pleno em Jesus Cristo. João começa seu evangelho quase ecoando essa linguagem: "No princípio era o Verbo, e o Verbo estava com Deus, e o Verbo era Deus... Todas as coisas foram feitas por ele" (João 1:1-3). Paulo também escreve que "por ele foram criadas todas as coisas... e ele é antes de todas as coisas" (Colossenses 1:16-17). O convite de Provérbios 8 encontra eco direto no próprio convite de Jesus: "Vinde a mim, todos os que estais cansados e oprimidos, e eu vos aliviarei" (Mateus 11:28).</p>
+<p>O mais impressionante é a semelhança entre a promessa de Provérbios 8:35 — "o que me achar a mim achará a vida" — e as próprias palavras de Jesus: "Eu sou o caminho, e a verdade, e a vida" (João 14:6). Jesus não apenas ensina sabedoria; Ele é a sabedoria de Deus encarnada, chamando publicamente, sem esconder o convite de ninguém: "todo aquele que crê" (João 3:16), não apenas os mais inteligentes ou merecedores.</p>
+<p>Isso é uma notícia maravilhosa para uma criança que às vezes se sente pequena, incapaz ou "não boa o suficiente" para se aproximar de Deus. O convite de Cristo não exige que você já seja sábio, bom ou perfeito antes de vir. Ele chama exatamente onde você está, oferecendo Sua própria justiça, sabedoria e vida como presente gratuito para todo aquele que O buscar de coração. Encontrar a Cristo é encontrar, de fato, a vida verdadeira e o favor eterno de Deus — não por mérito, mas por graça, recebida pela fé.</p>
+</div>
+</div>
+</details>
+<div class="section">
+<div class="section-label">Dinâmica</div>
+<div class="section-title">Pensando Biblicamente: Mundo x Deus</div>
+<p>Leia cada frase do "mundo" e pergunte às crianças se concordam. Depois revele o que Deus realmente diz.</p>
+<div class="example"><div class="example-title">Sobre quem pode se aproximar de Deus</div><p class="wrong">Mundo diz: "Só pessoas especiais, religiosas ou perfeitas merecem estar perto de Deus."</p><p class="right">Deus diz: "A vós, ó homens, clamo; e a minha voz se dirige aos filhos dos homens." (Pv 8:4)</p></div>
+<div class="example"><div class="example-title">Sobre o que vale mais</div><p class="wrong">Mundo diz: "Dinheiro, fama e posses são os maiores tesouros da vida."</p><p class="right">Deus diz: "Melhor é a minha instrução do que a prata... a sabedoria é melhor do que os rubis." (Pv 8:10-11)</p></div>
+<div class="example"><div class="example-title">Sobre a origem do mundo</div><p class="wrong">Mundo diz: "O universo é fruto do acaso, sem propósito nem criador."</p><p class="right">Deus diz: "Quando ele preparava os céus, aí estava eu." (Pv 8:27)</p></div>
+<div class="example"><div class="example-title">Sobre encontrar sentido na vida</div><p class="wrong">Mundo diz: "Você precisa descobrir seu próprio propósito sozinho."</p><p class="right">Deus diz: "O que me achar a mim achará a vida, e alcançará favor do Senhor." (Pv 8:35)</p></div>
+</div>
+<div class="section">
+<div class="section-label">Aplicação Prática</div>
+<div class="section-title">Desafios da Vida Real</div>
+<div class="example"><div class="example-title">Situação 1 — Na Escola</div><p>Rodrigo acha que só os alunos "mais inteligentes" da turma conseguem realmente entender as coisas de Deus, e por isso não se sente convidado a se aproximar Dele.</p><p class="right">Reflita: O que Provérbios 8:4 diz sobre quem a sabedoria convida? Como isso muda o que Rodrigo pensa sobre si mesmo diante de Deus?</p></div>
+<div class="example"><div class="example-title">Situação 2 — Com os Amigos</div><p>Uma amiga de Carol diz que "religião é para quem é fraco ou precisa de muleta", e Carol fica sem saber o que responder.</p><p class="right">Reflita: Como Provérbios 8 descreve o valor de conhecer a sabedoria de Deus comparado a qualquer outra coisa? O que Carol poderia responder com gentileza?</p></div>
+<div class="example"><div class="example-title">Situação 3 — Em Família</div><p>Durante um momento difícil, a família de Heitor se pergunta onde encontrar esperança e direção.</p><p class="right">Reflita: Como o convite "vinde a mim" de Jesus (Mt 11:28) se aplica a momentos de dificuldade familiar? O que significa buscar a Cristo como fonte de vida nesses momentos?</p></div>
+<div class="example"><div class="example-title">Situação 4 — Na Internet</div><p>Yasmin vê muitos influenciadores prometendo "a fórmula secreta" para uma vida feliz e de sucesso.</p><p class="right">Reflita: Por que essas promessas nunca entregam o que Cristo realmente oferece? O que significa que "o que me achar a mim achará a vida" (Pv 8:35)?</p></div>
+</div>
+<div class="section">
+<div class="section-label">Perguntas para Discussão</div>
+<div class="section-title">Conversa em Família</div>
+<ol class="questions-list"><li>Já nos sentimos, em algum momento, "não convidados" ou "não bons o suficiente" para nos aproximar de Deus? Por quê?</li><li>Como o convite amplo de Provérbios 8 (para "todos os filhos dos homens") muda essa forma de pensar?</li><li>De que maneira Jesus é a resposta ao convite de sabedoria de Provérbios 8?</li><li>O que buscamos mais em nossa família: prata e ouro, ou a sabedoria e a vida que vêm de Deus?</li><li>Quem em nossa vida ainda precisa ouvir o convite de Cristo? Como podemos compartilhar isso com essa pessoa?</li></ol>
+</div>
+<div class="challenge-box">
+<div class="challenge-title">&#10022; Desafio da Semana</div>
+<p><strong>Versículo para memorizar:</strong> &ldquo;Porque o que me achar a mim achará a vida, e alcançará favor do Senhor.&rdquo; (Pv 8:35)</p>
+<p>Convide alguém (um amigo, colega ou familiar) para conversar sobre algo que você aprendeu nesta lição sobre o convite de Cristo. Anote como foi essa conversa e o que você sentiu ao compartilhar sua fé.</p>
+<div class="reading-plan">
+<div class="reading-day"><strong>Dia 1</strong>João 1:1-3</div>
+<div class="reading-day"><strong>Dia 2</strong>Colossenses 1:16-17</div>
+<div class="reading-day"><strong>Dia 3</strong>Mateus 11:28</div>
+<div class="reading-day"><strong>Dia 4</strong>João 14:6</div>
+<div class="reading-day"><strong>Dia 5</strong>João 3:16</div>
+<div class="reading-day"><strong>Dia 6</strong>Releia Provérbios 8</div>
+</div>
+<div class="prayer-box"><div class="callout-title">Oração Final (leia em voz alta com as crianças)</div><p>Senhor, obrigado porque o Teu convite não é só para os mais sábios, ricos ou merecedores, mas para todos nós, exatamente como somos. Obrigado porque Jesus, a sabedoria eterna que estava contigo desde antes da criação do mundo, veio até nós e nos chama: "Vinde a mim". Perdoa-nos pelas vezes em que buscamos vida em outras coisas — aprovação, posses, prazer — esquecendo que só em Ti encontramos a vida verdadeira. Ajuda-nos a responder ao Teu convite com alegria, e nos dá coragem para convidar outras pessoas a também encontrarem a vida em Cristo. Em nome de Jesus. Amém.</p></div>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var KEY='pv_fontscale', min=0.8, max=1.8, step=0.1;
+  var wrap = document.getElementById('pv-scale-wrap');
+  var saved = parseFloat(localStorage.getItem(KEY)) || 1;
+  function apply(v){ if(wrap){ wrap.style.zoom = v; } try{ localStorage.setItem(KEY, v); }catch(e){} }
+  apply(saved);
+  var mEl = document.getElementById('pv-a11y-minus'), pEl = document.getElementById('pv-a11y-plus'), rEl = document.getElementById('pv-a11y-reset');
+  if(mEl) mEl.onclick = function(){ saved = Math.max(min, +(saved-step).toFixed(2)); apply(saved); };
+  if(pEl) pEl.onclick = function(){ saved = Math.min(max, +(saved+step).toFixed(2)); apply(saved); };
+  if(rEl) rEl.onclick = function(){ saved = 1; apply(saved); };
+})();
+</script>
+
+</body>
+</html>
