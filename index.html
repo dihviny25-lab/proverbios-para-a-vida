@@ -62,12 +62,19 @@ footer.site-foot { text-align:center; padding:24px; color:var(--text-muted); fon
 @media print { #pv-a11y-bar { display:none !important; } }
 @media (max-width:560px) { #pv-a11y-bar .pv-lbl { display:none; } #pv-a11y-bar a.pv-link { padding:6px 8px; font-size:11.5px; } #pv-a11y-bar { top:8px; right:8px; } }
 
+
+.top-nav .pv-a11y-inline { display:flex; align-items:center; gap:2px; }
+.top-nav .pv-a11y-inline .pv-lbl { color:#C4941A; font-size:9.5px; font-weight:700; letter-spacing:1px; padding:0 3px; text-transform:uppercase; }
+.top-nav .pv-a11y-inline button.pv-fbtn { all:unset; cursor:pointer; color:#fff; font-weight:700; font-size:12.5px; width:26px; height:26px; display:flex; align-items:center; justify-content:center; border-radius:50%; }
+.top-nav .pv-a11y-inline button.pv-fbtn:hover { background:rgba(255,255,255,0.18); }
+@media (max-width:560px) { .top-nav .pv-a11y-inline .pv-lbl { display:none; } }
+
 </style>
 </head>
 <body>
-<div id="pv-a11y-bar"><span class="pv-lbl">Fonte</span><button class="pv-fbtn" id="pv-a11y-minus" title="Diminuir fonte">A-</button><button class="pv-fbtn" id="pv-a11y-reset" title="Tamanho padrão">A</button><button class="pv-fbtn" id="pv-a11y-plus" title="Aumentar fonte">A+</button></div>
 <nav class="top-nav">
   <span class="brand">Provérbios para a Vida</span>
+  <div class="pv-a11y-inline"><span class="pv-lbl">Fonte</span><button class="pv-fbtn" id="pv-a11y-minus" title="Diminuir fonte">A-</button><button class="pv-fbtn" id="pv-a11y-reset" title="Tamanho padrão">A</button><button class="pv-fbtn" id="pv-a11y-plus" title="Aumentar fonte">A+</button></div>
 </nav>
 <div id="pv-scale-wrap">
 <div class="hero">
