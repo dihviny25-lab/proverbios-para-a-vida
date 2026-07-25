@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lição 2 — O Valor da Sabedoria — Provérbios para a Vida</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+:root {
+  --bg: #EFEBE0; --surface: #FAFAF7; --primary: #1B3A2D; --primary-light: #2D5C45;
+  --accent: #C4941A; --accent-light: #F5EDCF; --text: #1C1A17; --text-muted: #6B6557; --border: #DDD8CC; --radius: 10px;
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+a { color:inherit; text-decoration:none; }
+.top-nav { background:var(--primary); padding:16px 24px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:10; }
+.top-nav .brand { color:#fff; font-family:'Playfair Display',serif; font-weight:700; font-size:16px; }
+.top-nav .back { color:rgba(255,255,255,0.8); font-size:13px; font-weight:600; border:1px solid rgba(255,255,255,0.35); border-radius:7px; padding:6px 12px; }
+.top-nav .back:hover { color:#fff; background:rgba(255,255,255,0.12); }
+.hero { background:var(--primary); color:#fff; padding:56px 24px 44px; text-align:center; position:relative; overflow:hidden; }
+.hero::before { content:'\2726'; position:absolute; font-size:280px; top:50%; left:50%; transform:translate(-50%,-50%); opacity:0.05; font-family:serif; }
+.hero .eyebrow { font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--accent); margin-bottom:14px; position:relative; }
+.hero h1 { font-family:'Playfair Display',serif; font-size:clamp(26px,5vw,42px); margin-bottom:12px; position:relative; }
+.hero p { font-size:15px; opacity:0.8; max-width:640px; margin:0 auto; position:relative; }
+.hero .verse { font-family:'Playfair Display',serif; font-style:italic; font-size:17px; opacity:0.92; max-width:640px; margin:14px auto 0; position:relative; }
+.wrap { max-width:1100px; margin:0 auto; padding:40px 24px 64px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:14px; }
+.card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:16px 18px; box-shadow:0 2px 10px rgba(27,58,45,0.06); transition:transform .15s, box-shadow .15s; }
+.card:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(27,58,45,0.12); }
+.card .num { font-family:'Playfair Display',serif; font-size:11px; color:var(--accent); font-weight:700; letter-spacing:1px; margin-bottom:4px; }
+.card .title { font-family:'Playfair Display',serif; font-size:15px; font-weight:700; color:var(--primary); margin-bottom:10px; line-height:1.3; }
+.card .cap { font-size:12px; color:var(--text-muted); margin-bottom:10px; }
+.card .dl { display:inline-block; font-size:12.5px; font-weight:600; color:var(--accent); border:1px solid var(--accent); border-radius:6px; padding:5px 10px; }
+.card .dl:hover { background:var(--accent); color:#fff; }
+
+.opt-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:18px; }
+.opt-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; box-shadow:0 2px 14px rgba(27,58,45,0.08); transition:transform .15s, box-shadow .15s; }
+.opt-card:hover { transform:translateY(-3px); box-shadow:0 10px 26px rgba(27,58,45,0.14); }
+.opt-card .head { background:var(--primary); padding:18px 18px 14px; }
+.opt-card .label { font-size:9.5px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--accent); margin-bottom:5px; }
+.opt-card .title { font-family:'Playfair Display',serif; font-size:17px; font-weight:700; color:#fff; }
+.opt-card .body { padding:14px 18px 18px; }
+.opt-card .desc { font-size:13px; color:var(--text-muted); margin-bottom:12px; line-height:1.5; }
+.opt-card .cta { display:inline-block; font-size:13px; font-weight:600; color:var(--accent); border:1px solid var(--accent); border-radius:7px; padding:7px 13px; }
+.opt-card .cta:hover { background:var(--accent); color:#fff; }
+
+.bottom-back { text-align:center; margin-top:36px; }
+.bottom-back a { display:inline-block; font-size:13.5px; font-weight:600; color:var(--primary); border:1px solid var(--border); background:var(--surface); border-radius:8px; padding:10px 18px; }
+.bottom-back a:hover { background:var(--accent-light); border-color:var(--accent); }
+
+.section-title { font-family:'Playfair Display',serif; font-size:20px; color:var(--primary); margin:36px 0 14px; padding-bottom:8px; border-bottom:1px solid var(--border); }
+footer.site-foot { text-align:center; padding:24px; color:var(--text-muted); font-size:12.5px; }
+@media (max-width:600px) { .hero{padding:40px 16px 32px;} .wrap{padding:28px 16px 48px;} .grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));} }
+
+.opt-card .cta-row { display:flex; gap:8px; flex-wrap:wrap; }
+.opt-card .cta-primary { background:var(--accent); color:#fff; border-color:var(--accent); }
+.opt-card .cta-primary:hover { background:#a97c12; border-color:#a97c12; color:#fff; }
+.opt-card .cta-secondary { color:var(--text-muted); border-color:var(--border); font-size:12px; padding:7px 11px; }
+.opt-card .cta-secondary:hover { background:var(--bg); color:var(--text); border-color:var(--text-muted); }
+
+
+#pv-a11y-bar { position:fixed; top:14px; right:14px; z-index:9999; display:flex; align-items:center; gap:2px; background:#1B3A2D; border-radius:999px; padding:5px 6px; box-shadow:0 4px 16px rgba(0,0,0,0.28); font-family:'Inter',sans-serif; }
+#pv-a11y-bar a.pv-link { all:unset; cursor:pointer; color:#fff; font-size:12px; font-weight:600; padding:6px 10px; border-radius:999px; white-space:nowrap; }
+#pv-a11y-bar a.pv-link:hover { background:rgba(255,255,255,0.16); color:#F5EDCF; }
+#pv-a11y-bar .pv-sep { width:1px; height:18px; background:rgba(255,255,255,0.25); margin:0 3px; }
+#pv-a11y-bar button.pv-fbtn { all:unset; cursor:pointer; color:#fff; font-weight:700; font-size:12.5px; width:28px; height:28px; display:flex; align-items:center; justify-content:center; border-radius:50%; }
+#pv-a11y-bar button.pv-fbtn:hover { background:rgba(255,255,255,0.18); }
+#pv-a11y-bar .pv-lbl { color:#C4941A; font-size:9.5px; font-weight:700; letter-spacing:1px; padding:0 3px; text-transform:uppercase; }
+@media print { #pv-a11y-bar { display:none !important; } }
+@media (max-width:560px) { #pv-a11y-bar .pv-lbl { display:none; } #pv-a11y-bar a.pv-link { padding:6px 8px; font-size:11.5px; } #pv-a11y-bar { top:8px; right:8px; } }
+
+</style>
+</head>
+<body>
+<div id="pv-a11y-bar"><span class="pv-lbl">Fonte</span><button class="pv-fbtn" id="pv-a11y-minus" title="Diminuir fonte">A-</button><button class="pv-fbtn" id="pv-a11y-reset" title="Tamanho padrão">A</button><button class="pv-fbtn" id="pv-a11y-plus" title="Aumentar fonte">A+</button></div>
+<nav class="top-nav">
+  <span class="brand">Provérbios para a Vida</span>
+  <a class="back" href="../index.html">&larr; Voltar a todas as lições</a>
+</nav>
+<div id="pv-scale-wrap">
+<div class="hero">
+  <div class="eyebrow">Lição 2 de 31 &middot; Provérbios Provérbios 2</div>
+  <h1>O Valor da Sabedoria</h1>
+  <div class="verse">&ldquo;"Porque o Senhor dá a sabedoria; da sua boca vem o conhecimento e o entendimento." (Pv 2:6)&rdquo;</div>
+</div>
+<div class="wrap">
+  <div class="opt-grid"><div class="opt-card">
+  <div class="head">
+    <div class="label">Preparo do Professor</div>
+    <div class="title">Guia do Professor</div>
+  </div>
+  <div class="body">
+    <div class="desc">Guia completo com o essencial da lição em destaque e aprofundamento teológico opcional.</div>
+    <div class="cta-row"><a class="cta cta-primary" href="../guia-professor/leitura/Licao_02.html">Ler no site &rarr;</a><a class="cta cta-secondary" href="../guia-professor/pdfs/Guia_Professor_Licao_02_O_Valor_da_Sabedoria.pdf" target="_blank">Baixar PDF</a></div>
+  </div>
+</div><div class="opt-card">
+  <div class="head">
+    <div class="label">Preparo do Professor</div>
+    <div class="title">Roteiro de Aula</div>
+  </div>
+  <div class="body">
+    <div class="desc">Passo a passo da aula — abertura, dinâmica, ilustração e oração, como sugestão para adaptar.</div>
+    <div class="cta-row"><a class="cta cta-primary" href="../roteiro-aula/leitura/Licao_02.html">Ler no site &rarr;</a><a class="cta cta-secondary" href="../roteiro-aula/pdfs/Roteiro_Licao_02_O_Valor_da_Sabedoria.pdf" target="_blank">Baixar PDF</a></div>
+  </div>
+</div><div class="opt-card">
+  <div class="head">
+    <div class="label">Consulta Rápida</div>
+    <div class="title">Resumo Rápido</div>
+  </div>
+  <div class="body">
+    <div class="desc">Referência de 1-2 páginas — o essencial para revisar antes da aula.</div>
+    <div class="cta-row"><a class="cta cta-primary" href="../resumo-rapido/leitura/Licao_02.html">Ler no site &rarr;</a><a class="cta cta-secondary" href="../resumo-rapido/pdfs/Resumo_Licao_02_O_Valor_da_Sabedoria.pdf" target="_blank">Baixar PDF</a></div>
+  </div>
+</div><div class="opt-card">
+  <div class="head">
+    <div class="label">Material para Casa</div>
+    <div class="title">Desafio da Semana</div>
+  </div>
+  <div class="body">
+    <div class="desc">Folha para a criança levar para casa: versículo, leitura, desafio, oração e tarefa em família.</div>
+    <div class="cta-row"><a class="cta cta-primary" href="../desafio-semana/leitura/Licao_02.html">Ler no site &rarr;</a><a class="cta cta-secondary" href="../desafio-semana/pdfs/Desafio_Semana_Licao_02_O_Valor_da_Sabedoria.pdf" target="_blank">Baixar PDF</a></div>
+  </div>
+</div></div>
+  <div class="bottom-back" style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;"><a href="licao-01.html">&larr; Lição 1</a><a href="../index.html">Todas as lições</a><a href="licao-03.html">Lição 3 &rarr;</a></div>
+</div>
+<footer class="site-foot">Provérbios para a Vida &middot; Ministério Infantil</footer>
+</div>
+
+<script>
+(function(){
+  var KEY='pv_fontscale', min=0.8, max=1.8, step=0.1;
+  var wrap = document.getElementById('pv-scale-wrap');
+  var saved = parseFloat(localStorage.getItem(KEY)) || 1;
+  function apply(v){ if(wrap){ wrap.style.zoom = v; } try{ localStorage.setItem(KEY, v); }catch(e){} }
+  apply(saved);
+  var mEl = document.getElementById('pv-a11y-minus'), pEl = document.getElementById('pv-a11y-plus'), rEl = document.getElementById('pv-a11y-reset');
+  if(mEl) mEl.onclick = function(){ saved = Math.max(min, +(saved-step).toFixed(2)); apply(saved); };
+  if(pEl) pEl.onclick = function(){ saved = Math.min(max, +(saved+step).toFixed(2)); apply(saved); };
+  if(rEl) rEl.onclick = function(){ saved = 1; apply(saved); };
+})();
+</script>
+</body>
+</html>
