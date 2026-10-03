@@ -116,3 +116,27 @@ A Lição 8 termina com a Sabedoria chamando publicamente e oferecendo vida. A L
 
 ### Estratégia didática do bloco
 Usar contrastes visuais e situações curtas: **por fora/por dentro**, **verdade/engano**, **espada/remédio**, **impulso/pausa**, **parece/é**, **gasolina/água**, **meu plano/direção de Deus**. Isso respeita a estrutura antitética dos provérbios e funciona melhor para 6–12 anos do que longas exposições abstratas.
+
+
+## Matriz editorial — Bloco 3 (Lições 17–24)
+
+| Aula | Grande ideia v2 | Pergunta-chave | Movimento pedagógico |
+|---|---|---|---|
+| 17 | Amigo verdadeiro continua amando quando a amizade custa alguma coisa. | Como ajo com meu amigo quando ele não pode me oferecer nada? | diversão → dificuldade → lealdade |
+| 18 | Conflitos levantam muros; ouvir bem e buscar a paz ajuda a reconstruir pontes. | Eu ouvi antes de responder e julgar? | ouvir → compreender → reconciliar |
+| 19 | Nem toda provocação precisa virar uma batalha. | Preciso responder isso ou posso deixar passar? | ofensa → humildade → paz |
+| 20 | Pedir conselho sábio é reconhecer que não enxergamos tudo sozinhos. | Quem é uma pessoa sábia e segura para me aconselhar nisso? | ponto cego → conselho → decisão |
+| 21 | Deus vê não apenas o que fazemos, mas também por que fazemos. | Qual é o motivo verdadeiro do meu coração? | aparência → motivo → responsabilidade |
+| 22 | A instrução sábia recebida na infância merece ser ouvida e guardada. | Esta autoridade está me conduzindo no que é bom e correto? | instrução → discernimento → honra |
+| 23 | Desejos precisam de direção; Deus quer primeiro o nosso coração. | Este desejo está me governando ou estou aprendendo a governá-lo diante de Deus? | desejo → coração → domínio |
+| 24 | Coragem bíblica é fazer o que é certo quando seria mais fácil recuar. | O que é certo fazer mesmo que me custe alguma coisa? | pressão → coragem → ação |
+
+### Salvaguardas pastorais do bloco
+- **17:** lealdade não significa encobrir pecado, aceitar manipulação ou permanecer sozinho em uma relação perigosa.
+- **18:** reconciliação não exige que uma criança volte imediatamente a uma situação insegura; conflitos graves devem ser levados a adultos responsáveis.
+- **19:** “deixar passar uma ofensa” aplica-se a provocações e pequenas ofensas, não a abuso, violência, ameaça, bullying persistente ou segredo perigoso.
+- **20:** nem todo conselho tem o mesmo peso. Ensinar critérios: pessoa confiável, madura, coerente com a Palavra e adequada ao assunto.
+- **21:** examinar motivos não deve levar a criança a ansiedade obsessiva sobre intenções perfeitamente puras; o objetivo é honestidade diante de Deus e arrependimento.
+- **22:** honra e obediência não tornam uma ordem pecaminosa ou perigosa correta. A criança deve procurar outro adulto seguro quando uma autoridade pede algo errado, secreto ou ameaçador. Pv 22:6 deve ser apresentado como princípio sapiencial, não garantia automática do resultado de toda criação.
+- **23:** tratar desejos apropriados à infância; ao abordar Pv 23 e bebida, explicar o texto sem normalizar consumo infantil ou transformar a aula em curiosidade sobre álcool.
+- **24:** coragem não é imprudência nem enfrentar perigo sozinho. Em situações de risco, buscar ajuda é uma ação corajosa e sábia.
