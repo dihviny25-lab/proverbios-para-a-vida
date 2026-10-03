@@ -72,3 +72,21 @@ Provérbios descreve sabedoria para a vida diante de Deus. Princípios gerais n�
 
 ## Critérios de revisão
 Uma aula só está pronta quando: (a) o tema realmente nasce do capítulo; (b) guia, roteiro, resumo e desafio dizem a mesma coisa; (c) a dinâmica reforça a ideia central; (d) há aplicação concreta para 6–12 anos; (e) não há promessa indevida ou moralismo; (f) links e navegação continuam válidos.
+
+
+## Matriz editorial — Bloco 1 (Lições 1–9)
+
+| Aula | Grande ideia v2 | Pergunta-chave | Movimento pedagógico |
+|---|---|---|---|
+| 1 | A verdadeira sabedoria começa quando reconhecemos quem Deus é e aprendemos a ouvi-lo. | Quem ocupa o primeiro lugar quando eu decido o que é certo? | fundamento → temor → ouvir Deus |
+| 2 | A sabedoria é um tesouro que buscamos, mas é Deus quem a dá. | Onde estou procurando direção? | buscar → receber → ser guardado |
+| 3 | Posso confiar em Deus mesmo quando não entendo tudo. | Em quem estou apoiando todo o peso da minha decisão? | limite humano → confiança → caminhos |
+| 4 | O coração precisa ser guardado porque dele saem as direções da nossa vida. | O que estou deixando entrar e crescer no meu coração? | entradas → coração → caminho |
+| 5 | A sabedoria de Deus ensina fidelidade e limites que protegem relacionamentos. | Esta escolha honra a Deus e respeita o outro? | limites → fidelidade → santidade |
+| 6 | A pessoa prudente percebe o que precisa ser feito e age no tempo certo. | O que posso fazer hoje em vez de deixar para depois? | observar → planejar → agir |
+| 7 | Grandes quedas costumam começar com pequenos passos na direção errada. | Esta pequena escolha está me aproximando ou afastando do caminho sábio? | pequenos passos → tentação → fuga |
+| 8 | A sabedoria de Deus vale mais do que qualquer tesouro e chama todos a ouvi-la. | O que Deus diz que é sábio fazer? | convite → valor → vida |
+| 9 | A Sabedoria e a Insensatez fazem convites diferentes; precisamos discernir o caminho e seu destino. | Que voz eu estou ouvindo? | dois convites → temor/correção → dois destinos |
+
+### Continuidade 8 → 9
+A Lição 8 termina com a Sabedoria chamando publicamente e oferecendo vida. A Lição 9 amplia a cena: existe também um convite concorrente. A criança passa de **valorizar e ouvir a sabedoria** para **discernir entre vozes e considerar o destino de cada caminho**.
