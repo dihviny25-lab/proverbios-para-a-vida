@@ -140,3 +140,36 @@ Usar contrastes visuais e situações curtas: **por fora/por dentro**, **verdade
 - **22:** honra e obediência não tornam uma ordem pecaminosa ou perigosa correta. A criança deve procurar outro adulto seguro quando uma autoridade pede algo errado, secreto ou ameaçador. Pv 22:6 deve ser apresentado como princípio sapiencial, não garantia automática do resultado de toda criação.
 - **23:** tratar desejos apropriados à infância; ao abordar Pv 23 e bebida, explicar o texto sem normalizar consumo infantil ou transformar a aula em curiosidade sobre álcool.
 - **24:** coragem não é imprudência nem enfrentar perigo sozinho. Em situações de risco, buscar ajuda é uma ação corajosa e sábia.
+
+
+## Matriz editorial — Bloco 4 (Lições 25–31)
+
+| Aula | Grande ideia v2 | Pergunta-chave | Movimento pedagógico |
+|---|---|---|---|
+| 25 | Deus trabalha em nosso caráter como quem remove impurezas da prata. | O que esta correção ou dificuldade pode revelar em mim? | escória → refinamento → caráter |
+| 26 | O insensato repete o erro sem aprender; o sábio reconhece, se arrepende e muda de direção. | Estou apenas repetindo “desculpa” ou aprendendo com o erro? | repetição → reconhecimento → mudança |
+| 27 | Amigo verdadeiro não apenas acompanha: ajuda o outro a crescer em sabedoria. | Este amigo me ajuda a ficar mais sábio e eu faço o mesmo por ele? | amizade → atrito amoroso → crescimento |
+| 28 | Diligência trabalha com fidelidade; atalhos prometem resultado sem formar caráter. | Estou fazendo fielmente o trabalho que está diante de mim ou procurando um atalho errado? | tarefa → diligência → fruto |
+| 29 | Boa influência se submete à verdade de Deus e usa responsabilidade para servir. | Minha influência ajuda os outros a fazer o que é certo? | influência → direção → serviço |
+| 30 | Sabedoria também é saber dizer “eu não sei” e confiar no que Deus revelou. | Quando não sei tudo, onde encontro uma referência segura? | limite → Palavra → confiança |
+| 31 | Uma vida sábia é o fruto visível de um coração que teme ao Senhor. | Depois de 31 capítulos, que tipo de pessoa a sabedoria de Deus está formando? | retrospectiva → caráter → temor do Senhor |
+
+### Ajustes exegéticos e pedagógicos
+- **25:** Pv 25:4–5 usa o refino da prata diretamente como analogia para remover o ímpio da presença do rei. A aplicação ao processo pessoal de santificação pode ser feita como conexão bíblica, mas não deve ser apresentada como se fosse o significado exclusivo do versículo.
+- **26:** a imagem de Pv 26:11 é deliberadamente desagradável; com crianças pequenas, explicar sem exploração gráfica. Arrependimento é mais do que sentir nojo do erro: envolve reconhecer, confessar e mudar de direção pela graça.
+- **27:** “feridas do amigo” não legitimam agressão, humilhação, bullying ou violência. O texto fala da honestidade de uma amizade fiel.
+- **28:** Pv 28:19 descreve uma máxima sapiencial sobre diligência; evitar “Deus promete riqueza a quem trabalha”. Trabalho fiel não garante prosperidade material.
+- **29:** Pv 29:18 não significa “sem sonhos/visão de liderança o povo fracassa”; o eixo é revelação/instrução de Deus e guardar sua lei.
+- **30:** a confiança em Pv 30:5 está na pureza da palavra de Deus. Ao conectar com João 1, distinguir a expressão “Palavra/Verbo” aplicada a Cristo da referência imediata de Provérbios 30:5 às palavras de Deus.
+- **31:** Pv 31:10–31 é poesia sapiencial sobre a mulher de valor. Não apagar seu referente feminino, nem transformar o poema em checklist opressivo; para uma turma mista, mostrar virtudes que todos podem admirar e cultivar, preservando o que o texto efetivamente celebra.
+
+## Arco completo da série
+**1–9 — Aprender a ouvir a Sabedoria:** temor do Senhor, busca, confiança, coração, limites, prudência, escolhas e os dois convites.
+
+**10–16 — Reconhecer padrões de uma vida sábia:** integridade, honestidade, palavras, domínio próprio, discernimento, brandura e confiança na direção de Deus.
+
+**17–24 — Viver sabedoria nos relacionamentos e decisões:** amizade, conflitos, humildade, conselho, motivos, autoridade, desejos e coragem.
+
+**25–31 — Formar caráter e concluir a jornada:** refinamento, arrependimento, amizade que forma, diligência, influência, humildade intelectual e uma vida marcada pelo temor do Senhor.
+
+A Lição 31 deve retornar explicitamente à Lição 1. A série começa com **“o temor do Senhor é o princípio” (Pv 1:7)** e termina contemplando uma vida cujo valor é explicado por **“teme ao Senhor” (Pv 31:30)**. Assim, as 31 aulas formam uma jornada, e não apenas 31 temas independentes.
