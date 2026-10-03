@@ -90,3 +90,29 @@ Uma aula só está pronta quando: (a) o tema realmente nasce do capítulo; (b) g
 
 ### Continuidade 8 → 9
 A Lição 8 termina com a Sabedoria chamando publicamente e oferecendo vida. A Lição 9 amplia a cena: existe também um convite concorrente. A criança passa de **valorizar e ouvir a sabedoria** para **discernir entre vozes e considerar o destino de cada caminho**.
+
+
+## Matriz editorial — Bloco 2 (Lições 10–16)
+
+> A partir de Provérbios 10, o gênero muda: predominam ditos curtos e contrastes. O professor não deve tentar transformar o capítulo inteiro em uma narrativa única. A aula seleciona um eixo representativo, mostra outros provérbios que o sustentam e ensina a criança a reconhecer padrões de sabedoria.
+
+| Aula | Grande ideia v2 | Pergunta-chave | Movimento pedagógico |
+|---|---|---|---|
+| 10 | Integridade é viver diante de Deus sem precisar de duas versões de mim mesmo. | Eu faria a mesma coisa se ninguém estivesse olhando? | contraste justo/ímpio → inteireza → segurança |
+| 11 | Deus se importa com a verdade até nas pequenas coisas. | Estou sendo verdadeiro ou tentando obter vantagem enganando? | balança → pequenos enganos → honestidade |
+| 12 | Palavras podem ferir como espada ou ajudar a curar. | O que minhas palavras vão produzir na outra pessoa? | palavra precipitada → ferida → palavra sábia |
+| 13 | Sabedoria coloca espaço entre o impulso e a ação. | Preciso fazer ou falar isso agora? | impulso → pausa → domínio próprio |
+| 14 | Nem todo caminho que parece certo realmente termina bem. | Estou seguindo apenas o que parece certo ou verificando pela sabedoria de Deus? | aparência → discernimento → destino |
+| 15 | Uma resposta branda pode impedir que um conflito cresça. | Minha resposta está apagando ou alimentando o fogo? | provocação → resposta → escalada/paz |
+| 16 | Planejamos com responsabilidade, mas descansamos porque Deus dirige nossos passos. | Estou planejando fielmente ou tentando controlar tudo? | planejar → entregar → confiar |
+
+### Distinções que precisam permanecer claras
+- **10 × 11:** integridade é inteireza de caráter; honestidade enfatiza verdade e justiça nas relações. Não transformar as duas aulas em duplicatas.
+- **12 × 15:** a Lição 12 trata do poder geral das palavras; a 15 trata especificamente da resposta em situação de conflito.
+- **13:** autocontrole não é repressão emocional nem silêncio obrigatório; é domínio dos impulsos para responder sabiamente.
+- **14:** Pv 14:12 não ensina anti-intelectualismo. O problema não é pensar, mas tornar a percepção pessoal autoridade final.
+- **15:** brandura não significa aceitar abuso, esconder injustiça ou nunca pedir ajuda a um adulto responsável.
+- **16:** soberania de Deus não elimina planejamento, responsabilidade ou consequências; também não autoriza chamar todo acontecimento doloroso de bom em si mesmo.
+
+### Estratégia didática do bloco
+Usar contrastes visuais e situações curtas: **por fora/por dentro**, **verdade/engano**, **espada/remédio**, **impulso/pausa**, **parece/é**, **gasolina/água**, **meu plano/direção de Deus**. Isso respeita a estrutura antitética dos provérbios e funciona melhor para 6–12 anos do que longas exposições abstratas.
