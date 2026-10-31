@@ -23,7 +23,7 @@
 </div>
 <div class="section">
 <div class="section-label">Para o Professor</div>
-<div class="section-title">Erros que o Professor Deve Evitar</div>
+
 <div class="callout warning"><div class="callout-title">Resumo rápido antes de ensinar</div><ul class="styled-list"><li><strong>Não diga:</strong> algo como &ldquo;Só pessoas especiais, religiosas ou perfeitas merecem estar perto de Deus.&rdquo;</li><li><strong>Não diga:</strong> algo como &ldquo;Dinheiro, fama e posses são os maiores tesouros da vida.&rdquo;</li><li><strong>Não diga:</strong> algo como &ldquo;O universo é fruto do acaso, sem propósito nem criador.&rdquo;</li><li><strong>Diga:</strong> A sabedoria de Deus vale mais do que qualquer tesouro: devemos ouvi-la, guardá-la e andar em seus caminhos. O Novo Testamento apresenta Cristo como a sabedoria de Deus e a fonte da verdadeira vida.</li></ul></div>
 </div>
 <details class="aprofunde" open>
@@ -61,14 +61,7 @@
 <div class="challenge-title">&#10022; Desafio da Semana</div>
 <p><strong>Versículo para memorizar:</strong> &ldquo;Porque o que me achar a mim achará a vida, e alcançará favor do Senhor.&rdquo; (Pv 8:35)</p>
 <p>Durante a semana, antes de uma escolha importante, pare e pergunte: “O que Deus diz que é sábio fazer?” Depois conte aos seus pais ou responsáveis uma escolha sábia que você fez e como a Palavra de Deus ajudou você.</p>
-<div class="reading-plan">
-<div class="reading-day"><strong>Dia 1</strong>João 1:1-3</div>
-<div class="reading-day"><strong>Dia 2</strong>Colossenses 1:16-17</div>
-<div class="reading-day"><strong>Dia 3</strong>Mateus 11:28</div>
-<div class="reading-day"><strong>Dia 4</strong>João 14:6</div>
-<div class="reading-day"><strong>Dia 5</strong>João 3:16</div>
-<div class="reading-day"><strong>Dia 6</strong>Releia Provérbios 8</div>
-</div>
+
 <div class="prayer-box"><div class="callout-title">Oração Final (leia em voz alta com as crianças)</div><p>Senhor, obrigado porque o Teu convite não é só para os mais sábios, ricos ou merecedores, mas para todos nós, exatamente como somos. Obrigado porque Jesus, Teu Filho, a quem o Novo Testamento chama de sabedoria de Deus, veio até nós e nos chama: "Vinde a mim". Perdoa-nos pelas vezes em que buscamos vida em outras coisas — aprovação, posses, prazer — esquecendo que só em Ti encontramos a vida verdadeira. Ajuda-nos a responder ao Teu convite com alegria, e nos dá coragem para convidar outras pessoas a também encontrarem a vida em Cristo. Em nome de Jesus. Amém.</p></div>
 </div>
 </div>
@@ -169,6 +162,6 @@
   </div>
 </div>
 
-</section><section id="familia"><h2>Material para a família</h2><p>O Desafio da Semana permanece disponível em HTML e PDF enquanto validamos a experiência do manual.</p><p><a href="../desafio-semana/leitura/Licao_08.html">Ler o Desafio da Semana</a> · <a href="../desafio-semana/pdfs/Desafio_Semana_Licao_08_O_Convite_da_Sabedoria.pdf">Baixar PDF</a></p></section><p class="offline">Protótipo da Lição 8; nenhuma outra lição foi alterada.</p></main></div><script>
+</section><section id="familia"><h2>Material para a família</h2><p>O Desafio da Semana permanece disponível em HTML e PDF enquanto validamos a experiência do manual.</p><p><a href="/desafio-semana/leitura/Licao_08.html">Ler o Desafio da Semana</a></p></section><p class="offline">Protótipo da Lição 8; nenhuma outra lição foi alterada.</p></main></div><script>
 (()=>{'use strict';const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],tabs=$$('.modes [role=tab]'),panels=$$('.panel');function mode(m){tabs.forEach(t=>t.setAttribute('aria-selected',String(t.dataset.target===m)));panels.forEach(p=>p.hidden=p.id!==m);history.replaceState(null,'','#'+m);window.scrollTo({top:0,behavior:'instant'});if(m==='aula')showSlide(slide)}tabs.forEach(t=>t.addEventListener('click',()=>mode(t.dataset.target)));const side=$('#side'),overlay=$('#overlay'),menu=$('#menu');function toggle(open){side.classList.toggle('open',open);overlay.classList.toggle('open',open);menu.setAttribute('aria-expanded',String(open))}menu.addEventListener('click',()=>toggle(!side.classList.contains('open')));overlay.addEventListener('click',()=>toggle(false));$$('#nav a[data-mode]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();mode(a.dataset.mode);toggle(false)}));$$('#nav a:not([data-mode])').forEach(a=>a.addEventListener('click',()=>toggle(false)));const key='pv-manual-08-font';let font=Number(localStorage.getItem(key))||1;function apply(){font=Math.max(.85,Math.min(1.65,font));document.documentElement.style.setProperty('--font',font);try{localStorage.setItem(key,String(font))}catch(e){}}$('#minus').onclick=()=>{font=+(font-.1).toFixed(2);apply()};$('#plus').onclick=()=>{font=+(font+.1).toFixed(2);apply()};$('#reset').onclick=()=>{font=1;apply()};apply();$('#full').onclick=()=>{if(document.fullscreenElement)document.exitFullscreen?.();else document.documentElement.requestFullscreen?.()};const study=$('#estudo .lesson-content');if(study){[...study.children].filter(el=>el.classList.contains('section')).forEach((el,i)=>{const d=document.createElement('details');d.open=i<2;const s=document.createElement('summary');s.textContent=el.querySelector('.section-title')?.textContent?.trim()||'Seção de estudo';el.replaceWith(d);d.append(s,el)});const old=study.querySelector('details.aprofunde');if(old)old.open=false}const slides=$$('#aula .roteiro-section');let slide=0;function showSlide(n){slide=Math.max(0,Math.min(slides.length-1,n));slides.forEach((el,i)=>{el.classList.toggle('slide',true);el.hidden=i!==slide});$('#counter').textContent=(slide+1)+' / '+slides.length;['prev','prev2'].forEach(k=>$('#'+k).disabled=slide===0);['next','next2'].forEach(k=>$('#'+k).disabled=slide===slides.length-1)}['prev','prev2'].forEach(k=>$('#'+k).onclick=()=>showSlide(slide-1));['next','next2'].forEach(k=>$('#'+k).onclick=()=>showSlide(slide+1));document.addEventListener('keydown',e=>{if(e.key==='Escape')toggle(false);if($('#aula').hidden||['INPUT','TEXTAREA','BUTTON'].includes(document.activeElement?.tagName))return;if(e.key==='ArrowRight')showSlide(slide+1);if(e.key==='ArrowLeft')showSlide(slide-1)});showSlide(0);const hash=location.hash.slice(1);if(['estudo','aula','consulta'].includes(hash))mode(hash)})();
 </script></body></html>
